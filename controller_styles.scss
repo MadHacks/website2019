@@ -1,0 +1,62 @@
+$chrome_color: green;
+$chrome_font: "Helvetica Neue", "Helvetica", Arial;
+$chrome_padding: 10px;
+$chrome_shadow: #222222;
+
+$default_font: "Helvetica Neue", "Helvetica", Arial;
+
+body {
+	font-family: $default_font;
+}
+
+.framed {
+	position: absolute;
+	border: solid 6px $chrome_color;
+	padding: $chrome_padding;
+	padding-top: 2*$chrome_padding;
+
+	box-shadow: 8px 8px 0px $chrome_shadow;
+
+	outline: none;
+	background-color: white;
+
+	.hidden {
+		display: none;
+	}
+	.active {
+		display: block;
+	}
+}
+
+.framed .title_bar {
+	height: 24px;
+	background-color: $chrome_color;
+	color: white;
+	font-family: $chrome_font;
+	font-style: italic;
+
+	margin-left: -$chrome_padding - 1;
+	margin-top: -2*$chrome_padding - 1;
+	margin-right: -$chrome_padding - 1;
+
+	outline: none;
+	box-shadow: none;
+
+	cursor: arrow;
+}
+
+.framed .title_bar .close_button {
+	float: right;
+	color: white;
+	font-size: 0.8em;
+	height: 15px;
+	width: 15px;
+	margin-top: 4px;
+	margin-right: -4px;
+	cursor: pointer;
+}
+
+/* Draggable quirk fix */
+.draggable-mirror .close_button {
+	display: none;
+}
