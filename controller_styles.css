@@ -1,0 +1,51 @@
+body {
+  font-family: "Helvetica Neue", "Helvetica", Arial;
+}
+
+.framed {
+  position: absolute;
+  border: solid 6px green;
+  padding: 10px;
+  padding-top: 20px;
+  box-shadow: 8px 8px 0px #222222;
+  outline: none;
+  background-color: white;
+}
+.framed .hidden {
+  display: none;
+}
+.framed .active {
+  display: block;
+}
+
+.framed .title_bar {
+  height: 24px;
+  background-color: green;
+  color: white;
+  font-family: "Helvetica Neue", "Helvetica", Arial;
+  font-style: italic;
+  margin-left: -11px;
+  margin-top: -21px;
+  margin-right: -11px;
+  outline: none;
+  box-shadow: none;
+  cursor: arrow;
+}
+
+.framed .title_bar .close_button {
+  float: right;
+  color: white;
+  font-size: 0.8em;
+  height: 15px;
+  width: 15px;
+  margin-top: 4px;
+  margin-right: -4px;
+  cursor: pointer;
+}
+
+/* Draggable quirk fix */
+.draggable-mirror .close_button {
+  display: none;
+}
+
+/*# sourceMappingURL=controller_styles.css.map */
