@@ -1,30 +1,145 @@
 <html>
-    <head>
-        <title>MadHacks 2019</title>
-        <link rel="stylesheet" href="controller_styles.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
-        <script type="text/javascript" src="controller.js"></script>
-    </head>
-    <body>
-    	<div class="framed active">
-    		<div class="title_bar">
-    			Test
-    			<div class="close_button"><i class="fas fa-times"></i></div>
-    		</div>
-    		<h1>Hello!</h1>
-    	</div>
-    	<div class="framed active">
-    		<div class="title_bar">
-    			Test
-    			<div class="close_button"><i class="fas fa-times"></i></div>
-    		</div>
-    		<h1>Hello!</h1>
-    	</div>
-    	<script>
-		  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
-		  ':35729/livereload.js?snipver=1"></' + 'script>')
-		</script> 
-    </body>
+
+<head>
+	<title>MadHacks 2019</title>
+	<link rel="stylesheet" href="controller_styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
+	 crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+</head>
+
+<body>
+	<div class="framed active">
+		<div class="title_bar">
+			Test
+			<div class="close_button">
+				<i class="fas fa-times"></i>
+			</div>
+		</div>
+		<h1>Hello!</h1>
+	</div>
+
+	<!-- About -->
+	<div class="framed active about">
+		<div class="title_bar">
+			About
+			<div class="close_button">
+				<i class="fas fa-times"></i>
+			</div>
+		</div>
+		<p>
+			<h4 style="margin: 0;">Madhacks</h4> is the University of Wisconsin's twice-annual hackathon, bringing together participants from all over the
+			US for 24 hours of hacking.
+		</p>
+		<p>
+			Unlike other hackathons, MadHacks is going to be putting emphasis on the wacky, the original, and the downright impossible!
+		</p>
+	</div>
+
+	<!-- FAQ -->
+	<div class="framed active faq">
+		<div class="title_bar">
+			FAQ
+			<div class="close_button">
+				<i class="fas fa-times"></i>
+			</div>
+		</div>
+		<button class="accordion">What’s a hackathon?</button>
+		<div class="panel">
+			<p>A hackathon is an event where students gather together to work on a software or hardware project. 
+				MadHacks Spring 2018 will be a 12 hours hackathon. If this is your first time attending, 
+				check out our hackathon veteran Spencer’s medium post on 
+				<a href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" style="text-decoration: none;">How to Do Hackathons.</a></p>
+		</div>
+
+		<button class="accordion">Do I need a team?</button>
+		<div class="panel">
+			<p>We encourage students to work with a team of 2 - 4 people but you can work individually as well. 
+				If you don't have a team yet, there will be a team formation after the opening ceremony. 
+				If you want to find a team before the event, join the #team-formation slack channel.
+			</p>
+		</div>
+
+		<button class="accordion">Who can participate?</button>
+		<div class="panel">
+			<p>We welcome undergraduate and graduate students of all backgrounds. 
+				You don’t need to be a Computer Science or Engineering major to attend. 
+				If you don't know how to code, we will have workshops throughout the day to teach you how!
+			</p>
+		</div>
+
+		<button class="accordion">What do I need to bring?</button>
+		<div class="panel">
+			<p>You need to bring a photo ID to check in. 
+				You should also bring a laptop, chargers, and anything else you will need for a 24 hour hackathon.
+			</p>
+		</div>
+
+		<button class="accordion">How much does it cost to attend?</button>
+		<div class="panel">
+			<p>Admission to MadHacks is completely free. We will also be providing breakfast, lunch and dinner! 
+				There will also be workshops and activities throughout the event.
+			</p>
+		</div>
+
+		<button class="accordion">What else do I need to know?</button>
+		<div class="panel">
+			<p>Please review the <a href="">MLH Code of Conduct</a>. 
+				Please also be aware that by attending this event, you agree to the MLH Data Sharing Notice, 
+				<a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a> 
+				and the MLH Privacy Policy
+			</p>
+		</div>
+
+		<button class="accordion">Where and When?</button>
+		<div class="panel">
+			<p>
+				TBA
+			</p>
+		</div>
+
+		<button class="accordion">Will there be any prizes?</button>
+		<div class="panel">
+			<p>
+				TBA
+			</p>
+		</div>
+
+		<button class="accordion">Still have questions?</button>
+		<div class="panel">
+			<p>
+				Feel free to <a href="https://madhacks-2018.typeform.com/to/NI8CP7">contact us</a>.
+			</p>
+		</div>
+	</div>
+
+
+	<script>
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+			':35729/livereload.js?snipver=1"></' + 'script>')
+
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function () {
+				/* Toggle between adding and removing the "active" class,
+				to highlight the button that controls the panel */
+				this.classList.toggle("activate");
+
+				/* Toggle between hiding and showing the active panel */
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				} else {
+					panel.style.display = "block";
+				}
+			});
+		}
+	</script>
+</body>
+
 </html>

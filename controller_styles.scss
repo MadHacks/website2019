@@ -2,6 +2,7 @@ $chrome_color: green;
 $chrome_font: "Helvetica Neue", "Helvetica", Arial;
 $chrome_padding: 10px;
 $chrome_shadow: #222222;
+$width: 400px;
 
 $default_font: "Helvetica Neue", "Helvetica", Arial;
 
@@ -59,4 +60,8 @@ body {
 /* Draggable quirk fix */
 .draggable-mirror .close_button {
 	display: none;
+}
+
+.about {
+	width: $width
 }
