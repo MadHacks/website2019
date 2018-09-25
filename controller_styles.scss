@@ -1,16 +1,27 @@
 $chrome_color: #da2e2e;
 $chrome_font: "Helvetica Neue", "Helvetica", Arial;
 $chrome_padding: 10px;
-$chrome_shadow: #222222;
+$chrome_shadow: #555;
+$light_shadow: #555;
+$chrome_shadow_distance: 4px;
+$light_shadow_distance: 4px;
 $width: 400px;
 
 $default_font: 'IBM Plex Mono', monospace;
+
+@font-face {
+    font-family: "Chicago";
+    src: url("fonts/chicago.otf") format("opentype");
+}
 
 body {
 	font-family: $default_font;
 	margin: 0px;
 	padding: 0px;
 	background-color: #88E1E8;
+	position: fixed;
+	width: 100%;
+	height: 100%;
 }
 
 .framed {
@@ -19,7 +30,7 @@ body {
 	padding: $chrome_padding;
 	padding-top: 2*$chrome_padding;
 
-	box-shadow: 8px 8px 0px $chrome_shadow;
+	box-shadow: $chrome_shadow_distance $chrome_shadow_distance 0px $chrome_shadow;
 
 	outline: none;
 	background-color: white;
@@ -116,11 +127,10 @@ body {
 	width: 100%;
 	top: 0;
 	position: absolute;
-	z-index: -4;
 	display: inline-block;
+	z-index: 10;
+	font-family: "Chicago";
 }
-
-
 
 #time {
 	padding: 5px 16px;
@@ -131,17 +141,21 @@ body {
 
 .navbar {
     overflow: hidden;
-    background-color: #0A3E54;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #0A3E54;
+    font-family: "Chicago", Arial, Helvetica, sans-serif;
+    //font-smooth: never;
+    -webkit-font-smoothing: antialiased;
+    box-shadow: 0px $light_shadow_distance 0px $light_shadow;
 }
 
 .navbar a {
     float: left;
     font-size: 16px;
-    color: white;
     text-align: center;
     padding: 5px 16px;
     text-decoration: none;
+    color: #0A3E54;
 }
 
 .dropdown {
@@ -154,7 +168,7 @@ body {
     font-size: 16px;    
     border: none;
     outline: none;
-    color: white;
+    color: #0A3E54;
     padding: 5px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -170,7 +184,7 @@ body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 8px 8px 0px $chrome_shadow;
     z-index: 1;
 }
 
@@ -192,6 +206,58 @@ body {
 }
 
 #last, .dropdown-content {
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+
+/* MLH Badge */
+#mlh-trust-badge img {
+	-webkit-filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #aaa) invert(1);
+  	filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #aaa) invert(1);
+}
+
+#mlh-trust-badge {
+	margin-top: -1px;
+	z-index: 1;
+}
+
+/* Desktop Icons */
+.windows {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+ /* Desktop icons */
+.d-icon {
+	float: left;
+	height: 86px;
+	width: 86px;
+	text-align: center;
+	margin-left: 30px;
+	margin-top: 32px;
+	cursor: pointer;
+	font-style: italic;
+	font-weight: 500;
+	font-size: 10pt;
+}
+ .d-icon img {
+	height: 64px;
+	width: 64px;
+	margin-bottom: 10px;
+}
+
+.d-icon-about img {
+	background-color: white;
+}
+
+/*
+.d-icon-faq img {
+	-webkit-filter: invert(1);
+	filter: invert(1);
+}*/
+
+ .d-label {
+	display: inline-block;
+	background-color: white;
+	width: 50px;
 }

@@ -17,6 +17,8 @@ Website for MadHacks 2019
 * Theme the css according to the style guide (Stamper)
 * Find body font (Stamper)
 * Find appropriate desktop icons (Stamper)
+* Padding on frames, esp. Map (Stamper)
+* Maps -- remove text (Stamper)
 
 ## Using SASS
 Installation:
