@@ -1,10 +1,13 @@
 body {
-  font-family: "Helvetica Neue", "Helvetica", Arial;
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0px;
+  padding: 0px;
+  background-color: #88E1E8;
 }
 
 .framed {
   position: absolute;
-  border: solid 6px green;
+  border: solid 6px #da2e2e;
   padding: 10px;
   padding-top: 20px;
   box-shadow: 8px 8px 0px #222222;
@@ -20,7 +23,7 @@ body {
 
 .framed .title_bar {
   height: 24px;
-  background-color: green;
+  background-color: #da2e2e;
   color: white;
   font-family: "Helvetica Neue", "Helvetica", Arial;
   font-style: italic;
@@ -81,6 +84,100 @@ body {
   background-color: white;
   display: none;
   overflow: hidden;
+}
+
+.map {
+  height: 600px;
+  width: 900px;
+}
+
+#map {
+  height: 600px;
+  width: 900px;
+}
+
+.menu {
+  height: 30px;
+  background-color: grey;
+  width: 100%;
+  top: 0;
+  position: absolute;
+  z-index: -4;
+  display: inline-block;
+}
+
+#time {
+  padding: 5px 16px;
+  right: 50px;
+  position: absolute;
+  color: white;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #0A3E54;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 5px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn, .dropbtn2 {
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 5px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropbtn:focus, .dropbtn2:focus, .navbar a:focus {
+  background-color: #f3a022;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+#last, .dropdown-content {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 /*# sourceMappingURL=controller_styles.css.map */

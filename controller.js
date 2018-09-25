@@ -86,4 +86,45 @@ window.onload = function() {
 	draggable.on('drag:stop', (evt) => {
 
 	});
+	//draggable.on('drag:stop', () => console.log('drag:stop'));
+
+	//Menu Clock
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours();
+		var m = today.getMinutes();
+		dayornight = isItTheMorning(h);
+		m = formatMinutes(m);
+		h = formatHours(h);
+
+
+		document.getElementById('time').innerHTML =
+			h + ":" + m + dayornight;
+		var t = setTimeout(startTime, 500);
+	}
+	function formatMinutes(minutes, h) {
+		if (minutes < 10) { minutes = "0" + minutes };  // add zero in front of numbers < 10
+		return minutes;
+	}
+	function formatHours(hours) {
+		if (hours === 0) {
+			return 12
+		}
+		else if (hours > 12) {
+			return hours - 12
+		}
+		else {
+			return hours
+		}
+	}
+	function isItTheMorning(hours) {
+		if(hours < 12) {
+			return ' AM'
+		}
+		else {
+			return ' PM'
+		}
+	}
+
+	startTime();
 }

@@ -9,7 +9,17 @@
 	 crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
 	<script type="text/javascript" src="controller.js"></script>
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js"></script>
+	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
 </head>
+
+<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:28px;width:10%;"
+ href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black"
+ target="_blank">
+	<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season"
+	 style="width:100%">
+</a>
 
 <body>
 	<div class="windows">
@@ -22,14 +32,15 @@
 			</div>
 			<h1>Hello!</h1>
 		</div>
+	</div>
 
-		<!-- About -->
-		<div class="framed active about">
-			<div class="title_bar">
-				About
-				<div class="close_button">
-					<i class="fas fa-times"></i>
-				</div>
+
+		<!-- About
+	<div class="framed about">
+		<div class="title_bar">
+			About
+			<div class="close_button">
+				<i class="fas fa-times"></i>
 			</div>
 			<p>
 				<h4 style="margin: 0;">Madhacks</h4> is the University of Wisconsin's twice-annual hackathon, bringing together participants from all over the
@@ -39,61 +50,69 @@
 				Unlike other hackathons, MadHacks is going to be putting emphasis on the wacky, the original, and the downright impossible!
 			</p>
 		</div>
+		<p>
+			<h4 style="margin: 0;">Madhacks</h4> is the University of Wisconsin's twice-annual hackathon, bringing together participants from all over the
+			US for 24 hours of hacking.
+		</p>
+		<p>
+			Unlike other hackathons, MadHacks is going to be putting emphasis on the wacky, the original, and the downright impossible!
+		</p>
+	</div> -->
 
 		<!-- FAQ -->
-		<div class="framed active faq">
-			<div class="title_bar">
-				FAQ
-				<div class="close_button">
-					<i class="fas fa-times"></i>
-				</div>
+		<!-- <div class="framed faq">
+		<div class="title_bar">
+			FAQ
+			<div class="close_button">
+				<i class="fas fa-times"></i>
 			</div>
-			<button class="accordion">What’s a hackathon?</button>
-			<div class="panel">
-				<p>A hackathon is an event where students gather together to work on a software or hardware project. 
-					MadHacks Spring 2018 will be a 12 hours hackathon. If this is your first time attending, 
-					check out our hackathon veteran Spencer’s medium post on 
-					<a href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" style="text-decoration: none;">How to Do Hackathons.</a></p>
-			</div>
+		</div>
+		<button class="accordion">What’s a hackathon?</button>
+		<div class="panel">
+			<p>A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Spring 2018
+				will be a 12 hours hackathon. If this is your first time attending, check out our hackathon veteran Spencer’s medium
+				post on
+				<a href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" style="text-decoration: none;">How to Do Hackathons.</a>
+			</p>
+		</div>
 
-			<button class="accordion">Do I need a team?</button>
-			<div class="panel">
-				<p>We encourage students to work with a team of 2 - 4 people but you can work individually as well. 
-					If you don't have a team yet, there will be a team formation after the opening ceremony. 
-					If you want to find a team before the event, join the #team-formation slack channel.
-				</p>
-			</div>
+		<button class="accordion">Do I need a team?</button>
+		<div class="panel">
+			<p>We encourage students to work with a team of 2 - 4 people but you can work individually as well. If you don't have a team
+				yet, there will be a team formation after the opening ceremony. If you want to find a team before the event, join the
+				#team-formation slack channel.
+			</p>
+		</div>
 
-			<button class="accordion">Who can participate?</button>
-			<div class="panel">
-				<p>We welcome undergraduate and graduate students of all backgrounds. 
-					You don’t need to be a Computer Science or Engineering major to attend. 
-					If you don't know how to code, we will have workshops throughout the day to teach you how!
-				</p>
-			</div>
+		<button class="accordion">Who can participate?</button>
+		<div class="panel">
+			<p>We welcome undergraduate and graduate students of all backgrounds. You don’t need to be a Computer Science or Engineering
+				major to attend. If you don't know how to code, we will have workshops throughout the day to teach you how!
+			</p>
+		</div>
 
-			<button class="accordion">What do I need to bring?</button>
-			<div class="panel">
-				<p>You need to bring a photo ID to check in. 
-					You should also bring a laptop, chargers, and anything else you will need for a 24 hour hackathon.
-				</p>
-			</div>
+		<button class="accordion">What do I need to bring?</button>
+		<div class="panel">
+			<p>You need to bring a photo ID to check in. You should also bring a laptop, chargers, and anything else you will need for
+				a 24 hour hackathon.
+			</p>
+		</div>
 
-			<button class="accordion">How much does it cost to attend?</button>
-			<div class="panel">
-				<p>Admission to MadHacks is completely free. We will also be providing breakfast, lunch and dinner! 
-					There will also be workshops and activities throughout the event.
-				</p>
-			</div>
+		<button class="accordion">How much does it cost to attend?</button>
+		<div class="panel">
+			<p>Admission to MadHacks is completely free. We will also be providing breakfast, lunch and dinner! There will also be workshops
+				and activities throughout the event.
+			</p>
+		</div>
 
-			<button class="accordion">What else do I need to know?</button>
-			<div class="panel">
-				<p>Please review the <a href="">MLH Code of Conduct</a>. 
-					Please also be aware that by attending this event, you agree to the MLH Data Sharing Notice, 
-					<a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a> 
-					and the MLH Privacy Policy
-				</p>
-			</div>
+		<button class="accordion">What else do I need to know?</button>
+		<div class="panel">
+			<p>Please review the
+				<a href="">MLH Code of Conduct</a>. Please also be aware that by attending this event, you agree to the MLH Data Sharing Notice,
+				<a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a>
+				and the MLH Privacy Policy
+			</p>
+		</div>
 
 			<button class="accordion">Where and When?</button>
 			<div class="panel">
@@ -117,37 +136,153 @@
 			</div>
 		</div>
 
-		<!-- Desktop Icons -->
-		<div class="d-icon d-icon-about">
-			<img src="img/logo.png">
-			<div class="d-label">About</div>
+		<button class="accordion">Still have questions?</button>
+		<div class="panel">
+			<p>
+				Feel free to
+				<a href="https://madhacks-2018.typeform.com/to/NI8CP7">contact us</a>.
+			</p>
 		</div>
-		<div class="d-icon d-icon-faq">
-			<img src="img/faq_64.png">
-			<div class="d-label">FAQ</div>
+	</div> -->
+
+		<!-- Map -->
+		<div class="framed map">
+			<div class="title_bar">
+				Map
+				<div class="close_button">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<div id="map"></div>
 		</div>
-	</div>
 
-	<script>
-		var acc = document.getElementsByClassName("accordion");
-		var i;
+		<!-- Top menu bar -->
+		<div class="navbar">
+			<a>MadHacks 2019</a>
+			<a href="#">File</a>
+			<a href="#">Edit</a>
+			<div class="dropdown">
+				<button class="dropbtn" onclick="myFunction()">View</button>
+				<div class="dropdown-content" id="myDropdown">
+					<a href="#">Link</a>
+					<a href="#">Link 2</a>
+					<a href="#" id="last">Link 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn2" onclick="mySecondFunction()">History</button>
+				<div class="dropdown-content" id="myDropdown2">
+					<a href="#">2018</a>
+					<a href="#">2017</a>
+					<a href="#" id="last">2016</a>
+				</div>
+			</div>
+			<div id="time"></div>
+		</div>
 
-		for (i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function () {
-				/* Toggle between adding and removing the "active" class,
-				to highlight the button that controls the panel */
-				this.classList.toggle("activate");
 
-				/* Toggle between hiding and showing the active panel */
-				var panel = this.nextElementSibling;
-				if (panel.style.display === "block") {
-					panel.style.display = "none";
-				} else {
-					panel.style.display = "block";
+
+</body>
+<script>
+	document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+		':35729/livereload.js?snipver=1"></' + 'script>')
+
+	//FAQ script
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function () {
+			/* Toggle between adding and removing the "active" class,
+			to highlight the button that controls the panel */
+			this.classList.toggle("activate");
+
+			/* Toggle between hiding and showing the active panel */
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+
+
+	//Top Menu Script
+	/* When the user clicks on the button, 
+t	oggle between hiding and showing the dropdown content */
+	function myFunction() {
+		document.getElementById("myDropdown").classList.toggle("show");
+	}
+	function mySecondFunction() {
+		document.getElementById("myDropdown2").classList.toggle("show");
+	}
+
+	// Close the dropdown if the user clicks outside of it
+	window.onclick = function (e) {
+		var myDropdown = document.getElementById("myDropdown");
+		var myDropdown2 = document.getElementById("myDropdown2")
+		if (!e.target.matches('.dropbtn') && !e.target.matches('.dropbtn2')) {
+			if (myDropdown.classList.contains('show')) {
+				myDropdown.classList.remove('show');
+			}
+			if (myDropdown2.classList.contains('show')) {
+				myDropdown2.classList.remove('show');
+			}
+		}
+		else if (e.target.matches('.dropbtn2')) {
+			if (myDropdown.classList.contains('show')) {
+				myDropdown.classList.remove('show');
+			}
+		}
+		else if (!e.target.matches('.dropbtn2')) {
+			if (myDropdown2.classList.contains('show')) {
+				myDropdown2.classList.remove('show');
+			}
+		}
+		else if (e.target.matches('.dropbtn')) {
+			if (myDropdown2.classList.contains('show')) {
+				myDropdown2.classList.remove('show');
+			}
+		}
+	}
+
+
+
+	// Map script
+	mapboxgl.accessToken = "pk.eyJ1IjoiY29ubm9yc3RhbXBlciIsImEiOiJjamFpeDM1bXMyMXdrMnFsZTh0dmJmanVxIn0.v2IUgOKPxfRDTlAhaswe0w";
+
+	/* Map: This represents the map on the page. */
+	var map = new mapboxgl.Map({
+		container: "map",
+		style: "mapbox://styles/connorstamper/cjmh7cpqx9tgg2ro6qj0ocstn",
+		zoom: 15,
+		center: [-89.40331, 43.07108]
+	});
+
+	map.on("load", function () {
+		/* Image: An image is loaded and added to the map. */
+		map.loadImage("https://i.imgur.com/MK4NUzI.png", function (error, image) {
+			if (error) throw error;
+			map.addImage("custom-marker", image);
+			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+			map.addLayer({
+				id: "markers",
+				type: "symbol",
+				/* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+				source: {
+					type: "geojson",
+					data: {
+						type: "FeatureCollection",
+						features: [{ "type": "Feature", "geometry": { "type": "Point", "coordinates": [-89.40355468309329, 43.071904256933436] } }]
+					}
+				},
+				layout: {
+					"icon-image": "custom-marker",
 				}
 			});
-		}
-	</script>
-</body>
+		});
+	});
+</script>
 
 </html>
