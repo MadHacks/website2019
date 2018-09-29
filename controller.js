@@ -1,7 +1,10 @@
 window.onload = function() {
+
+	/*
+		Window Manager
+	*/
 	numWindows = document.querySelectorAll('.framed').length;
 	windowZs = []
-	console.log(numWindows)
 
 	function updateZ(evt) {
 		if (evt.data) {
@@ -20,7 +23,6 @@ window.onload = function() {
 		for (i = numWindows-1; i >= 0; i--) {
 			windowZs[i].style.zIndex = i.toString()
 		}
-		console.log(windowZs)
 	}
 
 	function MakeFrame(list_of_frames) {
@@ -34,10 +36,8 @@ window.onload = function() {
 		return out
 	}
 
-	// Manage frames
 	frames_set = MakeFrame(document.querySelectorAll('.framed'));
 
-	// Dragability
 	const draggable = new Draggable.Draggable(document.querySelectorAll('.framed'), {
   		draggable: '.title_bar'
 	});
@@ -49,9 +49,8 @@ window.onload = function() {
 		relative_y = evt.data.sensorEvent.data.clientY - evt.data.sourceContainer.offsetTop;
 		frames_set[evt.data.sourceContainer]['init_mouse_start'] = [relative_x, relative_y];
 
-		//console.log(relative_x, evt.data.sourceContainer.offsetWidth)
 		if (relative_x > evt.data.sourceContainer.offsetWidth - 20) {
-			evt.data.sourceContainer.style.display = "none";
+			evt.data.sourceContainer.classList.remove("active");
 		}
 	});
 	draggable.on('drag:move', (evt) => {
@@ -70,25 +69,52 @@ window.onload = function() {
 		anchor_y = y - y_;
 
 		frame.style.left = x - x_;
-		frame.style.top = y - y_;
-
-		/*
-		// Check against right bound
-		if (bound_x < window.innerWidth && anchor_x > 0 ) { frame.style.left = x - x_; draggable.trigger(new DragStopEvent({source: evt.data.source, originalSource: evt.data.originalSource, sensorEvent: evt.data.sensorEvent, sourceContainer: evt.data.sourceContainer })); }
-		else if (bound_x > window.innerWidth) { frame.style.left = window.innerWidth - frame.offsetWidth - 1; }
-		else if (anchor_x < 0) { frame.style.left = 1; }
-
-		if (bound_y < window.innerHeight && anchor_y > 0) { frame.style.top = y - y_; }
-		else if (bound_y > window.innerHeight) { frame.style.top = window.innerHeight - frame.offsetHeight - 1; }
-		else if (anchor_y < 0) { frame.style.top = 1; }
-		*/
+		if (y - y_ > 32) {
+			frame.style.top = y - y_;
+		}
 	});
 	draggable.on('drag:stop', (evt) => {
+		frame = evt.data.sourceContainer;
+		w = frame.offsetWidth;
+		h = frame.offsetHeight;
+		l = frame.offsetLeft;
+		t = frame.offsetTop;
 
+		if (l < 0) {
+			frame.style.left = 1;
+		}
+		else if (l + w > window.innerWidth) {
+			frame.style.left = window.innerWidth - w - 1;
+		}
+		if (t < 32) {
+			frame.style.top = 32;
+		}
+		else if (t + h> window.innerHeight) {
+			frame.style.top = window.innerHeight - h - 1;
+		}
 	});
-	//draggable.on('drag:stop', () => console.log('drag:stop'));
 
-	//Menu Clock
+	/* 
+		Desktop Icons
+	*/
+	dicons = document.getElementsByClassName("d-icon");
+	for (d of dicons) {
+		d.addEventListener('click', (evt) => {
+			evt.currentTarget.classList.add("focused");
+			evt.stopPropagation();
+		});
+		d.addEventListener('dblclick', (evt) => {
+			evt.currentTarget.classList.remove("focused");
+			linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
+			linked_frame.classList.add("active");
+			evt.stopPropagation();
+		});
+	}
+
+
+	/* 
+		Menu Clock
+	*/
 	function startTime() {
 		var today = new Date();
 		var h = today.getHours();
@@ -102,10 +128,12 @@ window.onload = function() {
 			h + ":" + m + dayornight;
 		var t = setTimeout(startTime, 500);
 	}
+
 	function formatMinutes(minutes, h) {
 		if (minutes < 10) { minutes = "0" + minutes };  // add zero in front of numbers < 10
 		return minutes;
 	}
+
 	function formatHours(hours) {
 		if (hours === 0) {
 			return 12
@@ -117,6 +145,7 @@ window.onload = function() {
 			return hours
 		}
 	}
+
 	function isItTheMorning(hours) {
 		if(hours < 12) {
 			return ' AM'
@@ -125,6 +154,95 @@ window.onload = function() {
 			return ' PM'
 		}
 	}
-
 	startTime();
+
+	/*
+		Nav bar
+	*/
+	document.addEventListener('click', () => {
+		ddowns = document.getElementsByClassName("dropdown-content");
+		for (d of ddowns) {
+			d.classList.remove("show");
+		}
+
+		dicons = document.getElementsByClassName("d-icon");
+		for (d of dicons) {
+			d.classList.remove("focused");
+		}
+	})
+
+	/*
+		Map
+	*/
+	mapboxgl.accessToken = "pk.eyJ1IjoiY29ubm9yc3RhbXBlciIsImEiOiJjamFpeDM1bXMyMXdrMnFsZTh0dmJmanVxIn0.v2IUgOKPxfRDTlAhaswe0w";
+
+	/* Map: This represents the map on the page. */
+	var map = new mapboxgl.Map({
+		container: "map",
+		style: "mapbox://styles/connorstamper/cjmh7cpqx9tgg2ro6qj0ocstn",
+		zoom: 15,
+		center: [-89.40331, 43.07108]
+	});
+
+	map.on("load", function () {
+		/* Image: An image is loaded and added to the map. */
+		map.loadImage("https://i.imgur.com/MK4NUzI.png", function (error, image) {
+			if (error) throw error;
+			map.addImage("custom-marker", image);
+			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+			map.addLayer({
+				id: "markers",
+				type: "symbol",
+				/* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+				source: {
+					type: "geojson",
+					data: {
+						type: "FeatureCollection",
+						features: [{ "type": "Feature", "geometry": { "type": "Point", "coordinates": [-89.40355468309329, 43.071904256933436] } }]
+					}
+				},
+				layout: {
+					"icon-image": "custom-marker",
+				}
+			});
+		});
+	});
+
+	/*
+		FAQ
+	*/
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+		acc[i].addEventListener("click", function () {
+			/* Toggle between adding and removing the "active" class,
+			to highlight the button that controls the panel */
+			this.classList.toggle("activate");
+
+			/* Toggle between hiding and showing the active panel */
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+				panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+		});
+	}
+}
+
+/*
+	Navbar dropdown functionality
+	Needs to be outside window.onload for function scoping reasons
+		this is ugly -- fix later
+*/
+function ddownFunction(id, evt) {
+	ddowns = document.getElementsByClassName("dropdown-content");
+	for (d of ddowns) {
+		if (d != document.getElementById(id)) {
+			d.classList.remove("show");
+		}
+	}
+	document.getElementById(id).classList.toggle("show");
+	evt.stopPropagation();
 }

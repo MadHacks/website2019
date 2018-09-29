@@ -6,6 +6,7 @@ $light_shadow: #555;
 $chrome_shadow_distance: 4px;
 $light_shadow_distance: 4px;
 $width: 400px;
+$d_icon_focus_color: #8692a5;
 
 $default_font: 'IBM Plex Mono', monospace;
 
@@ -35,12 +36,11 @@ body {
 	outline: none;
 	background-color: white;
 
-	.hidden {
-		display: none;
-	}
-	.active {
-		display: block;
-	}
+	display: none;
+}
+
+.framed.active {
+	display: block;
 }
 
 .framed .title_bar {
@@ -136,7 +136,8 @@ body {
 	padding: 5px 16px;
 	right: 50px;
 	position: absolute;
-	color: white;
+	color: #0A3E54;
+	margin-top: 5px;
 }
 
 .navbar {
@@ -154,6 +155,7 @@ body {
     font-size: 16px;
     text-align: center;
     padding: 5px 16px;
+    padding-top: 10px;
     text-decoration: none;
     color: #0A3E54;
 }
@@ -170,6 +172,7 @@ body {
     outline: none;
     color: #0A3E54;
     padding: 5px 16px;
+    padding-top: 10px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -184,17 +187,23 @@ body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 8px 8px 0px $chrome_shadow;
+    box-shadow: $light_shadow_distance  $light_shadow_distance 0px $chrome_shadow;
     z-index: 1;
 }
 
 .dropdown-content a {
     float: none;
     color: black;
-    padding: 5px 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 36px;
     text-decoration: none;
     display: block;
     text-align: left;
+    font-family: "Helvetica";
+    font-size: 12pt;
+    font-style: italic;
 }
 
 .dropdown-content a:hover {
@@ -217,7 +226,7 @@ body {
 }
 
 #mlh-trust-badge {
-	margin-top: -1px;
+	margin-top: 0px;
 	z-index: 1;
 }
 
@@ -239,7 +248,22 @@ body {
 	font-style: italic;
 	font-weight: 500;
 	font-size: 10pt;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	z-index: 5000;
 }
+
+.d-icon.focused {
+	color: white;
+	background-color: $d_icon_focus_color;
+	.d-label {
+		background-color: $d_icon_focus_color;
+	}
+	img {
+		opacity: 0.8;
+	}
+}
+
  .d-icon img {
 	height: 64px;
 	width: 64px;
@@ -249,12 +273,6 @@ body {
 .d-icon-about img {
 	background-color: white;
 }
-
-/*
-.d-icon-faq img {
-	-webkit-filter: invert(1);
-	filter: invert(1);
-}*/
 
  .d-label {
 	display: inline-block;
