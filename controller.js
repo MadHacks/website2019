@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
 
 	/*
 		Window Manager
@@ -20,7 +20,7 @@ window.onload = function() {
 				windowZs.push(l)
 			}
 		}
-		for (i = numWindows-1; i >= 0; i--) {
+		for (i = numWindows - 1; i >= 0; i--) {
 			windowZs[i].style.zIndex = i.toString()
 		}
 	}
@@ -39,7 +39,7 @@ window.onload = function() {
 	frames_set = MakeFrame(document.querySelectorAll('.framed'));
 
 	const draggable = new Draggable.Draggable(document.querySelectorAll('.framed'), {
-  		draggable: '.title_bar'
+		draggable: '.title_bar'
 	});
 
 	draggable.on('drag:start', (evt) => {
@@ -55,7 +55,7 @@ window.onload = function() {
 	});
 	draggable.on('drag:move', (evt) => {
 		frame = evt.data.sourceContainer;
-		
+
 		x = evt.data.sensorEvent.data.clientX;
 		y = evt.data.sensorEvent.data.clientY;
 
@@ -89,7 +89,7 @@ window.onload = function() {
 		if (t < 32) {
 			frame.style.top = 32;
 		}
-		else if (t + h> window.innerHeight) {
+		else if (t + h > window.innerHeight) {
 			frame.style.top = window.innerHeight - h - 1;
 		}
 	});
@@ -158,7 +158,7 @@ window.onload = function() {
 	}
 
 	function isItTheMorning(hours) {
-		if(hours < 12) {
+		if (hours < 12) {
 			return ' AM'
 		}
 		else {
@@ -195,29 +195,38 @@ window.onload = function() {
 		center: [-89.40331, 43.07108]
 	});
 
-	map.on("load", function () {
-		/* Image: An image is loaded and added to the map. */
-		map.loadImage("https://i.imgur.com/MK4NUzI.png", function (error, image) {
-			if (error) throw error;
-			map.addImage("custom-marker", image);
-			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
-			map.addLayer({
-				id: "markers",
-				type: "symbol",
-				/* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
-				source: {
-					type: "geojson",
-					data: {
-						type: "FeatureCollection",
-						features: [{ "type": "Feature", "geometry": { "type": "Point", "coordinates": [-89.40355468309329, 43.071904256933436] } }]
-					}
-				},
-				layout: {
-					"icon-image": "custom-marker",
-				}
-			});
-		});
+	var geojson = {
+		type: 'FeatureCollection',
+		features: [{
+			type: 'Feature',
+			geometry: {
+				type: 'Point',
+				coordinates: [-89.40355468309329, 43.071904256933436]
+			},
+			properties: {
+				title: 'MadHacks',
+				description: '1025 W Johnson St',
+				description2: 'Madison, WI 53706'
+			}
+		}]
+	}
+	// add markers to map
+	geojson.features.forEach(function (marker) {
+
+		// create a HTML element for each feature
+		var el = document.createElement('div');
+		el.className = 'marker';
+
+		// make a marker for each feature and add to the map
+		new mapboxgl.Marker(el)
+			.setLngLat(marker.geometry.coordinates)
+			.setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+			.setHTML('<h3>' + marker.properties.title + '</h3><p>' + 
+				marker.properties.description + '</p>' + '<p>' + marker.properties.description2 + '</p>'))
+			.addTo(map);
 	});
+
+	map.addControl(new mapboxgl.NavigationControl());
 
 	/*
 		FAQ
