@@ -38,8 +38,8 @@ body {
 	border: solid 6px $chrome_color;
 	padding: $chrome_padding;
 	padding-top: 2*$chrome_padding;
-	top: 20%;
-	left: 40%;
+	top: 64px;
+	left: 32px;
 
 	box-shadow: $chrome_shadow_distance $chrome_shadow_distance 0px $chrome_shadow;
 
@@ -138,6 +138,8 @@ body {
 	height: 50px;
 	border-radius: 50%;
 	cursor: pointer;
+	filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #aaa);
+	-webkit-filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #aaa);
 }
 
 .mapboxgl-popup {
@@ -154,11 +156,13 @@ body {
 	}
 	p {
 		font-family: $body_font_stack;
+		padding-right: 20px;
 	}
 	box-shadow: $chrome_shadow_distance $chrome_shadow_distance 0px $chrome_shadow !important;
 	border-radius: 0px !important;
 	background-color: $theme_red !important;
 	color: white !important;
+	padding: 5px;
 }
 
 .mapboxgl-popup-tip {
