@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "Chicago";
+  src: url("fonts/chicago.otf") format("opentype");
+}
 body {
   font-family: "IBM Plex Mono", monospace;
   margin: 0px;
   padding: 0px;
   background-color: #88E1E8;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .framed {
@@ -10,14 +18,13 @@ body {
   border: solid 6px #da2e2e;
   padding: 10px;
   padding-top: 20px;
-  box-shadow: 8px 8px 0px #222222;
+  box-shadow: 4px 4px 0px #555;
   outline: none;
   background-color: white;
-}
-.framed .hidden {
   display: none;
 }
-.framed .active {
+
+.framed.active {
   display: block;
 }
 
@@ -96,36 +103,60 @@ body {
   width: 900px;
 }
 
+.marker {
+  background-image: url("./img/logo.png");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
 .menu {
   height: 30px;
   background-color: grey;
   width: 100%;
   top: 0;
   position: absolute;
-  z-index: -4;
   display: inline-block;
+  z-index: 10;
+  font-family: "Chicago";
 }
 
 #time {
   padding: 5px 16px;
   right: 50px;
   position: absolute;
-  color: white;
+  color: #0A3E54;
+  margin-top: 5px;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #0A3E54;
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: #0A3E54;
+  font-family: "Chicago", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-shadow: 0px 4px 0px #555;
 }
 
 .navbar a {
   float: left;
   font-size: 16px;
-  color: white;
   text-align: center;
   padding: 5px 16px;
+  padding-top: 10px;
   text-decoration: none;
+  color: #0A3E54;
 }
 
 .dropdown {
@@ -138,8 +169,9 @@ body {
   font-size: 16px;
   border: none;
   outline: none;
-  color: white;
+  color: #0A3E54;
   padding: 5px 16px;
+  padding-top: 10px;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
@@ -154,17 +186,23 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 0px #555;
   z-index: 1;
 }
 
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 5px 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 36px;
   text-decoration: none;
   display: block;
   text-align: left;
+  font-family: "Helvetica";
+  font-size: 12pt;
+  font-style: italic;
 }
 
 .dropdown-content a:hover {
@@ -176,8 +214,77 @@ body {
 }
 
 #last, .dropdown-content {
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+/* MLH Badge */
+#mlh-trust-badge img {
+  -webkit-filter: drop-shadow(4px 4px 0px #aaa) invert(1);
+  filter: drop-shadow(4px 4px 0px #aaa) invert(1);
+}
+
+#mlh-trust-badge {
+  margin-top: 0px;
+  z-index: 999;
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  position: fixed;
+  right: 50px;
+  top: 28px;
+  width: 10%;
+}
+
+/* Desktop Icons */
+.windows {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* Desktop icons */
+.d-icon {
+  float: left;
+  height: 86px;
+  width: 86px;
+  text-align: center;
+  margin-left: 30px;
+  margin-top: 32px;
+  cursor: pointer;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 10pt;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  z-index: 5000;
+}
+
+.d-icon.focused {
+  color: white;
+  background-color: #8692a5;
+}
+.d-icon.focused .d-label {
+  background-color: #8692a5;
+}
+.d-icon.focused img {
+  opacity: 0.8;
+}
+
+.d-icon img {
+  height: 64px;
+  width: 64px;
+  margin-bottom: 10px;
+}
+
+.d-icon-about img {
+  background-color: white;
+}
+
+.d-label {
+  display: inline-block;
+  background-color: white;
+  width: 50px;
 }
 
 /*# sourceMappingURL=controller_styles.css.map */
