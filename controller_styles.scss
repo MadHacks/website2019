@@ -10,7 +10,12 @@ $d_icon_focus_color: #8692a5;
 $map_height: 600px;
 $map_width: 900px;
 
-$default_font: 'IBM Plex Mono', monospace;
+$chicago_font_stack: "Chicago", sans-serif;
+$header_font_stack: "Helvetica", "Helvetica Neue", Arial, sans-serif;
+$body_font_stack: 'IBM Plex Mono', 'Courier New', monospace;
+
+$theme_blue: #0A3E54;
+$theme_red: #da2e2e;
 
 @font-face {
     font-family: "Chicago";
@@ -18,7 +23,7 @@ $default_font: 'IBM Plex Mono', monospace;
 }
 
 body {
-	font-family: $default_font;
+	font-family: $body_font_stack;
 	margin: 0px;
 	padding: 0px;
 	background-color: #88E1E8;
@@ -140,8 +145,29 @@ body {
 }
   
 .mapboxgl-popup-content {
-	text-align: center;
-	font-family: 'Open Sans', sans-serif;
+	text-align: left;
+	h3 {
+		font-family: $header_font_stack;
+		font-style: italic;
+		margin-top: 3px;
+		margin-bottom: 3px;
+	}
+	p {
+		font-family: $body_font_stack;
+	}
+	box-shadow: $chrome_shadow_distance $chrome_shadow_distance 0px $chrome_shadow !important;
+	border-radius: 0px !important;
+	background-color: $theme_red !important;
+	color: white !important;
+}
+
+.mapboxgl-popup-tip {
+	display: none;
+}
+
+.mapboxgl-popup-close-button {
+	color: white !important;
+	font-size: 18px;
 }
 
 .menu {
@@ -152,7 +178,7 @@ body {
 	position: absolute;
 	display: inline-block;
 	z-index: 10;
-	font-family: "Chicago";
+	font-family: $chicago_font_stack;
 }
 
 #time {
@@ -167,7 +193,7 @@ body {
     overflow: hidden;
     background-color: white;
     color: #0A3E54;
-    font-family: "Chicago", Arial, Helvetica, sans-serif;
+    font-family: $chicago_font_stack;
     //font-smooth: never;
     -webkit-font-smoothing: antialiased;
     box-shadow: 0px $light_shadow_distance 0px $light_shadow;
@@ -224,7 +250,7 @@ body {
     text-decoration: none;
     display: block;
     text-align: left;
-    font-family: "Helvetica";
+    font-family: $header_font_stack;
     font-size: 12pt;
     font-style: italic;
 }

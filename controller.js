@@ -118,6 +118,10 @@ window.onload = function () {
 			evt.currentTarget.classList.remove("focused");
 			linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
 			linked_frame.classList.add("active");
+
+			// Fix map size
+			map.resize();
+
 			evt.stopPropagation();
 		});
 	}
@@ -191,7 +195,7 @@ window.onload = function () {
 	var map = new mapboxgl.Map({
 		container: "map",
 		style: "mapbox://styles/connorstamper/cjmh7cpqx9tgg2ro6qj0ocstn",
-		zoom: 15,
+		zoom: 13,
 		center: [-89.40331, 43.07108]
 	});
 
@@ -222,7 +226,7 @@ window.onload = function () {
 			.setLngLat(marker.geometry.coordinates)
 			.setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
 			.setHTML('<h3>' + marker.properties.title + '</h3><p>' + 
-				marker.properties.description + '</p>' + '<p>' + marker.properties.description2 + '</p>'))
+				marker.properties.description + '<br>' + marker.properties.description2 + '</p>'))
 			.addTo(map);
 	});
 
