@@ -6,7 +6,7 @@ window.onload = function() {
 	numWindows = document.querySelectorAll('.framed').length;
 	windowZs = []
 
-	function updateZ(evt) {
+	function updateZ(evt, manual) {
 		if (evt.data) {
 			elm = evt.data.sourceContainer;
 		}
@@ -100,7 +100,18 @@ window.onload = function() {
 	dicons = document.getElementsByClassName("d-icon");
 	for (d of dicons) {
 		d.addEventListener('click', (evt) => {
+			dicons = document.getElementsByClassName("d-icon");
+			for (d of dicons) {
+				d.classList.remove("focused");
+			}
 			evt.currentTarget.classList.add("focused");
+
+			// Fix map size
+			map.resize();
+
+			// Fix z ordering of frames
+			updateZ({'data': {'sourceContainer': document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0]}})
+
 			evt.stopPropagation();
 		});
 		d.addEventListener('dblclick', (evt) => {

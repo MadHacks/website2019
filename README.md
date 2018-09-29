@@ -9,7 +9,7 @@ Website for MadHacks 2019
 * ~~Add title bar (Stamper)~~
 * ~~Fix currently-dragging window z-index issue (Moss)~~
 * ~~Fix weird bug where window title gets dragged off screen, but everything else stays put (Moss)~~
-* Decide whether we want the weird floating title bug, or the ability to drag over the nav bar?
+* ~~Decide whether we want the weird floating title bug, or the ability to drag over the nav bar?~~ (the former, a fix would be nice though)
 * Assign starting positions and active/hidden status to each window
 * ~~"About" is acting weird -- why? (Moss)~~
 * Clicking close button doesn't always work -- why? (Moss)
@@ -23,6 +23,7 @@ Website for MadHacks 2019
 * Find appropriate desktop icons (Stamper)
 * Padding on frames, esp. Map (Stamper)
 * Maps -- remove text (Stamper)
+* Maps -- update marker (Stamper)
 
 ## Using SASS
 Installation:
