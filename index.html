@@ -162,8 +162,8 @@
 			</div>
 
 			<!-- content -->
-			<div style="flex: 1; flex-direction: row; display: flex; align-items: center; height: 100%; justify-content: space-between">
-				<div style="align-content: center; margin-left: 15px;">
+			
+				<div style="align-content: center; margin-left: 15px; flex: 1; position: fixed;">
 					<div class="sponsor-button " id="partner-btn" onclick="showPartners()">
 						<p class="sponsor-button-text">Partners</p>
 					</div>
@@ -172,15 +172,22 @@
 					</div>
 				</div>
 				<!-- Partners -->
-				<div style=" display: none; margin: 50px" id="partnerList">
-					<div style="justify-content: center">
+				<div style=" display: none; flex: 1; margin-left: 100px;" id="partnerList">
+					<div style="justify-content: center; display: flex; margin: 50px; ">
 						<img src="./img/partner_sponsor_logos/partners/wolfram.png" />
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center">
+						<div class="sponsor-item">
+							<p>Interested in partnering?
+								<a href="mailto:team@madhacks.io">Contact Us</a>
+							</p>
+						</div>
 					</div>
 
 				</div>
 
 				<!-- Sponsors -->
-				<div style="display: block; flex: 1" id="sponsorList">
+				<div style="display: block; flex: 1; margin-left: 100px;" id="sponsorList">
 					<div style="flex-direction: row; display: flex; justify-content: center">
 						<div class="sponsor-item">
 							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/jane_street_large.png" />
@@ -224,8 +231,14 @@
 							<img style="height: 60;" src="./img/partner_sponsor_logos/sponsors/warf_small.png" />
 						</div>
 					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; margin-top: 50px">
+						<div class="sponsor-item">
+							<p>Interested in sponsoring?
+								<a href="mailto:sponsorship@madhacks.io">Contact Us</a>
+							</p>
+						</div>
+					</div>
 				</div>
-			</div>
 		</div>
 
 		<!-- Schedule -->

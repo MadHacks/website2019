@@ -6,7 +6,7 @@ body {
   font-family: "IBM Plex Mono", "Courier New", monospace;
   margin: 0px;
   padding: 0px;
-  background-color: #88E1E8;
+  background-color: #0a3e54;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -36,9 +36,11 @@ body {
   font-family: "Helvetica Neue", "Helvetica", Arial;
   font-style: italic;
   margin-top: -21px;
+  position: fixed;
+  width: inherit;
   outline: none;
   box-shadow: none;
-  cursor: arrow;
+  cursor: pointer;
 }
 
 .framed .title_bar .close_button {
@@ -312,6 +314,8 @@ body {
   height: 64px;
   width: 64px;
   margin-bottom: 10px;
+  -webkit-filter: drop-shadow(4px 4px 0px #fff) invert(1);
+  filter: drop-shadow(4px 4px 0px #fff) invert(1);
 }
 
 .d-label {
@@ -323,6 +327,16 @@ body {
 .sponsors {
   height: 600px;
   width: 1000px;
+  overflow: scroll;
+}
+
+.sponsors a {
+  color: #0A3E54;
+  text-decoration: none;
+}
+
+.sponsors a:hover {
+  color: #da2e2e;
 }
 
 .sponsor-button {

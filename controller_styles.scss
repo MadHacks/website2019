@@ -26,7 +26,7 @@ body {
 	font-family: $body_font_stack;
 	margin: 0px;
 	padding: 0px;
-	background-color: #88E1E8;
+	background-color: #0a3e54;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -59,11 +59,13 @@ body {
 	font-family: $chrome_font;
 	font-style: italic;
 	margin-top: -2*$chrome_padding - 1;
+	position: fixed;
+	width: inherit;
 
 	outline: none;
 	box-shadow: none;
 
-	cursor: arrow;
+	cursor: pointer
 }
 
 .framed .title_bar .close_button {
@@ -337,6 +339,8 @@ body {
 	height: 64px;
 	width: 64px;
 	margin-bottom: 10px;
+	-webkit-filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #fff) invert(1);
+  	filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #fff) invert(1);
 }
 
  .d-label {
@@ -348,7 +352,18 @@ body {
 .sponsors {
 	height: 600px;
 	width: 1000px;
+	overflow: scroll;
 }
+
+.sponsors a {
+	color: #0A3E54;
+	text-decoration: none;
+}
+
+.sponsors a:hover {
+	color: #da2e2e
+}
+
 
 .sponsor-button {
 	width: 100px;
