@@ -196,6 +196,7 @@ body {
 .dropdown {
   float: left;
   overflow: hidden;
+  z-index: 1000;
 }
 
 .dropdown .dropbtn, .dropbtn2 {
@@ -241,7 +242,7 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: #f3a022;
 }
 
 .show {
@@ -292,7 +293,7 @@ body {
   font-size: 10pt;
   padding-top: 10px;
   padding-bottom: 10px;
-  z-index: 5000;
+  z-index: 1;
 }
 
 .d-icon.focused {

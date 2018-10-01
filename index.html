@@ -39,7 +39,7 @@
 					Unlike other hackathons, MadHacks is going to be putting emphasis on the wacky, the original, and the downright impossible!
 				</p>
 				<p>
-					Apply now under File > New Application
+					Apply now by clicking the Apply icon or under File > New Application
 				</p>
 			</div>
 
@@ -97,7 +97,8 @@
 					<button class="accordion">What else do I need to know?</button>
 					<div class="panel">
 						<p>Please review the
-							<a href="https://mlh.io/faq#code-of-conduct">MLH Code of Conduct</a>. Please also be aware that by attending this event, you agree to the MLH Data Sharing Notice and
+							<a href="https://mlh.io/faq#code-of-conduct">MLH Code of Conduct</a>. Please also be aware that by attending this event, you agree to the MLH Data Sharing Notice
+							and
 							<a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a>
 						</p>
 					</div>
@@ -159,15 +160,15 @@
 			<!-- content -->
 			<div style="flex: 1; flex-direction: row; display: flex; align-items: center; height: 100%; justify-content: space-between">
 				<div style="align-content: center; margin-left: 15px;">
-					<div class="sponsor-button active-button" id="partner-btn" onclick="showPartners()">
+					<div class="sponsor-button " id="partner-btn" onclick="showPartners()">
 						<p class="sponsor-button-text">Partners</p>
 					</div>
-					<div class="sponsor-button" id="sponsor-btn" onclick="showSponsors()">
+					<div class="sponsor-button active-button" id="sponsor-btn" onclick="showSponsors()">
 						<p class="sponsor-button-text">Sponsors</p>
 					</div>
 				</div>
 				<!-- Partners -->
-				<div style="margin: 50px" id="partnerList">
+				<div style=" display: none; margin: 50px" id="partnerList">
 					<div style="justify-content: center">
 						<img src="./img/partner_sponsor_logos/partners/wolfram.png" />
 					</div>
@@ -175,7 +176,7 @@
 				</div>
 
 				<!-- Sponsors -->
-				<div style="display: none; flex: 1" id="sponsorList">
+				<div style="display: block; flex: 1" id="sponsorList">
 					<div style="flex-direction: row; display: flex; justify-content: center">
 						<div class="sponsor-item">
 							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/jane_street_large.png" />
@@ -307,6 +308,21 @@
 
 		</div>
 
+		<!-- Map -->
+
+		<div class="framed apply">
+			<div class="title_bar">
+				Apply
+				<div class="close_button">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<div>
+				<iframe src="forms/application.html" style="height: 600; width: 1000"></iframe>
+			</div>
+		</div>
+
+
 		<!-- Top menu bar -->
 		<div class="navbar">
 			<a>MadHacks 2019</a>
@@ -339,25 +355,44 @@
 
 
 		<!-- Desktop Icons -->
-		<div class="d-icon d-icon-about" data-linked-frame="about">
-			<img src="img/about-icon.png">
-			<div class="d-label">About</div>
+		<div style="display: flex; flex-direction: row; position: absolute; z-index: 0;">
+			<div style="display: flex; flex-direction: column">
+				<div class="d-icon d-icon-about" data-linked-frame="about">
+					<img src="img/about-icon.png">
+					<div class="d-label">About</div>
+				</div>
+				<div class="d-icon d-icon-faq" data-linked-frame="faq">
+					<img src="img/faq-icon.png">
+					<div class="d-label">FAQ</div>
+				</div>
+				<div class="d-icon d-icon-map" data-linked-frame="map">
+					<img src="img/map-icon.png">
+					<div class="d-label">Map</div>
+				</div>
+			</div>
+			<div style="flex: 1; display: flex; flex-direction: column">
+				<div class="d-icon d-icon-sponsors" data-linked-frame="sponsors">
+					<img src="img/sponsors-icon.png">
+					<div class="d-label">Sponsors</div>
+				</div>
+				<div class="d-icon d-icon-schedule" data-linked-frame="schedule">
+					<img src="img/schedule-icon.png">
+					<div class="d-label">Schedule</div>
+				</div>
+				<div class="d-icon d-icon-apply" data-linked-frame="apply">
+					<img src="img/apply-icon.png">
+					<div class="d-label">Apply</div>
+				</div>
+			</div>
 		</div>
-		<div class="d-icon d-icon-faq" data-linked-frame="faq">
-			<img src="img/faq-icon.png">
-			<div class="d-label">FAQ</div>
-		</div>
-		<div class="d-icon d-icon-map" data-linked-frame="map">
-			<img src="img/map-icon.png">
-			<div class="d-label">Map</div>
-		</div>
-		<div class="d-icon d-icon-sponsors" data-linked-frame="sponsors">
-			<img src="img/sponsors-icon.png">
-			<div class="d-label">Sponsors</div>
-		</div>
-		<div class="d-icon d-icon-schedule" data-linked-frame="schedule">
-			<img src="img/schedule-icon.png">
-			<div class="d-label">Schedule</div>
+
+
+	</div>
+
+	<!-- Background Logo Image -->
+	<div style="display: flex; justify-content: center; height: 100%; align-items: center">
+		<div>
+			<img src="img/logo.png" alt="logo" style="height: 500px;">
 		</div>
 	</div>
 
