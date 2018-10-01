@@ -65,8 +65,17 @@ body {
   width: 800px;
   position: absolute;
   text-align: center;
-  height: 250px;
+  height: 300px;
   overflow: scroll;
+}
+
+.faq a {
+  color: #0A3E54;
+  text-decoration: none;
+}
+
+.faq a:hover {
+  color: #da2e2e;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
