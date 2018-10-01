@@ -1,203 +1,271 @@
 <html>
-	<head>
-		<title>MadHacks 2019</title>
-		<link rel="stylesheet" href="controller_styles.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
-		 crossorigin="anonymous">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
-		 crossorigin="anonymous">
-		<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
-		<script type="text/javascript" src="controller.js"></script>
-		<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js"></script>
-		<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
-	</head>
 
-	<a id="mlh-trust-badge"
-	 href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black"
-	 target="_blank">
-		<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season"
-		 style="width:100%">
-	</a>
+<head>
+	<title>MadHacks 2019</title>
+	<link rel="stylesheet" href="controller_styles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
+	 crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
+	<script type="text/javascript" src="controller.js"></script>
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js"></script>
+	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+</head>
 
-	<body>
-		<div class="windows">
-			<!-- Test -->
-			<div class="framed test active">
-				<div class="title_bar">
-					Test
-					<div class="close_button">
-						<i class="fas fa-times"></i>
-					</div>
+<a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black"
+ target="_blank">
+	<img src="https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-black.svg" alt="Major League Hacking 2019 Hackathon Season"
+	 style="width:100%">
+</a>
+
+<body>
+	<div class="windows">
+		<!-- About -->
+		<div class="framed about">
+			<div class="title_bar">
+				About
+				<div class="close_button">
+					<i class="fas fa-times"></i>
 				</div>
-				<h1>Hello!</h1>
 			</div>
-
-
-			<!-- About -->
-			<div class="framed about">
-				<div class="title_bar">
-					About
-					<div class="close_button">
-						<i class="fas fa-times"></i>
-					</div>
-				</div>
+			<div style="margin: 20px">
 				<p>
-					<h4 style="margin: 0;">Madhacks</h4> is the University of Wisconsin's twice-annual hackathon, bringing together participants from all over the
-					US for 24 hours of hacking.
+					<h4 style="margin: 0;">Madhacks</h4> is the University of Wisconsin's twice-annual hackathon, bringing together participants from all over
+					the US for 24 hours of hacking.
 				</p>
 				<p>
 					Unlike other hackathons, MadHacks is going to be putting emphasis on the wacky, the original, and the downright impossible!
 				</p>
 				<p>
-					<h4 style="margin: 0;">Madhacks</h4> is the University of Wisconsin's twice-annual hackathon, bringing together participants from all over the
-					US for 24 hours of hacking.
+					Apply now under File > New Application
 				</p>
+			</div>
+
+		</div>
+
+		<!-- FAQ -->
+		<div class="framed faq">
+			<div class="title_bar">
+				FAQ
+				<div class="close_button">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<button class="accordion">What’s a hackathon?</button>
+			<div class="panel">
+				<p>A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Spring 2018
+					will be a 12 hours hackathon. If this is your first time attending, check out our hackathon veteran Spencer’s medium
+					post on
+					<a href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" style="text-decoration: none;">How to Do Hackathons.</a>
+				</p>
+			</div>
+
+			<button class="accordion">Do I need a team?</button>
+			<div class="panel">
+				<p>We encourage students to work with a team of 2 - 4 people but you can work individually as well. If you don't have a
+					team yet, there will be a team formation after the opening ceremony. If you want to find a team before the event, join
+					the #team-formation slack channel.
+				</p>
+			</div>
+
+			<button class="accordion">Who can participate?</button>
+			<div class="panel">
+				<p>We welcome undergraduate and graduate students of all backgrounds. You don’t need to be a Computer Science or Engineering
+					major to attend. If you don't know how to code, we will have workshops throughout the day to teach you how!
+				</p>
+			</div>
+
+			<button class="accordion">What do I need to bring?</button>
+			<div class="panel">
+				<p>You need to bring a photo ID to check in. You should also bring a laptop, chargers, and anything else you will need for
+					a 24 hour hackathon.
+				</p>
+			</div>
+
+			<button class="accordion">How much does it cost to attend?</button>
+			<div class="panel">
+				<p>Admission to MadHacks is completely free. We will also be providing breakfast, lunch and dinner! There will also be workshops
+					and activities throughout the event.
+				</p>
+			</div>
+
+			<button class="accordion">What else do I need to know?</button>
+			<div class="panel">
+				<p>Please review the
+					<a href="">MLH Code of Conduct</a>. Please also be aware that by attending this event, you agree to the MLH Data Sharing Notice,
+					<a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a>
+					and the MLH Privacy Policy
+				</p>
+			</div>
+
+			<button class="accordion">Where and When?</button>
+			<div class="panel">
 				<p>
-					Unlike other hackathons, MadHacks is going to be putting emphasis on the wacky, the original, and the downright impossible!
+					TBA
 				</p>
 			</div>
 
-			<!-- FAQ -->
-			<div class="framed faq">
-				<div class="title_bar">
-					FAQ
-					<div class="close_button">
-						<i class="fas fa-times"></i>
-					</div>
-				</div>
-				<button class="accordion">What’s a hackathon?</button>
-				<div class="panel">
-					<p>A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Spring 2018
-						will be a 12 hours hackathon. If this is your first time attending, check out our hackathon veteran Spencer’s medium
-						post on
-						<a href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" style="text-decoration: none;">How to Do Hackathons.</a>
-					</p>
-				</div>
-
-				<button class="accordion">Do I need a team?</button>
-				<div class="panel">
-					<p>We encourage students to work with a team of 2 - 4 people but you can work individually as well. If you don't have a team
-						yet, there will be a team formation after the opening ceremony. If you want to find a team before the event, join the
-						#team-formation slack channel.
-					</p>
-				</div>
-
-				<button class="accordion">Who can participate?</button>
-				<div class="panel">
-					<p>We welcome undergraduate and graduate students of all backgrounds. You don’t need to be a Computer Science or Engineering
-						major to attend. If you don't know how to code, we will have workshops throughout the day to teach you how!
-					</p>
-				</div>
-
-				<button class="accordion">What do I need to bring?</button>
-				<div class="panel">
-					<p>You need to bring a photo ID to check in. You should also bring a laptop, chargers, and anything else you will need for
-						a 24 hour hackathon.
-					</p>
-				</div>
-
-				<button class="accordion">How much does it cost to attend?</button>
-				<div class="panel">
-					<p>Admission to MadHacks is completely free. We will also be providing breakfast, lunch and dinner! There will also be workshops
-						and activities throughout the event.
-					</p>
-				</div>
-
-				<button class="accordion">What else do I need to know?</button>
-				<div class="panel">
-					<p>Please review the
-						<a href="">MLH Code of Conduct</a>. Please also be aware that by attending this event, you agree to the MLH Data Sharing Notice,
-						<a href="https://github.com/MLH/mlh-policies/tree/master/prize-terms-and-conditions">MLH Contest Terms and Conditions</a>
-						and the MLH Privacy Policy
-					</p>
-				</div>
-
-				<button class="accordion">Where and When?</button>
-				<div class="panel">
-					<p>
-						TBA
-					</p>
-				</div>
-
-				<button class="accordion">Will there be any prizes?</button>
-				<div class="panel">
-					<p>
-						TBA
-					</p>
-				</div>
-
-				<button class="accordion">Still have questions?</button>
-				<div class="panel">
-					<p>
-						Feel free to <a href="https://madhacks-2018.typeform.com/to/NI8CP7">contact us</a>.
-					</p>
-				</div>
-
-				<button class="accordion">Still have questions?</button>
-				<div class="panel">
-					<p>
-						Feel free to
-						<a href="https://madhacks-2018.typeform.com/to/NI8CP7">contact us</a>.
-					</p>
-				</div>
+			<button class="accordion">Will there be any prizes?</button>
+			<div class="panel">
+				<p>
+					TBA
+				</p>
 			</div>
 
-			<!-- Map -->
-			<div class="framed map">
-				<div class="title_bar">
-					Map
-					<div class="close_button">
-						<i class="fas fa-times"></i>
-					</div>
-				</div>
-				<div id="map"></div>
-			</div>
-
-			<!-- Top menu bar -->
-			<div class="navbar">
-				<a>MadHacks 2019</a>
-				<div class="dropdown">
-					<button class="dropbtn" onclick="ddownFunction('fileDropdown', event)">File</button>
-					<div class="dropdown-content" id="fileDropdown">
-						<a href="forms/application.html" target="_blank">New Application...</a>
-						<a href="forms/mentors.html" target="_blank">New Mentor Application...</a>
-						<a href="forms/volunteers.html" target="_blank" id="last">New Sponsor Application...</a>
-					</div>
-				</div>
-				<a href="#">Edit</a>
-				<div class="dropdown">
-					<button class="dropbtn" onclick="ddownFunction('editDropdown', event)">View</button>
-					<div class="dropdown-content" id="editDropdown">
-						<a href="#">Link</a>
-						<a href="#">Link 2</a>
-						<a href="#" id="last">Link 3</a>
-					</div>
-				</div>
-				<div class="dropdown">
-					<button class="dropbtn2" onclick="ddownFunction('historyDropdown', event)">History</button>
-					<div class="dropdown-content" id="historyDropdown">
-						<a href="#">2018</a>
-						<a href="#">2017</a>
-						<a href="#" id="last">2016</a>
-					</div>
-				</div>
-				<div id="time"></div>
-			</div>
-
-			<!-- Desktop Icons -->
-			<div class="d-icon d-icon-about" data-linked-frame="about">
-				<img src="img/about_alt.png">
-				<div class="d-label">About</div>
-			</div>
-			<div class="d-icon d-icon-faq" data-linked-frame="faq">
-				<img src="img/faq_alt.png">
-				<div class="d-label">FAQ</div>
-			</div>
-			<div class="d-icon d-icon-faq" data-linked-frame="map">
-				<div class="d-label">Map</div>
+			<button class="accordion">Still have questions?</button>
+			<div class="panel">
+				<p>
+					Feel free to
+					<a href="https://madhacks-2018.typeform.com/to/NI8CP7">contact us</a>.
+				</p>
 			</div>
 		</div>
 
-	</body>
+		<!-- Map -->
+		<div class="framed map">
+			<div class="title_bar">
+				Map
+				<div class="close_button">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<div id="map"></div>
+		</div>
+
+		<!-- Sponsors -->
+		<div class="framed sponsors">
+			<div class="title_bar">
+				Sponsors
+				<div class="close_button">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+
+			<!-- content -->
+			<div style="flex: 1; flex-direction: row; display: flex; align-items: center; height: 100%; justify-content: space-between">
+				<div style="align-content: center; margin-left: 15px;">
+					<div class="sponsor-button active-button" id="partner-btn" onclick="showPartners()">
+						<p class="sponsor-button-text">Partners</p>
+					</div>
+					<div class="sponsor-button" id="sponsor-btn" onclick="showSponsors()">
+						<p class="sponsor-button-text">Sponsors</p>
+					</div>
+				</div>
+				<!-- Partners -->
+				<div style="margin: 50px" id="partnerList">
+					<div style="justify-content: center">
+						<img src="./img/partner_sponsor_logos/partners/wolfram.png" />
+					</div>
+
+				</div>
+
+				<!-- Sponsors -->
+				<div style="display: none; flex: 1" id="sponsorList">
+					<div style="flex-direction: row; display: flex; justify-content: center">
+						<div class="sponsor-item">
+							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/jane_street_large.png" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 65;" src="./img/partner_sponsor_logos/sponsors/bloomberg_medium.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 95;" src="./img/partner_sponsor_logos/sponsors/Capital_One_medium.png" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Epic_medium.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Singlewire_medium.jpg" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/5NINES-small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/balsamiq_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/Domino_small.png" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/kiio_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/perblue_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 60;" src="./img/partner_sponsor_logos/sponsors/warf_small.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Top menu bar -->
+		<div class="navbar">
+			<a>MadHacks 2019</a>
+			<div class="dropdown">
+				<button class="dropbtn" onclick="ddownFunction('fileDropdown', event)">File</button>
+				<div class="dropdown-content" id="fileDropdown">
+					<a href="forms/application.html" target="_blank">New Application...</a>
+					<a href="forms/mentors.html" target="_blank">New Mentor Application...</a>
+					<a href="forms/talks.html" target="_blank">New Speaker Application...</a>
+					<a href="forms/volunteers.html" target="_blank" id="last">New Sponsor Application...</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" onclick="ddownFunction('editDropdown', event)">View</button>
+				<div class="dropdown-content" id="editDropdown">
+					<a href="#">Link</a>
+					<a href="#">Link 2</a>
+					<a href="#" id="last">Link 3</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn2" onclick="ddownFunction('historyDropdown', event)">History</button>
+				<div class="dropdown-content" id="historyDropdown">
+					<a href="#">2018</a>
+					<a href="#">2017</a>
+					<a href="#" id="last">2016</a>
+				</div>
+			</div>
+			<a href="https://madhacks-2018.typeform.com/to/NI8CP7" target="_blank">Contact</a>
+			<div id="time"></div>
+		</div>
+
+
+		<!-- Desktop Icons -->
+		<div class="d-icon d-icon-about" data-linked-frame="about">
+			<img src="img/about-icon.png">
+			<div class="d-label">About</div>
+		</div>
+		<div class="d-icon d-icon-faq" data-linked-frame="faq">
+			<img src="img/faq-icon.png">
+			<div class="d-label">FAQ</div>
+		</div>
+		<div class="d-icon d-icon-map" data-linked-frame="map">
+			<img src="img/map-icon.png">
+			<div class="d-label">Map</div>
+		</div>
+		<div class="d-icon d-icon-sponsors" data-linked-frame="sponsors">
+			<img src="img/sponsors-icon.png">
+			<div class="d-label">Sponsors</div>
+		</div>
+		<div class="d-icon d-icon-schedule" data-linked-frame="schedule">
+			<img src="img/schedule-icon.png">
+			<div class="d-label">Schedule</div>
+		</div>
+	</div>
+
+</body>
+
 </html>

@@ -110,7 +110,7 @@ window.onload = function () {
 			map.resize();
 
 			// Fix z ordering of frames
-			updateZ({'data': {'sourceContainer': document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0]}})
+			updateZ({ 'data': { 'sourceContainer': document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0] } })
 
 			evt.stopPropagation();
 		});
@@ -225,8 +225,8 @@ window.onload = function () {
 		new mapboxgl.Marker(el)
 			.setLngLat(marker.geometry.coordinates)
 			.setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-			.setHTML('<h3>' + marker.properties.title + '</h3><p>' + 
-				marker.properties.description + '<br>' + marker.properties.description2 + '</p>'))
+				.setHTML('<h3>' + marker.properties.title + '</h3><p>' +
+					marker.properties.description + '<br>' + marker.properties.description2 + '</p>'))
 			.addTo(map);
 	});
 
@@ -270,3 +270,23 @@ function ddownFunction(id, evt) {
 	document.getElementById(id).classList.toggle("show");
 	evt.stopPropagation();
 }
+
+// handle sponsor buttons
+function showPartners() {
+	partnerBtn = document.getElementById('partner-btn');
+	partnerBtn.classList.toggle('active-button');
+	sponsorBtn = document.getElementById('sponsor-btn');
+	sponsorBtn.classList.toggle('active-button');
+	document.getElementById('partnerList').style.display = 'block';
+	document.getElementById('sponsorList').style.display = 'none';
+}
+
+function showSponsors() {
+	partnerBtn = document.getElementById('partner-btn');
+	partnerBtn.classList.toggle('active-button');
+	sponsorBtn = document.getElementById('sponsor-btn');
+	sponsorBtn.classList.toggle('active-button');
+	document.getElementById('partnerList').style.display = 'none';
+	document.getElementById('sponsorList').style.display = 'block';
+}
+

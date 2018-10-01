@@ -36,7 +36,6 @@ body {
 .framed {
 	position: absolute;
 	border: solid 6px $chrome_color;
-	padding: $chrome_padding;
 	padding-top: 2*$chrome_padding;
 	top: 64px;
 	left: 32px;
@@ -59,10 +58,7 @@ body {
 	color: white;
 	font-family: $chrome_font;
 	font-style: italic;
-
-	margin-left: -$chrome_padding - 1;
 	margin-top: -2*$chrome_padding - 1;
-	margin-right: -$chrome_padding - 1;
 
 	outline: none;
 	box-shadow: none;
@@ -187,7 +183,7 @@ body {
 
 #time {
 	padding: 5px 16px;
-	right: 50px;
+	right: 45px;
 	position: absolute;
 	color: #0A3E54;
 	margin-top: 5px;
@@ -232,7 +228,8 @@ body {
 }
 
 .dropbtn:focus, .dropbtn2:focus, .navbar a:focus {
-    background-color: #f3a022;
+	background-color: #0A3E54;
+	color: white;
 }
 
 .dropdown-content {
@@ -320,6 +317,7 @@ body {
 		background-color: $d_icon_focus_color;
 	}
 	img {
+		background-color: transparent;
 		opacity: 0.8;
 	}
 }
@@ -332,6 +330,29 @@ body {
 
  .d-label {
 	display: inline-block;
+	width: 75px;
 	background-color: white;
-	width: 50px;
+}
+
+.sponsors {
+	height: 600px;
+	width: 1000px;
+}
+
+.sponsor-button {
+	width: 100px;
+	cursor: pointer;
+}
+
+.sponsor-button-text {
+	padding: 5px 10px;
+	color: #0A3E54
+}
+
+.sponsor-item {
+	margin: 10px
+}
+
+.active-button {
+	background-color: #f3a022
 }
