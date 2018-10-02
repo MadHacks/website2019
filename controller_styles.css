@@ -19,7 +19,7 @@ body {
   padding-top: 20px;
   top: 64px;
   left: 32px;
-  box-shadow: 4px 4px 0px #555;
+  box-shadow: 4px 4px 0px #000;
   outline: none;
   background-color: white;
   display: none;
@@ -66,9 +66,12 @@ body {
 .faq {
   width: 800px;
   position: absolute;
-  text-align: center;
   height: 300px;
   overflow: scroll;
+}
+
+.faq p {
+  text-align: center;
 }
 
 .faq a {
@@ -89,6 +92,7 @@ body {
   border: none;
   outline: none;
   transition: 0.4s;
+  font-size: 18px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -131,7 +135,7 @@ body {
 
 .mapboxgl-popup-content {
   text-align: left;
-  box-shadow: 4px 4px 0px #555 !important;
+  box-shadow: 4px 4px 0px #000 !important;
   border-radius: 0px !important;
   background-color: #da2e2e !important;
   color: white !important;
@@ -182,7 +186,7 @@ body {
   color: #0A3E54;
   font-family: "Chicago", sans-serif;
   -webkit-font-smoothing: antialiased;
-  box-shadow: 0px 4px 0px #555;
+  box-shadow: 0px 4px 0px #000;
 }
 
 .navbar a {
@@ -224,7 +228,7 @@ body {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 4px 4px 0px #555;
+  box-shadow: 4px 4px 0px #000;
   z-index: 1;
 }
 
@@ -258,8 +262,8 @@ body {
 
 /* MLH Badge */
 #mlh-trust-badge img {
-  -webkit-filter: drop-shadow(4px 4px 0px #aaa) invert(1);
-  filter: drop-shadow(4px 4px 0px #aaa) invert(1);
+  -webkit-filter: drop-shadow(4px 4px 0px #000) invert(1);
+  filter: drop-shadow(4px 4px 0px #fff) invert(1);
 }
 
 #mlh-trust-badge {

@@ -1,8 +1,7 @@
 $chrome_color: #da2e2e;
 $chrome_font: "Helvetica Neue", "Helvetica", Arial;
 $chrome_padding: 10px;
-$chrome_shadow: #555;
-$light_shadow: #555;
+$chrome_shadow: #000;
 $chrome_shadow_distance: 4px;
 $light_shadow_distance: 4px;
 $width: 400px;
@@ -91,9 +90,12 @@ body {
 .faq {
 	width: 800px;
 	position: absolute;
-	text-align: center;
 	height: 300px;
 	overflow: scroll;
+}
+
+.faq p {
+	text-align: center;
 }
 
 .faq a {
@@ -114,6 +116,7 @@ body {
 	border: none;
 	outline: none;
 	transition: 0.4s;
+	font-size: 18px;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -208,7 +211,7 @@ body {
     font-family: $chicago_font_stack;
     //font-smooth: never;
     -webkit-font-smoothing: antialiased;
-	box-shadow: 0px $light_shadow_distance 0px $light_shadow;
+	box-shadow: 0px $light_shadow_distance 0px $chrome_shadow;
 }
 
 .navbar a {
@@ -284,8 +287,8 @@ body {
 
 /* MLH Badge */
 #mlh-trust-badge img {
-	-webkit-filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #aaa) invert(1);
-  	filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #aaa) invert(1);
+	-webkit-filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #000) invert(1);
+  	filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #fff) invert(1);
 }
 
 #mlh-trust-badge {

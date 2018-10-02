@@ -116,14 +116,24 @@ window.onload = function () {
 		});
 		d.addEventListener('dblclick', (evt) => {
 			evt.currentTarget.classList.remove("focused");
-			linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
-			linked_frame.classList.add("active");
-
+			//if apply icon open link in new window/tab
+			if(evt.currentTarget.dataset.linkedFrame === 'apply') {
+				openInNewTab('forms/application.html')
+			} else {
+				linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
+				linked_frame.classList.add("active");
+			}
+	
 			// Fix map size
 			map.resize();
 
 			evt.stopPropagation();
 		});
+	}
+
+	function openInNewTab(url) {
+		var win = window.open(url, '_blank');
+		win.focus();
 	}
 
 
