@@ -20,6 +20,8 @@ $theme_orange: #f3a022;
 
 $d_icon_focus_color: $theme_orange;
 
+$navbar_color: #000000;
+
 @font-face {
     font-family: "Chicago";
     src: url("fonts/chicago.otf") format("opentype");
@@ -80,6 +82,13 @@ body {
 	margin-top: 4px;
 	margin-right: -4px;
 	cursor: pointer;
+}
+
+.sponsors {
+	.frame_contents {
+		overflow: scroll;
+		height: 600px;
+	}
 }
 
 /* Draggable quirk fix */
@@ -202,16 +211,15 @@ body {
 
 #time {
 	padding: 5px 16px;
-	right: 45px;
+	right: 0;
 	position: absolute;
-	color: $theme_blue;
+	color: $navbar_color;
 	margin-top: 5px;
 }
 
 .navbar {
     overflow: hidden;
     background-color: white;
-    color: $theme_blue;
     font-family: $chicago_font_stack;
     //font-smooth: never;
     -webkit-font-smoothing: antialiased;
@@ -225,11 +233,11 @@ body {
     padding: 5px 16px;
     padding-top: 10px;
     text-decoration: none;
-    color: $theme_blue;
+    color: $navbar_color;
 }
 
 .navbar a:visited {
-	color: $theme_blue;
+	color: $navbar_color;
 }
 
 .dropdown {
@@ -243,7 +251,7 @@ body {
     font-size: 16px;    
     border: none;
     outline: none;
-    color: $theme_blue;
+    color: $navbar_color;
     padding: 5px 16px;
     padding-top: 10px;
     background-color: inherit;
@@ -253,13 +261,14 @@ body {
 
 .dropbtn:focus, .dropbtn2:focus, .navbar a:focus {
 	background-color: $theme_orange;
-	color: $theme_blue;
+	color: $navbar_color;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #ddd;
+    color: white;
     min-width: 160px;
     box-shadow: $chrome_shadow_distance  $chrome_shadow_distance 0px $chrome_shadow;
     z-index: 1;
@@ -267,7 +276,7 @@ body {
 
 .dropdown-content a {
     float: none;
-    color: black;
+    color: black !important;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 16px;
@@ -282,6 +291,8 @@ body {
 
 .dropdown-content a:hover {
     background-color: $theme_orange;
+    color: $navbar_color !important;
+    cursor: pointer;
 }
 
 .show {
@@ -306,7 +317,7 @@ body {
 	max-width:100px;
 	min-width:60px;
 	position:fixed;
-	right:50px;
+	right: 64px;
 	top:28px;
 	width:10%;
 }
@@ -365,7 +376,6 @@ body {
 .sponsors {
 	height: 600px;
 	width: 1000px;
-	overflow: scroll;
 }
 
 .sponsors a {
@@ -376,7 +386,6 @@ body {
 .sponsors a:hover {
 	color: $theme_red
 }
-
 
 .sponsor-button {
 	width: 100px;
@@ -397,6 +406,19 @@ body {
 }
 
 .schedule {
-	height: 600px;
 	width: 900px;
+	padding-bottom: 25px;
+
+	h2 {
+		margin-bottom: 3px;
+	}
+
+	h4 {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+
+	p {
+		margin-bottom: 5px;
+	}
 }

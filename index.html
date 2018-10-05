@@ -2,6 +2,8 @@
 
 <head>
 	<title>MadHacks 2019</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="icon" type="image/png" href="img/logo.png" />
 	<link rel="stylesheet" href="controller_styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
 	 crossorigin="anonymous">
@@ -12,7 +14,6 @@
 	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js"></script>
 	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,400,700" rel="stylesheet">
-	<link rel="icon" type="image/png" href="img/favicon.ico" />
 </head>
 
 <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black"
@@ -167,80 +168,81 @@
 			</div>
 
 			<!-- content -->
+			<div class="frame_contents">
+				<div style="align-content: center; margin-left: 15px; flex: 1; position: fixed;">
+					<div class="sponsor-button " id="partner-btn" onclick="showPartners()">
+						<p class="sponsor-button-text">Partners</p>
+					</div>
+					<div class="sponsor-button active-button" id="sponsor-btn" onclick="showSponsors()">
+						<p class="sponsor-button-text">Sponsors</p>
+					</div>
+				</div>
+				<!-- Partners -->
+				<div style=" display: none; flex: 1; margin-left: 100px;" id="partnerList">
+					<div style="justify-content: center; display: flex; margin: 50px; ">
+						<img src="./img/partner_sponsor_logos/partners/wolfram.png" />
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center">
+						<div class="sponsor-item">
+							<p>Interested in partnering?
+								<a href="mailto:team@madhacks.io">Contact Us</a>
+							</p>
+						</div>
+					</div>
 
-			<div style="align-content: center; margin-left: 15px; flex: 1; position: fixed;">
-				<div class="sponsor-button " id="partner-btn" onclick="showPartners()">
-					<p class="sponsor-button-text">Partners</p>
-				</div>
-				<div class="sponsor-button active-button" id="sponsor-btn" onclick="showSponsors()">
-					<p class="sponsor-button-text">Sponsors</p>
-				</div>
-			</div>
-			<!-- Partners -->
-			<div style=" display: none; flex: 1; margin-left: 100px;" id="partnerList">
-				<div style="justify-content: center; display: flex; margin: 50px; ">
-					<img src="./img/partner_sponsor_logos/partners/wolfram.png" />
-				</div>
-				<div style="flex-direction: row; display: flex; justify-content: center">
-					<div class="sponsor-item">
-						<p>Interested in partnering?
-							<a href="mailto:team@madhacks.io">Contact Us</a>
-						</p>
-					</div>
 				</div>
 
-			</div>
-
-			<!-- Sponsors -->
-			<div style="display: block; flex: 1; margin-left: 100px;" id="sponsorList">
-				<div style="flex-direction: row; display: flex; justify-content: center">
-					<div class="sponsor-item">
-						<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/jane_street_large.png" />
+				<!-- Sponsors -->
+				<div style="display: block; flex: 1; margin-left: 100px;" id="sponsorList">
+					<div style="flex-direction: row; display: flex; justify-content: center">
+						<div class="sponsor-item">
+							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/jane_street_large.png" />
+						</div>
 					</div>
-				</div>
-				<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
-					<div class="sponsor-item">
-						<img style="height: 65;" src="./img/partner_sponsor_logos/sponsors/bloomberg_medium.png" />
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 65;" src="./img/partner_sponsor_logos/sponsors/bloomberg_medium.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 95;" src="./img/partner_sponsor_logos/sponsors/Capital_One_medium.png" />
+						</div>
 					</div>
-					<div class="sponsor-item">
-						<img style="height: 95;" src="./img/partner_sponsor_logos/sponsors/Capital_One_medium.png" />
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Epic_medium.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Singlewire_medium.jpg" />
+						</div>
 					</div>
-				</div>
-				<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
-					<div class="sponsor-item">
-						<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Epic_medium.png" />
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/5NINES-small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/balsamiq_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/Domino_small.png" />
+						</div>
 					</div>
-					<div class="sponsor-item">
-						<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Singlewire_medium.jpg" />
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/kiio_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/perblue_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 60;" src="./img/partner_sponsor_logos/sponsors/warf_small.png" />
+						</div>
 					</div>
-				</div>
-				<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
-					<div class="sponsor-item">
-						<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/5NINES-small.png" />
-					</div>
-					<div class="sponsor-item">
-						<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/balsamiq_small.png" />
-					</div>
-					<div class="sponsor-item">
-						<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/Domino_small.png" />
-					</div>
-				</div>
-				<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
-					<div class="sponsor-item">
-						<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/kiio_small.png" />
-					</div>
-					<div class="sponsor-item">
-						<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/perblue_small.png" />
-					</div>
-					<div class="sponsor-item">
-						<img style="height: 60;" src="./img/partner_sponsor_logos/sponsors/warf_small.png" />
-					</div>
-				</div>
-				<div style="flex-direction: row; display: flex; justify-content: center; margin-top: 50px">
-					<div class="sponsor-item">
-						<p>Interested in sponsoring?
-							<a href="mailto:sponsorship@madhacks.io">Contact Us</a>
-						</p>
+					<div style="flex-direction: row; display: flex; justify-content: center; margin-top: 50px">
+						<div class="sponsor-item">
+							<p>Interested in sponsoring?
+								<a href="mailto:sponsorship@madhacks.io">Contact Us</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -254,8 +256,8 @@
 					<i class="fas fa-times"></i>
 				</div>
 			</div>
-			<div style="flex: 1; flex-direction: row; display: flex; text-align: center">
-				<div style="flex: 1; justify-content: center; padding-left: 50px; padding-right: 50px; height: 100%;">
+			<div style="flex: 1; flex-direction: row; display: flex;">
+				<div style="flex: 1; justify-content: center; padding-left: 50px; padding-right: 50px; height: 100%; text-align: left">
 					<h2>Saturday</h2>
 					<h4>November 10th</h4>
 					<div style="flex-direction: row; display: flex; justify-content: space-between;">
@@ -295,7 +297,7 @@
 						<p>Sleeping Rooms Open</p>
 					</div>
 				</div>
-				<div style="flex: 1; justify-content: center; margin-left: 50px; margin-right: 50px">
+				<div style="flex: 1; justify-content: center; margin-left: 50px; margin-right: 50px; text-align: left">
 					<h2>Sunday</h2>
 					<h4>November 11th</h4>
 					<div style="flex-direction: row; display: flex; justify-content: space-between;">
