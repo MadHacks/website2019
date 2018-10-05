@@ -107,10 +107,6 @@ body {
 	overflow: scroll;
 }
 
-.faq p {
-	text-align: center;
-}
-
 .faq a {
 	color: $theme_blue;
 	text-decoration: none;
@@ -421,4 +417,34 @@ body {
 	p {
 		margin-bottom: 5px;
 	}
+}
+
+.faq-button {
+	margin: 5px;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+
+	p {
+		margin: 0px
+	}
+
+	i {
+		padding-left: 5px;
+	}
+}
+
+.faq-button:hover {
+	background-color: $theme_orange
+}
+
+.faqActive {
+	background-color: $theme_orange
+}
+
+#faqTarget {
+	text-align: left;
+	padding: 10px 20px;
 }
