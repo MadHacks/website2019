@@ -51,6 +51,7 @@ window.onload = function () {
 
 		if (relative_x > evt.data.sourceContainer.offsetWidth - 20) {
 			evt.data.sourceContainer.classList.remove("active");
+			evt.data.sourceContainer.classList.remove("default_window");
 		}
 	});
 	draggable.on('drag:move', (evt) => {
