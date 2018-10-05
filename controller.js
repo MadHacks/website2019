@@ -74,6 +74,7 @@ window.onload = function () {
 		}
 	});
 	draggable.on('drag:stop', (evt) => {
+		/* Removed to allow for smaller screen sizes
 		frame = evt.data.sourceContainer;
 		w = frame.offsetWidth;
 		h = frame.offsetHeight;
@@ -92,6 +93,7 @@ window.onload = function () {
 		else if (t + h > window.innerHeight) {
 			frame.style.top = window.innerHeight - h - 1;
 		}
+		*/
 	});
 
 	/* 
@@ -117,11 +119,13 @@ window.onload = function () {
 		d.addEventListener('dblclick', (evt) => {
 			evt.currentTarget.classList.remove("focused");
 			//if apply icon open link in new window/tab
-			if(evt.currentTarget.dataset.linkedFrame === 'apply') {
+			if (evt.currentTarget.dataset.linkedFrame === 'apply') {
 				openInNewTab('forms/application.html')
 			} else {
 				linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
 				linked_frame.classList.add("active");
+				linked_frame.offsetLeft = 32
+				linked_frame.offsetTop = 64
 			}
 	
 			// Fix map size

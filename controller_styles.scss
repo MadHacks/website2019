@@ -1,11 +1,12 @@
 $chrome_color: #da2e2e;
 $chrome_font: "Helvetica Neue", "Helvetica", Arial;
 $chrome_padding: 10px;
+
 $chrome_shadow: #000;
 $chrome_shadow_distance: 4px;
-$light_shadow_distance: 4px;
+
 $width: 400px;
-$d_icon_focus_color: #8692a5;
+
 $map_height: 600px;
 $map_width: 900px;
 
@@ -13,8 +14,11 @@ $chicago_font_stack: "Chicago", sans-serif;
 $header_font_stack: "Helvetica", "Helvetica Neue", Arial, sans-serif;
 $body_font_stack: 'IBM Plex Mono', 'Courier New', monospace;
 
-$theme_blue: #0A3E54;
+$theme_blue: #0a3e54;
 $theme_red: #da2e2e;
+$theme_orange: #f3a022;
+
+$d_icon_focus_color: $theme_orange;
 
 @font-face {
     font-family: "Chicago";
@@ -25,7 +29,7 @@ body {
 	font-family: $body_font_stack;
 	margin: 0px;
 	padding: 0px;
-	background-color: #0a3e54;
+	background-color: $theme_blue;
 	position: fixed;
 	width: 100%;
 	height: 100%;
@@ -99,12 +103,12 @@ body {
 }
 
 .faq a {
-	color: #0A3E54;
+	color: $theme_blue;
 	text-decoration: none;
 }
 
 .faq a:hover {
-	color: #da2e2e
+	color: $theme_red
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -121,7 +125,7 @@ body {
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .activate, .accordion:hover {
-  background-color: #f3a022;
+  background-color: $theme_orange;
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -149,8 +153,8 @@ body {
 	height: 50px;
 	border-radius: 50%;
 	cursor: pointer;
-	filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #aaa);
-	-webkit-filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #aaa);
+	filter: drop-shadow($chrome_shadow_distance $chrome_shadow_distance 0px #aaa);
+	-webkit-filter: drop-shadow($chrome_shadow_distance $chrome_shadow_distance 0px #aaa);
 }
 
 .mapboxgl-popup {
@@ -200,18 +204,18 @@ body {
 	padding: 5px 16px;
 	right: 45px;
 	position: absolute;
-	color: #0A3E54;
+	color: $theme_blue;
 	margin-top: 5px;
 }
 
 .navbar {
     overflow: hidden;
     background-color: white;
-    color: #0A3E54;
+    color: $theme_blue;
     font-family: $chicago_font_stack;
     //font-smooth: never;
     -webkit-font-smoothing: antialiased;
-	box-shadow: 0px $light_shadow_distance 0px $chrome_shadow;
+	box-shadow: 0px $chrome_shadow_distance 0px $chrome_shadow;
 }
 
 .navbar a {
@@ -221,7 +225,11 @@ body {
     padding: 5px 16px;
     padding-top: 10px;
     text-decoration: none;
-    color: #0A3E54;
+    color: $theme_blue;
+}
+
+.navbar a:visited {
+	color: $theme_blue;
 }
 
 .dropdown {
@@ -235,7 +243,7 @@ body {
     font-size: 16px;    
     border: none;
     outline: none;
-    color: #0A3E54;
+    color: $theme_blue;
     padding: 5px 16px;
     padding-top: 10px;
     background-color: inherit;
@@ -244,8 +252,8 @@ body {
 }
 
 .dropbtn:focus, .dropbtn2:focus, .navbar a:focus {
-	background-color: #0A3E54;
-	color: white;
+	background-color: $theme_orange;
+	color: $theme_blue;
 }
 
 .dropdown-content {
@@ -253,7 +261,7 @@ body {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: $light_shadow_distance  $light_shadow_distance 0px $chrome_shadow;
+    box-shadow: $chrome_shadow_distance  $chrome_shadow_distance 0px $chrome_shadow;
     z-index: 1;
 }
 
@@ -273,7 +281,7 @@ body {
 }
 
 .dropdown-content a:hover {
-    background-color: #f3a022;
+    background-color: $theme_orange;
 }
 
 .show {
@@ -287,8 +295,8 @@ body {
 
 /* MLH Badge */
 #mlh-trust-badge img {
-	-webkit-filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #000) invert(1);
-  	filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #fff) invert(1);
+	-webkit-filter: drop-shadow($chrome_shadow_distance $chrome_shadow_distance 0px #000) invert(1);
+  	filter: drop-shadow($chrome_shadow_distance $chrome_shadow_distance 0px #fff) invert(1);
 }
 
 #mlh-trust-badge {
@@ -331,6 +339,7 @@ body {
 	background-color: $d_icon_focus_color;
 	.d-label {
 		background-color: $d_icon_focus_color;
+		color: $theme_blue;
 	}
 	img {
 		background-color: transparent;
@@ -342,8 +351,9 @@ body {
 	height: 64px;
 	width: 64px;
 	margin-bottom: 10px;
-	-webkit-filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #fff) invert(1);
-  	filter: drop-shadow($light_shadow_distance $light_shadow_distance 0px #fff) invert(1);
+	-webkit-filter: drop-shadow($chrome_shadow_distance $chrome_shadow_distance 0px #fff) invert(1);
+  	filter: drop-shadow($chrome_shadow_distance $chrome_shadow_distance 0px #fff) invert(1);
+  	image-rendering: pixelated;
 }
 
  .d-label {
@@ -359,12 +369,12 @@ body {
 }
 
 .sponsors a {
-	color: #0A3E54;
+	color: $theme_blue;
 	text-decoration: none;
 }
 
 .sponsors a:hover {
-	color: #da2e2e
+	color: $theme_red
 }
 
 
@@ -375,7 +385,7 @@ body {
 
 .sponsor-button-text {
 	padding: 5px 10px;
-	color: #0A3E54
+	color: $theme_blue
 }
 
 .sponsor-item {
@@ -383,7 +393,7 @@ body {
 }
 
 .active-button {
-	background-color: #f3a022
+	background-color: $theme_orange
 }
 
 .schedule {
