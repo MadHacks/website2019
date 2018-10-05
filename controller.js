@@ -308,3 +308,18 @@ function showSponsors() {
 	document.getElementById('sponsorList').style.display = 'block';
 }
 
+
+function faqButtonClick(el) {
+	faqButtons = document.getElementsByClassName('faq-button');
+	faqTarget = document.getElementById('faqTarget')
+	console.log(faqButtons.length)
+	for(i = 0; i< faqButtons.length; i++) {
+		if(faqButtons[i] !== el) {
+			faqButtons[i].classList.remove('faqActive')
+		}
+	}
+	el.classList.add('faqActive')
+	var content = el.querySelector('#faqContent').innerHTML
+	faqTarget.innerHTML = content;
+
+}
