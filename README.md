@@ -8,12 +8,13 @@ Website for MadHacks 2019
 * ~~Scroll bars interfere with close button~~
 * ~~Sponsors page gets jumpy occasionally~~
 * Reformat FAQ
-* Fix title bar on Apply window
+* ~~Fix title bar on Apply window~~
 * View->The Team window
 * ~~Favicon doesn't work on some browsers~~ (Still weird on Brave, fix this when we check browser compatibility)
 * Scale down desktop icons, reupload (so browser isn't downloading them at full size then rescaling client side)
 * Add title bar icons to far right: bluetooth, volume, wifi, battery, flux
 * ~~Fix sponsor formatting~~
+* Move inline styles outline
 
 ### Window manager framework
 * ~~Fix bug where you can move windows off the screen (Moss)~~
@@ -33,7 +34,7 @@ Website for MadHacks 2019
 * ~~change history links when past websites are hosted, otherwise remove them~~
 * add a page for the team if desired, otherwise remove
 
-### Style
+### style
 * ~~Theme the css according to the style guide (Stamper)~~
 * ~~Find body font (Stamper)~~
 * ~~Find appropriate desktop icons (Stamper)~~

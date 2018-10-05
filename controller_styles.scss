@@ -5,8 +5,6 @@ $chrome_padding: 10px;
 $chrome_shadow: #000;
 $chrome_shadow_distance: 4px;
 
-$width: 400px;
-
 $map_height: 600px;
 $map_width: 900px;
 
@@ -97,7 +95,7 @@ body {
 }
 
 .about {
-	width: $width
+	width: 600px;
 }
 
 .faq {
@@ -406,10 +404,13 @@ body {
 }
 
 .schedule {
-	width: 900px;
-	padding-bottom: 25px;
+	width: 800px;
+	.framed_contents {
+		padding: 10px;
+	}
 
 	h2 {
+		margin-top: 10px;
 		margin-bottom: 3px;
 	}
 

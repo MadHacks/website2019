@@ -124,8 +124,9 @@ window.onload = function () {
 			} else {
 				linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
 				linked_frame.classList.add("active");
-				linked_frame.offsetLeft = 32
-				linked_frame.offsetTop = 64
+				linked_frame.style.left = 32
+				linked_frame.style.top  = 64
+				console.log(linked_frame.offsetLeft)
 			}
 	
 			// Fix map size
@@ -238,9 +239,12 @@ window.onload = function () {
 		// make a marker for each feature and add to the map
 		new mapboxgl.Marker(el)
 			.setLngLat(marker.geometry.coordinates)
-			.setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-				.setHTML('<h3>' + marker.properties.title + '</h3><p>' +
-					marker.properties.description + '<br>' + marker.properties.description2 + '</p>'))
+			.addTo(map);
+
+		new mapboxgl.Popup({closeOnClick: false})
+			.setLngLat([-89.40355468309329, 43.074])
+			.setHTML('<h3>' + marker.properties.title + '</h3><p>' +
+					marker.properties.description + '<br>' + marker.properties.description2 + '</p>')
 			.addTo(map);
 	});
 
