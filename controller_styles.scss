@@ -40,8 +40,6 @@ body {
 	position: absolute;
 	border: solid 6px $chrome_color;
 	padding-top: 2*$chrome_padding;
-	top: 64px;
-	left: 32px;
 
 	box-shadow: $chrome_shadow_distance $chrome_shadow_distance 0px $chrome_shadow;
 
@@ -96,6 +94,13 @@ body {
 
 .about {
 	width: 600px;
+	height: auto;
+}
+
+.default_window {
+	bottom: 32px;
+	right: 32px;
+	display: block;
 }
 
 .faq {

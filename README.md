@@ -15,6 +15,8 @@ Website for MadHacks 2019
 * Add title bar icons to far right: bluetooth, volume, wifi, battery, flux
 * ~~Fix sponsor formatting~~
 * Move inline styles outline
+* Add prize information to the FAQ
+* ~~About -- have about open to the bottom right~~
 
 ### Window manager framework
 * ~~Fix bug where you can move windows off the screen (Moss)~~
@@ -27,7 +29,7 @@ Website for MadHacks 2019
 * ~~"About" is acting weird -- why? (Moss)~~
 * ~~Clicking close button doesn't always work -- why? (Moss)~~
 * ~~Allow for windows to edge off screen to allow for smaller screen sizes~~
-* Force window back to original position when icon is re-double clicked
+* ~~Force window back to original position when icon is re-double clicked~~
 
 ### Content
 * ~~Add rest of the windows, barebones content (Stamper)~~

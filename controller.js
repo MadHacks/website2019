@@ -124,6 +124,7 @@ window.onload = function () {
 			} else {
 				linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
 				linked_frame.classList.add("active");
+				linked_frame.classList.remove("default_window")
 				linked_frame.style.left = 32
 				linked_frame.style.top  = 64
 				console.log(linked_frame.offsetLeft)
