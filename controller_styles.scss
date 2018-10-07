@@ -92,6 +92,10 @@ body {
 	display: none;
 }
 
+.draggable-mirror {
+	display: none;
+}
+
 .about {
 	width: 600px;
 	height: auto;
@@ -453,4 +457,11 @@ body {
 #faqTarget {
 	text-align: left;
 	padding: 10px 20px;
+}
+
+/* Mobile site */
+@media (max-width:801px) {
+	body {
+		background-color: white;
+	}
 }

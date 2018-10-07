@@ -17,6 +17,8 @@ Website for MadHacks 2019
 * Move inline styles outline
 * Add prize information to the FAQ
 * ~~About -- have about open to the bottom right~~
+* Sponsor window left pane toggles, should do something clever-er
+* Fix about page bug where dragging before doing anything else keeps it stuck to the bottom
 
 ### Window manager framework
 * ~~Fix bug where you can move windows off the screen (Moss)~~
