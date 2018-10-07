@@ -20,8 +20,8 @@ $d_icon_focus_color: $theme_orange;
 
 $navbar_color: #000000;
 
-$default_cursor: url('img/def_cursor.png'), auto;
-$pointer_cursor: url('img/pointer_cursor.png'), auto;
+$default_cursor: url('img/def_cursor_small.png') 5 5, default;
+$pointer_cursor: url('img/pointer_cursor_alt_small.png') 10 5, pointer;
 
 @font-face {
     font-family: "Chicago";
@@ -125,6 +125,7 @@ a {
 .faq a {
 	color: $theme_blue;
 	text-decoration: none;
+	font-weight: 700;
 }
 
 .faq a:hover {
@@ -222,8 +223,7 @@ a {
 
 #time {
 	padding: 5px 16px;
-	right: 0;
-	position: absolute;
+	float: right;
 	color: $navbar_color;
 	margin-top: 5px;
 }
@@ -235,6 +235,15 @@ a {
     //font-smooth: never;
     -webkit-font-smoothing: antialiased;
 	box-shadow: 0px $chrome_shadow_distance 0px $chrome_shadow;
+}
+
+.navbar_icons {
+	float: right;
+	margin-top: 8px;
+	i {
+		margin-left: 10px;
+		color: #999;
+	}
 }
 
 .navbar a {

@@ -58,9 +58,11 @@ if (window.innerWidth > 801) {
 					evt.data.sourceContainer.classList.remove("default_window");
 				}
 
-				// About-window specific behaviour
-				evt.data.sourceContainer.classList.add("active")
-				evt.data.sourceContainer.classList.remove("default_window");
+				else {
+					// About-window specific behaviour
+					evt.data.sourceContainer.classList.add("active")
+					evt.data.sourceContainer.classList.remove("default_window");
+				}
 				
 			});
 			draggable.on('drag:move', (evt) => {
