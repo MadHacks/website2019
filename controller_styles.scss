@@ -462,6 +462,59 @@ body {
 /* Mobile site */
 @media (max-width:801px) {
 	body {
-		background-color: white;
+		
+		margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: $theme_blue;
+  font-family: "Avenir Next", "Avenir", sans-serif;
 	}
+
+.mobile-nav {
+	width: 100%;
+	background-color: white;
+	height: 40px;
+	position: absolute;
+	top: 0px;
+	button {
+		outline: none;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.side-drawer {
+	height: 100%;
+	z-index: 100;
+	position: fixed;
+	width: 40%;
+	top: 40px;
+	background-color:$theme_red;
+	display: none;
+	
+}
+
+.nav-category {
+	margin: 10px;
+}
+
+.open {
+	display: block;
+}
+
+.navbar {
+	display: none;
+}
+
+#mlh-trust-badge {
+	display: none;
+}
+
+.d-icon {
+	display: none;
+}
 }

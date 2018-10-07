@@ -14,6 +14,7 @@
 	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.js"></script>
 	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,400,700" rel="stylesheet">
+	<link href="./hamburger.css" rel="stylesheet">
 </head>
 
 <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black"
@@ -25,7 +26,7 @@
 <body>
 	<div class="windows">
 		<!-- About -->
-		<div class="framed about default_window">
+		<div class="framed about">
 			<div class="title_bar">
 				About
 				<div class="close_button">
@@ -41,7 +42,8 @@
 					Unlike other hackathons, MadHacks is going to be putting emphasis on the wacky, the original, and the downright impossible!
 				</p>
 				<p>
-					<h4 style="font-weight: 700; margin-bottom: 5px">Logistics</h4> Madhacks 2019 will take place on November 10-11, 2018 at 1025 W Johnson St, in Madison, WI.  Look forward to seeing you all there!
+					<h4 style="font-weight: 700; margin-bottom: 5px">Logistics</h4> Madhacks 2019 will take place on November 10-11, 2018 at 1025 W Johnson St, in Madison, WI. Look forward
+					to seeing you all there!
 				</p>
 				<p>
 					Apply now by clicking the Apply icon, or under File > New Application.
@@ -183,11 +185,11 @@
 			<!-- content -->
 			<div class="frame_contents">
 				<div style="align-content: center; margin-left: 15px; flex: 1; position: fixed;">
-					<div class="sponsor-button " id="partner-btn" onclick="showPartners()">
-						<p class="sponsor-button-text">Partners</p>
-					</div>
 					<div class="sponsor-button active-button" id="sponsor-btn" onclick="showSponsors()">
 						<p class="sponsor-button-text">Sponsors</p>
+					</div>
+					<div class="sponsor-button " id="partner-btn" onclick="showPartners()">
+						<p class="sponsor-button-text">Partners</p>
 					</div>
 				</div>
 				<!-- Partners -->
@@ -362,7 +364,7 @@
 
 		<!-- Top menu bar -->
 		<div class="navbar">
-			<a>MadHacks 2019</a>
+			<a>MadHacks 2018</a>
 			<div class="dropdown">
 				<button class="dropbtn" onclick="ddownFunction('fileDropdown', event)">File</button>
 				<div class="dropdown-content" id="fileDropdown">
@@ -381,9 +383,9 @@
 			<div class="dropdown">
 				<button class="dropbtn2" onclick="ddownFunction('historyDropdown', event)">History</button>
 				<div class="dropdown-content" id="historyDropdown">
-					<a href="https://mini18.madhacks.io/" target="_blank">2018</a>
-					<a href="https://2017.madhacks.io" target="_blank">2017</a>
-					<a href="https://2016.madhacks.io" target="_blank" id="last">2016</a>
+					<a href="https://mini18.madhacks.io/" target="_blank">Mini18</a>
+					<a href="https://2017.madhacks.io" target="_blank">Madhacks 2017</a>
+					<a href="https://2016.madhacks.io" target="_blank" id="last">Madhacks 2016</a>
 				</div>
 			</div>
 			<a href="https://madhacks-2018.typeform.com/to/NI8CP7" target="_blank">Contact</a>
@@ -432,6 +434,47 @@
 			<img src="img/logo.png" alt="logo" style="height: 250px;">
 		</div>
 	</div>
+
+
+	<!-- Mobile nav drawer -->
+	<div class='mobile-nav' style="display: flex; flex-direction: row;">
+		<div>
+			<button class="hamburger hamburger--squeeze" type="button" onclick="drawerToggle()">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</button>
+		</div>
+		<div style="display: flex; flex: 1; justify-content: center; margin-right: 60px;">
+			<div>
+				<p style="font-family: Chicago, sans-serif;">Madhacks 2018</p>
+			</div>
+		</div>
+	</div>
+	<div class="side-drawer">
+		<div style="display: flex; flex-direction: column; padding-top: 50px;">
+			<div class="nav-category">
+				<a href="#">About</a>
+			</div>
+			<div class="nav-category">
+				<a href="#">FAQ</a>
+			</div>
+			<div class="nav-category">
+				<a href="#">Map</a>
+			</div>
+			<div class="nav-category">
+				<a href="#">Sponsors</a>
+			</div>
+			<div class="nav-category">
+				<a href="#">Schedule</a>
+			</div>
+			<div class="nav-category">
+				<a href="#">Apply</a>
+			</div>
+		</div>
+	</div>
+
+
 
 </body>
 
