@@ -53,7 +53,7 @@ if (window.innerWidth > 801) {
 				relative_y = evt.data.sensorEvent.data.clientY - evt.data.sourceContainer.offsetTop;
 				frames_set[evt.data.sourceContainer]['init_mouse_start'] = [relative_x, relative_y];
 
-				if (relative_x > evt.data.sourceContainer.offsetWidth - 20) {
+				if (relative_x > evt.data.sourceContainer.offsetWidth - 25) {
 					evt.data.sourceContainer.classList.remove("active");
 					evt.data.sourceContainer.classList.remove("default_window");
 				}
@@ -142,7 +142,6 @@ if (window.innerWidth > 801) {
 						linked_frame.classList.remove("default_window")
 						linked_frame.style.left = 32
 						linked_frame.style.top  = 64
-						console.log(linked_frame.offsetLeft)
 					}
 			
 					// Fix map size
@@ -327,18 +326,18 @@ function ddownFunction(id, evt) {
 // handle sponsor buttons
 function showPartners() {
 	partnerBtn = document.getElementById('partner-btn');
-	partnerBtn.classList.toggle('active-button');
+	partnerBtn.classList.add('active-button');
 	sponsorBtn = document.getElementById('sponsor-btn');
-	sponsorBtn.classList.toggle('active-button');
+	sponsorBtn.classList.remove('active-button');
 	document.getElementById('partnerList').style.display = 'block';
 	document.getElementById('sponsorList').style.display = 'none';
 }
 
 function showSponsors() {
 	partnerBtn = document.getElementById('partner-btn');
-	partnerBtn.classList.toggle('active-button');
+	partnerBtn.classList.remove('active-button');
 	sponsorBtn = document.getElementById('sponsor-btn');
-	sponsorBtn.classList.toggle('active-button');
+	sponsorBtn.classList.add('active-button');
 	document.getElementById('partnerList').style.display = 'none';
 	document.getElementById('sponsorList').style.display = 'block';
 }
