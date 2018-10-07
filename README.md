@@ -4,7 +4,6 @@ Website for MadHacks 2019
 ## TODO
 
 ### General Fixes
-* Mobile site (!!)
 * ~~Scroll bars interfere with close button~~
 * ~~Sponsors page gets jumpy occasionally~~
 * Reformat FAQ
@@ -18,7 +17,11 @@ Website for MadHacks 2019
 * Add prize information to the FAQ
 * ~~About -- have about open to the bottom right~~
 * Sponsor window left pane toggles, should do something clever-er
-* Fix about page bug where dragging before doing anything else keeps it stuck to the bottom
+* ~~Fix about page bug where dragging before doing anything else keeps it stuck to the bottom~~
+* ~~Fun cursors~~
+
+### Mobile
+* Everything
 
 ### Window manager framework
 * ~~Fix bug where you can move windows off the screen (Moss)~~
