@@ -53,28 +53,26 @@ if (window.innerWidth > 801) {
 			relative_y = evt.data.sensorEvent.data.clientY - evt.data.sourceContainer.offsetTop;
 			frames_set[evt.data.sourceContainer]['init_mouse_start'] = [relative_x, relative_y];
 
-			if (relative_x > evt.data.sourceContainer.offsetWidth - 20) {
+			if (relative_x > evt.data.sourceContainer.offsetWidth - 25) {
 				evt.data.sourceContainer.classList.remove("active");
 				evt.data.sourceContainer.classList.remove("default_window");
 			}
-				if (relative_x > evt.data.sourceContainer.offsetWidth - 25) {
-					evt.data.sourceContainer.classList.remove("active");
-					evt.data.sourceContainer.classList.remove("default_window");
-				}
 
-				else {
-					// About-window specific behaviour
-					evt.data.sourceContainer.classList.add("active")
-					evt.data.sourceContainer.classList.remove("default_window");
-				}
-				
-			});
-			draggable.on('drag:move', (evt) => {
-				frame = evt.data.sourceContainer;
+			else {
+				// About-window specific behaviour
+				evt.data.sourceContainer.classList.add("active")
+				evt.data.sourceContainer.classList.remove("default_window");
+			}
+
+		});
+		draggable.on('drag:move', (evt) => {
+			frame = evt.data.sourceContainer;
 
 			// About-window specific behaviour
-			evt.data.sourceContainer.classList.add("active")
-			evt.data.sourceContainer.classList.remove("default_window");
+			if (evt.data.sourceContainer.classList.contains("default_window")) {
+				evt.data.sourceContainer.classList.add("active")
+				evt.data.sourceContainer.classList.remove("default_window");
+			}
 
 		});
 		draggable.on('drag:move', (evt) => {
@@ -121,9 +119,9 @@ if (window.innerWidth > 801) {
 						linked_frame.classList.add("active");
 						linked_frame.classList.remove("default_window")
 						linked_frame.style.left = 32
-						linked_frame.style.top  = 64
+						linked_frame.style.top = 64
 					}
-			
+
 					// Fix map size
 					map.resize();
 
@@ -193,7 +191,6 @@ if (window.innerWidth > 801) {
 					linked_frame.classList.remove("default_window")
 					linked_frame.style.left = 32
 					linked_frame.style.top = 64
-					console.log(linked_frame.offsetLeft)
 				}
 
 				// Fix map size
@@ -342,14 +339,20 @@ if (window.innerWidth > 801) {
 }
 else {
 	/* Mobile version code */
+	window.onload = function() {
+	}
+	
 	function drawerToggle() {
 		var menuToggle = document.getElementsByClassName('hamburger')[0];
 		menuToggle.classList.toggle('is-active');
 		var sideDrawer = document.getElementsByClassName('side-drawer')[0];
 		sideDrawer.classList.toggle('open');
 	}
-	window.onload = function () {
-		console.log('yum')
+
+	//toggle drawer menu items
+	function displayToggle(target) {
+		element = document.getElementById(target);
+		element.classList.toggle('open')
 	}
 }
 
@@ -404,7 +407,6 @@ function showSponsors() {
 function faqButtonClick(el) {
 	faqButtons = document.getElementsByClassName('faq-button');
 	faqTarget = document.getElementById('faqTarget')
-	console.log(faqButtons.length)
 	for (i = 0; i < faqButtons.length; i++) {
 		if (faqButtons[i] !== el) {
 			faqButtons[i].classList.remove('faqActive')

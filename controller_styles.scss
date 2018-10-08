@@ -502,39 +502,124 @@ a {
 		}
 	}
 
-	a {
-		text-decoration: none;
-		color: white;
+	html {
+		overflow: scroll;
 	}
 
-	.side-drawer {
-		height: 100%;
-		z-index: 100;
-		position: fixed;
-		width: 40%;
-		top: 40px;
-		background-color:$theme_red;
-		display: none;
+	body {		
+		margin: 0;
+	  	padding: 0;
+		background: $theme_blue;
+		overflow: scroll;
+		top: 0;
+		bottom: 0;
 		
 	}
 
-	.nav-category {
-		margin: 10px;
-	}
-
-	.open {
+	.framed {
 		display: block;
+		position: relative;
+		overflow: hidden;
+		border-top: 2px solid $theme_red;
+		border-right:none;
+		border-left: none;
 	}
 
-	.navbar {
+
+	.title_bar {
 		display: none;
 	}
 
-	#mlh-trust-badge {
-		display: none;
+	.map, .about, .faq, .schedule, .sponsors {
+		width: 100%;
+		height: auto
 	}
 
-	.d-icon {
-		display: none;
+	.mobile-nav {
+		width: 100%;
+		background-color: white;
+		height: 40px;
+		position: fixed;
+		top: 0px;
+		box-shadow: 0px $chrome_shadow_distance 0px $chrome_shadow;
+
+		button {
+			outline: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.side-drawer {
+			height: 100%;
+			z-index: 100;
+			position: fixed;
+			width: 40%;
+			top: 40px;
+			background-color:$theme_red;
+			display: none;
+			
+		}
+
+		.nav-category {
+			margin: 10px;
+		}
+
+		.side-drawer {
+			height: 100%;
+			z-index: 100;
+			position: fixed;
+			width: 75%;
+			top: 40px;
+			background-color:$theme_red;
+			display: none;
+			overflow-y: scroll;
+		    top: 40px;
+		    bottom: 0;
+		}
+
+		.drawer-button-content {
+			padding: 10px;
+			display: flex; 
+			flex-direction: column;
+			display: none;
+			font-size: 15px;
+			background-color: #B32626;
+			margin-top: 10px;
+			div {
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			a {
+				color: white;
+				margin-bottom: 10px;
+			}
+			
+		}
+
+		.nav-category {
+			margin-top: 20px;
+		}
+		.nav-category a {
+			margin: 10px;
+		}
+
+		.open {
+			display: block;
+		}
+
+		.navbar {
+			display: none;
+		}
+
+		#mlh-trust-badge {
+			display: none;
+		}
+
+		.d-icon {
+			display: none;
+		}
 	}
 }

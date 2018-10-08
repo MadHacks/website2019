@@ -7,7 +7,8 @@
 	<link rel="stylesheet" href="controller_styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
 	 crossorigin="anonymous">
-	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
 	 crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
@@ -20,11 +21,11 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48665252-2"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-	  gtag('config', 'UA-48665252-2');
+		gtag('config', 'UA-48665252-2');
 	</script>
 </head>
 
@@ -37,7 +38,7 @@
 <body>
 	<div class="windows">
 		<!-- About -->
-		<div class="framed about">
+		<div class="framed about default_window">
 			<div class="title_bar">
 				About
 				<div class="close_button">
@@ -147,7 +148,7 @@
 						<p>Will there be any prizes?</p>
 						<div style="display: none;" id='faqContent'>
 							<p>
-								Yes!  Check back soon for details.
+								Yes! Check back soon for details.
 							</p>
 						</div>
 					</div>
@@ -470,26 +471,57 @@
 	</div>
 	<div class="side-drawer">
 		<div style="display: flex; flex-direction: column; padding-top: 50px;">
-			<div class="nav-category">
+			<div class="nav-category" onclick="drawerToggle()">
 				<a href="#">About</a>
 			</div>
-			<div class="nav-category">
+			<div class="nav-category" onclick="drawerToggle()">
 				<a href="#">FAQ</a>
 			</div>
-			<div class="nav-category">
+			<div class="nav-category" onclick="drawerToggle()">
 				<a href="#">Map</a>
 			</div>
-			<div class="nav-category">
+			<div class="nav-category" onclick="drawerToggle()">
 				<a href="#">Sponsors</a>
 			</div>
-			<div class="nav-category">
+			<div class="nav-category" onclick="drawerToggle()">
 				<a href="#">Schedule</a>
 			</div>
-			<div class="nav-category">
+			<div class="nav-category" onclick="drawerToggle()">
 				<a href="#">Apply</a>
 			</div>
+			<div class="nav-category" onclick="displayToggle('drawer-applications-content')">
+				<a href="#">Applications</a>
+				<div id='drawer-applications-content' class='drawer-button-content'>
+					<div>
+						<a href="forms/application.html" target="_blank">New Application...</a>
+					</div>
+					<div>
+						<a href="forms/mentors.html" target="_blank">New Mentor Application...</a>
+					</div>
+					<div>
+						<a href="forms/talks.html" target="_blank">New Speaker Application...</a>
+					</div>
+					<div>
+						<a href="forms/volunteers.html" target="_blank" id="last">New Sponsor Application...</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="nav-category" onclick="displayToggle('drawer-history-content')">
+				<a href="#">History</a>
+				<div id='drawer-history-content' class='drawer-button-content'>
+					<div>
+						<a href="https://mini18.madhacks.io/" target="_blank">Mini18</a>
+					</div>
+					<div>
+						<a href="https://2017.madhacks.io" target="_blank">Madhacks 2017</a>
+					</div>
+					<div>
+						<a href="https://2016.madhacks.io" target="_blank" id="last">Madhacks 2016</a>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
 
 
 

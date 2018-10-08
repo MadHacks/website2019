@@ -51,9 +51,9 @@
     content: "";
     display: block; }
   .hamburger-inner::before {
-    top: -10px; }
+    top: -7px; }
   .hamburger-inner::after {
-    bottom: -10px; }
+    bottom: -7px; }
 
 /*
    * 3DX
