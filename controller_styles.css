@@ -89,7 +89,7 @@ a {
   width: 800px;
   position: absolute;
   height: 300px;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .faq a {
