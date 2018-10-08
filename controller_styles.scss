@@ -127,7 +127,7 @@ a {
 }
 
 .faq {
-	width: 800px;
+	width: 820px;
 	position: absolute;
 	height: 360px;
 	overflow: hidden;
@@ -530,6 +530,10 @@ a {
 	align-items: center;
 }
 
+.apply-button-mobile {
+	display: none;
+}
+
 /* Mobile site */
 @media (max-width:801px) {
 	.mobile-nav {
@@ -570,6 +574,28 @@ a {
 		margin-bottom: 32px;
 	}
 
+	.apply-button-mobile {
+		background-color: #fff;
+		margin-left: 80px;
+		margin-right: 80px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: $chrome_shadow_distance $chrome_shadow_distance 0px $chrome_shadow;
+		font-family: $body_font_stack;
+		font-weight: 700;
+		
+		div {
+			padding: 10px 20px ;
+		}
+	
+		a {
+			color: $theme_red;
+			text-align: center;
+			font-size: 18px;
+		}
+	}
+
 	.about {
 		background-color: $theme_red;
 		color: white;
@@ -586,7 +612,7 @@ a {
 		display: none;
 	}
 
-	.map, .about, .faq, .schedule, .sponsors {
+	.map, .about, .faq, .schedule, .sponsors-mobile {
 		width: 100%;
 		height: auto;
 	}
@@ -795,6 +821,9 @@ a {
 			color: $theme_blue;
 			text-decoration: none;
 			font-weight: 700;
+		}
+		img {
+			max-width: 100%;
 		}
 	}
 }

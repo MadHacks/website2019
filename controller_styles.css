@@ -94,7 +94,7 @@ a {
 }
 
 .faq {
-  width: 800px;
+  width: 820px;
   position: absolute;
   height: 360px;
   overflow: hidden;
@@ -492,6 +492,10 @@ a {
   align-items: center;
 }
 
+.apply-button-mobile {
+  display: none;
+}
+
 /* Mobile site */
 @media (max-width: 801px) {
   .mobile-nav {
@@ -531,6 +535,26 @@ a {
     margin-bottom: 32px;
   }
 
+  .apply-button-mobile {
+    background-color: #fff;
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 0px #000;
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+    font-weight: 700;
+  }
+  .apply-button-mobile div {
+    padding: 10px 20px;
+  }
+  .apply-button-mobile a {
+    color: #da2e2e;
+    text-align: center;
+    font-size: 18px;
+  }
+
   .about {
     background-color: #da2e2e;
     color: white;
@@ -547,7 +571,7 @@ a {
     display: none;
   }
 
-  .map, .about, .faq, .schedule, .sponsors {
+  .map, .about, .faq, .schedule, .sponsors-mobile {
     width: 100%;
     height: auto;
   }
@@ -754,6 +778,9 @@ a {
     color: #0a3e54;
     text-decoration: none;
     font-weight: 700;
+  }
+  .sponsor-item img {
+    max-width: 100%;
   }
 }
 
