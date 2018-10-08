@@ -65,6 +65,14 @@ a {
   font-weight: 700;
 }
 
+.attribution {
+  font-weight: 200;
+  background-color: #efefef;
+  padding: 5px 10px 5px 10px;
+  font-size: 10pt;
+  margin-top: 25px;
+}
+
 /* Draggable quirk fix */
 .draggable-mirror .close_button {
   display: none;
@@ -515,10 +523,24 @@ a {
     display: block;
     position: relative;
     overflow: hidden;
-    border-top: 2px solid #da2e2e;
+    border-bottom: none;
+    border-top: 8px solid #da2e2e;
     border-right: none;
     border-left: none;
     padding-top: 0px;
+    margin-bottom: 32px;
+  }
+
+  .about {
+    background-color: #da2e2e;
+    color: white;
+  }
+  .about .mobile-header {
+    color: white !important;
+  }
+
+  .attribution {
+    display: none;
   }
 
   .title_bar {
@@ -683,6 +705,27 @@ a {
     display: block;
     text-align: center;
     margin: 10px;
+    font-family: "Helvetica", "Helvetica Neue", Arial, sans-serif;
+    font-style: italic;
+    font-size: 24px;
+    color: #da2e2e;
+  }
+
+  .apply {
+    display: none;
+  }
+
+  .sponsors-mobile {
+    width: 100%;
+  }
+  .sponsors-mobile .frame_contents {
+    width: 100%;
+    scroll: hidden;
+    height: 720px;
+  }
+
+  .sponsors {
+    display: none;
   }
 }
 

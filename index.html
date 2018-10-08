@@ -64,7 +64,7 @@
 				<p>
 					Apply now by double-clicking the Apply icon, or under File > New Application.
 				</p>
-				<p style="font-weight: 200; background-color: #efefef; padding: 5px 10px 5px 10px; font-size: 10pt; margin-top: 25px;">
+				<p class="attribution">
 					Icon artwork by Henrik Lund Mikkelsen, cursors by IconsGhost and Round Pixel (all of the Noun Project)
 				</p>
 
@@ -193,7 +193,100 @@
 		</div>
 
 		<!-- Sponsors -->
-		<div class="framed sponsors" id="sponsors">
+		<div class="framed sponsors">
+			<div class="title_bar">
+				Sponsors
+				<div class="close_button">
+					<i class="fas fa-times"></i>
+				</div>
+			</div>
+			<div class="mobile-header">
+				<h4>Sponsors</h4>
+			</div>
+
+			<!-- content -->
+			<div class="frame_contents">
+				<div style="align-content: center; margin-left: 15px; flex: 1; position: fixed;">
+					<div class="sponsor-button active-button" id="sponsor-btn" onclick="showSponsors()">
+						<p class="sponsor-button-text">Sponsors</p>
+					</div>
+					<div class="sponsor-button" id="partner-btn" onclick="showPartners()">
+						<p class="sponsor-button-text">Partners</p>
+					</div>
+				</div>
+				<!-- Partners -->
+				<div style=" display: none; flex: 1; margin-left: 100px;" id="partnerList">
+					<div style="justify-content: center; display: flex; margin: 50px; ">
+						<img src="./img/partner_sponsor_logos/partners/wolfram.png" />
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center">
+						<div class="sponsor-item">
+							<p>Interested in partnering?
+								<a href="mailto:team@madhacks.io">Contact Us</a>.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Sponsors -->
+				<div style="display: block; flex: 1; margin-left: 100px;" id="sponsorList">
+					<div style="flex-direction: row; display: flex; justify-content: center">
+						<div class="sponsor-item">
+							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/jane_street_large.png" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 65;" src="./img/partner_sponsor_logos/sponsors/bloomberg_medium.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 95;" src="./img/partner_sponsor_logos/sponsors/Capital_One_medium.png" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Epic_medium.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Singlewire_medium.jpg" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/5NINES-small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/balsamiq_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/Domino_small.png" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
+						<div class="sponsor-item">
+							<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/kiio_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/perblue_small.png" />
+						</div>
+						<div class="sponsor-item">
+							<img style="height: 60;" src="./img/partner_sponsor_logos/sponsors/warf_small.png" />
+						</div>
+					</div>
+					<div style="flex-direction: row; display: flex; justify-content: center; margin-top: 50px">
+						<div class="sponsor-item">
+							<p>Interested in sponsoring?
+								<a href="mailto:sponsorship@madhacks.io">Contact Us</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+				<!-- Sponsors -->
+		<div class="framed sponsors-mobile" id="sponsors">
 			<div class="title_bar">
 				Sponsors
 				<div class="close_button">

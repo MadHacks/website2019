@@ -6,7 +6,7 @@ Website for MadHacks 2019
 ### General Fixes
 * Add prize information to the FAQ
 * Move inline styles outline
-* View->The Team window
+* View->The Team window (hidden for now)
 * ~~Scale down desktop icons, reupload (so browser isn't downloading them at full size then rescaling client side)~~
 * Send Edge users to mobile
 * ~~Scroll bars interfere with close button~~
@@ -22,7 +22,7 @@ Website for MadHacks 2019
 * ~~Fun cursors~~
 
 ### Mobile
-* Everything
+* ~~Everything~~
 
 ### Window manager framework
 * ~~Fix bug where you can move windows off the screen (Moss)~~
