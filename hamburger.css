@@ -8,7 +8,6 @@
 .hamburger {
   padding: 10px 10px;
   display: inline-block;
-  cursor: pointer;
   transition-property: opacity, filter;
   transition-duration: 0.15s;
   transition-timing-function: linear;

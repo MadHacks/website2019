@@ -31,7 +31,8 @@ if (window.innerWidth > 801) {
 
 		function MakeFrame(list_of_frames) {
 			var out = {}
-			for (l of list_of_frames) {
+			for (var i = 0; i < list_of_frames.length; i++) {
+				var l = list_of_frames[i];
 				out[l] = {}
 
 				l.addEventListener('click', updateZ)
@@ -93,10 +94,12 @@ if (window.innerWidth > 801) {
 				Desktop Icons
 			*/
 			dicons = document.getElementsByClassName("d-icon");
-			for (d of dicons) {
+			for (var i = 0; i < dicons.length; i++) {
+				d = dicons[i]
 				d.addEventListener('click', (evt) => {
 					dicons = document.getElementsByClassName("d-icon");
-					for (d of dicons) {
+					for (var i = 0; i < dicons.length; i++) {
+						d = dicons[i]
 						d.classList.remove("focused");
 					}
 					evt.currentTarget.classList.add("focused");
@@ -164,10 +167,12 @@ if (window.innerWidth > 801) {
 			Desktop Icons
 		*/
 		dicons = document.getElementsByClassName("d-icon");
-		for (d of dicons) {
+		for (var i = 0; i < dicons.length; i++) {
+			d = dicons[i]
 			d.addEventListener('click', (evt) => {
 				dicons = document.getElementsByClassName("d-icon");
-				for (d of dicons) {
+				for (var i = 0; i < dicons.length; i++) {
+					d = dicons[i]
 					d.classList.remove("focused");
 				}
 				evt.currentTarget.classList.add("focused");
@@ -255,12 +260,14 @@ if (window.innerWidth > 801) {
 		*/
 		document.addEventListener('click', () => {
 			ddowns = document.getElementsByClassName("dropdown-content");
-			for (d of ddowns) {
+			for (var i = 0; i < ddowns.length; i++) {
+				d = ddowns[i]
 				d.classList.remove("show");
 			}
 
 			dicons = document.getElementsByClassName("d-icon");
-			for (d of dicons) {
+			for (var i = 0; i < ddowns.length; i++) {
+				d = ddowns[i]
 				d.classList.remove("focused");
 			}
 		})
@@ -340,6 +347,8 @@ if (window.innerWidth > 801) {
 else {
 	/* Mobile version code */
 	window.onload = function() {
+		about = document.getElementsByClassName('default_window')[0];
+		about.classList.remove('default_window');
 	}
 	
 	function drawerToggle() {
@@ -375,7 +384,8 @@ window.onresize = function () {
 */
 function ddownFunction(id, evt) {
 	ddowns = document.getElementsByClassName("dropdown-content");
-	for (d of ddowns) {
+	for (var i = 0; i < ddowns.length; i++) {
+		d = ddowns[i];
 		if (d != document.getElementById(id)) {
 			d.classList.remove("show");
 		}
