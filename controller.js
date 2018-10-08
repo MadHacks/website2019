@@ -57,6 +57,20 @@ if (window.innerWidth > 801) {
 				evt.data.sourceContainer.classList.remove("active");
 				evt.data.sourceContainer.classList.remove("default_window");
 			}
+				if (relative_x > evt.data.sourceContainer.offsetWidth - 25) {
+					evt.data.sourceContainer.classList.remove("active");
+					evt.data.sourceContainer.classList.remove("default_window");
+				}
+
+				else {
+					// About-window specific behaviour
+					evt.data.sourceContainer.classList.add("active")
+					evt.data.sourceContainer.classList.remove("default_window");
+				}
+				
+			});
+			draggable.on('drag:move', (evt) => {
+				frame = evt.data.sourceContainer;
 
 			// About-window specific behaviour
 			evt.data.sourceContainer.classList.add("active")
@@ -77,6 +91,45 @@ if (window.innerWidth > 801) {
 
 			anchor_x = x - x_;
 			anchor_y = y - y_;
+			/* 
+				Desktop Icons
+			*/
+			dicons = document.getElementsByClassName("d-icon");
+			for (d of dicons) {
+				d.addEventListener('click', (evt) => {
+					dicons = document.getElementsByClassName("d-icon");
+					for (d of dicons) {
+						d.classList.remove("focused");
+					}
+					evt.currentTarget.classList.add("focused");
+
+					// Fix map size
+					map.resize();
+
+					// Fix z ordering of frames
+					updateZ({ 'data': { 'sourceContainer': document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0] } })
+
+					evt.stopPropagation();
+				});
+				d.addEventListener('dblclick', (evt) => {
+					evt.currentTarget.classList.remove("focused");
+					//if apply icon open link in new window/tab
+					if (evt.currentTarget.dataset.linkedFrame === 'apply') {
+						openInNewTab('forms/application.html')
+					} else {
+						linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
+						linked_frame.classList.add("active");
+						linked_frame.classList.remove("default_window")
+						linked_frame.style.left = 32
+						linked_frame.style.top  = 64
+					}
+			
+					// Fix map size
+					map.resize();
+
+					evt.stopPropagation();
+				});
+			}
 
 			frame.style.left = x - x_;
 			if (y - y_ > 32) {
@@ -331,18 +384,18 @@ function ddownFunction(id, evt) {
 // handle sponsor buttons
 function showPartners() {
 	partnerBtn = document.getElementById('partner-btn');
-	partnerBtn.classList.toggle('active-button');
+	partnerBtn.classList.add('active-button');
 	sponsorBtn = document.getElementById('sponsor-btn');
-	sponsorBtn.classList.toggle('active-button');
+	sponsorBtn.classList.remove('active-button');
 	document.getElementById('partnerList').style.display = 'block';
 	document.getElementById('sponsorList').style.display = 'none';
 }
 
 function showSponsors() {
 	partnerBtn = document.getElementById('partner-btn');
-	partnerBtn.classList.toggle('active-button');
+	partnerBtn.classList.remove('active-button');
 	sponsorBtn = document.getElementById('sponsor-btn');
-	sponsorBtn.classList.toggle('active-button');
+	sponsorBtn.classList.add('active-button');
 	document.getElementById('partnerList').style.display = 'none';
 	document.getElementById('sponsorList').style.display = 'block';
 }

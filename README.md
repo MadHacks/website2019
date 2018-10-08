@@ -4,21 +4,24 @@ Website for MadHacks 2019
 ## TODO
 
 ### General Fixes
-* Mobile site (!!)
+* Add prize information to the FAQ
+* Move inline styles outline
+* View->The Team window
+* Scale down desktop icons, reupload (so browser isn't downloading them at full size then rescaling client side)
 * ~~Scroll bars interfere with close button~~
 * ~~Sponsors page gets jumpy occasionally~~
-* Reformat FAQ
+* ~~Reformat FAQ~~
 * ~~Fix title bar on Apply window~~
-* View->The Team window
 * ~~Favicon doesn't work on some browsers~~ (Still weird on Brave, fix this when we check browser compatibility)
-* Scale down desktop icons, reupload (so browser isn't downloading them at full size then rescaling client side)
-* Add title bar icons to far right: bluetooth, volume, wifi, battery, flux
+* ~~Add title bar icons to far right: bluetooth, volume, wifi, battery, flux~~
 * ~~Fix sponsor formatting~~
-* Move inline styles outline
-* Add prize information to the FAQ
 * ~~About -- have about open to the bottom right~~
-* Sponsor window left pane toggles, should do something clever-er
-* Fix about page bug where dragging before doing anything else keeps it stuck to the bottom
+* ~~Sponsor window left pane toggles, should do something clever-er~~
+* ~~Fix about page bug where dragging before doing anything else keeps it stuck to the bottom~~
+* ~~Fun cursors~~
+
+### Mobile
+* Everything
 
 ### Window manager framework
 * ~~Fix bug where you can move windows off the screen (Moss)~~
@@ -36,7 +39,6 @@ Website for MadHacks 2019
 ### Content
 * ~~Add rest of the windows, barebones content (Stamper)~~
 * ~~change history links when past websites are hosted, otherwise remove them~~
-* add a page for the team if desired, otherwise remove
 
 ### style
 * ~~Theme the css according to the style guide (Stamper)~~

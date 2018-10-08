@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="controller_styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
 	 crossorigin="anonymous">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7"
 	 crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.6/lib/draggable.bundle.js"></script>
@@ -15,6 +16,16 @@
 	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.0/mapbox-gl.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:200,400,700" rel="stylesheet">
 	<link href="./hamburger.css" rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48665252-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-48665252-2');
+	</script>
 </head>
 
 <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=black"
@@ -46,10 +57,10 @@
 					to seeing you all there!
 				</p>
 				<p>
-					Apply now by clicking the Apply icon, or under File > New Application.
+					Apply now by double-clicking the Apply icon, or under File > New Application.
 				</p>
 				<p style="font-weight: 200; background-color: #efefef; padding: 5px 10px 5px 10px; font-size: 10pt; margin-top: 25px;">
-					Icon artwork by Henrik Lund Mikkelsen (Noun Project)
+					Icon artwork by Henrik Lund Mikkelsen, cursors by IconsGhost and Round Pixel (all of the Noun Project)
 				</p>
 
 			</div>
@@ -127,8 +138,8 @@
 							<p>
 								Saturday, November 10th in the Educational Sciences building on the UW-Madison campus.
 							</p>
-							<p style="font-weight: 700">
-								1025 W Johnson St Madison, WI 53706
+							<p>
+								<a href="https://goo.gl/maps/MFGt2tMaTKE2" target="_blank">1025 W Johnson St Madison, WI 53706</a>
 							</p>
 						</div>
 					</div>
@@ -136,7 +147,7 @@
 						<p>Will there be any prizes?</p>
 						<div style="display: none;" id='faqContent'>
 							<p>
-								TBA
+								Yes!  Check back soon for details.
 							</p>
 						</div>
 					</div>
@@ -188,7 +199,11 @@
 					<div class="sponsor-button active-button" id="sponsor-btn" onclick="showSponsors()">
 						<p class="sponsor-button-text">Sponsors</p>
 					</div>
+<<<<<<< HEAD
 					<div class="sponsor-button " id="partner-btn" onclick="showPartners()">
+=======
+					<div class="sponsor-button" id="partner-btn" onclick="showPartners()">
+>>>>>>> 17ee44663a2451820922926ab2ff371c22e03c89
 						<p class="sponsor-button-text">Partners</p>
 					</div>
 				</div>
@@ -200,7 +215,7 @@
 					<div style="flex-direction: row; display: flex; justify-content: center">
 						<div class="sponsor-item">
 							<p>Interested in partnering?
-								<a href="mailto:team@madhacks.io">Contact Us</a>
+								<a href="mailto:team@madhacks.io">Contact Us</a>.
 							</p>
 						</div>
 					</div>
@@ -390,6 +405,12 @@
 			</div>
 			<a href="https://madhacks-2018.typeform.com/to/NI8CP7" target="_blank">Contact</a>
 			<div id="time"></div>
+			<div class="navbar_icons">
+				<i class="fab fa-bluetooth"></i>
+				<i class="fas fa-wifi"></i>
+				<i class="fas fa-volume-up"></i>
+				<i class="fas fa-battery-full"></i>
+			</div>
 		</div>
 
 
