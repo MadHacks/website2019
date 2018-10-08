@@ -40,7 +40,7 @@
 	<div class="spacer">&nbsp;</div>
 	<div class="windows">
 		<!-- About -->
-		<div class="framed about default_window">
+		<div class="framed about default_window" id="about">
 			<div class="title_bar">
 				About
 				<div class="close_button">
@@ -73,7 +73,7 @@
 		</div>
 
 		<!-- FAQ -->
-		<div class="framed faq">
+		<div class="framed faq" id="faq">
 			<div class="title_bar">
 				FAQ
 				<div class="close_button">
@@ -193,7 +193,7 @@
 		</div>
 
 		<!-- Sponsors -->
-		<div class="framed sponsors">
+		<div class="framed sponsors" id="sponsors">
 			<div class="title_bar">
 				Sponsors
 				<div class="close_button">
@@ -286,7 +286,7 @@
 		</div>
 
 		<!-- Schedule -->
-		<div class="framed schedule">
+		<div class="framed schedule" id="schedule">
 			<div class="title_bar">
 				Schedule
 				<div class="close_button">
@@ -485,22 +485,19 @@
 	<div class="side-drawer">
 		<div style="display: flex; flex-direction: column; padding-top: 50px;">
 			<div class="nav-category" onclick="drawerToggle()">
-				<a href="#">About</a>
+				<a href="#about">About</a>
 			</div>
 			<div class="nav-category" onclick="drawerToggle()">
-				<a href="#">FAQ</a>
+				<a href="#faq">FAQ</a>
 			</div>
 			<div class="nav-category" onclick="drawerToggle()">
-				<a href="#">Map</a>
+				<a href="#map">Map</a>
 			</div>
 			<div class="nav-category" onclick="drawerToggle()">
-				<a href="#">Sponsors</a>
+				<a href="#sponsors">Sponsors</a>
 			</div>
 			<div class="nav-category" onclick="drawerToggle()">
-				<a href="#">Schedule</a>
-			</div>
-			<div class="nav-category" onclick="drawerToggle()">
-				<a href="#">Apply</a>
+				<a href="#schedule">Schedule</a>
 			</div>
 			<div class="nav-category" onclick="displayToggle('drawer-applications-content')">
 				<a href="#">Applications</a>
