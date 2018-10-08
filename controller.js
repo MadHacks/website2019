@@ -280,12 +280,6 @@ window.onload = function () {
 		}
 		startTime();
 
-		dicons = document.getElementsByClassName("d-icon");
-		for (var i = 0; i < ddowns.length; i++) {
-			d = ddowns[i]
-			d.classList.remove("focused");
-		}
-
 		/*
 			Nav bar
 		*/
@@ -297,12 +291,11 @@ window.onload = function () {
 			}
 
 			dicons = document.getElementsByClassName("d-icon");
-			for (var i = 0; i < ddowns.length; i++) {
-				d = ddowns[i]
+			for (var i = 0; i < dicons.length; i++) {
+				d = dicons[i]
 				d.classList.remove("focused");
 			}
 		})
-
 	}
 	else {
 		/* Mobile version code */
