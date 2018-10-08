@@ -484,57 +484,57 @@ a {
 	body {
 		
 		margin: 0;
-  padding: 0;
+  		padding: 0;
   
-  /* make it look decent enough */
-  background: $theme_blue;
-  font-family: "Avenir Next", "Avenir", sans-serif;
+  		/* make it look decent enough */
+  		background: $theme_blue;
+  		font-family: "Avenir Next", "Avenir", sans-serif;
 	}
 
-.mobile-nav {
-	width: 100%;
-	background-color: white;
-	height: 40px;
-	position: absolute;
-	top: 0px;
-	button {
-		outline: none;
+	.mobile-nav {
+		width: 100%;
+		background-color: white;
+		height: 40px;
+		position: absolute;
+		top: 0px;
+		button {
+			outline: none;
+		}
 	}
-}
 
-a {
-	text-decoration: none;
-	color: white;
-}
+	a {
+		text-decoration: none;
+		color: white;
+	}
 
-.side-drawer {
-	height: 100%;
-	z-index: 100;
-	position: fixed;
-	width: 40%;
-	top: 40px;
-	background-color:$theme_red;
-	display: none;
-	
-}
+	.side-drawer {
+		height: 100%;
+		z-index: 100;
+		position: fixed;
+		width: 40%;
+		top: 40px;
+		background-color:$theme_red;
+		display: none;
+		
+	}
 
-.nav-category {
-	margin: 10px;
-}
+	.nav-category {
+		margin: 10px;
+	}
 
-.open {
-	display: block;
-}
+	.open {
+		display: block;
+	}
 
-.navbar {
-	display: none;
-}
+	.navbar {
+		display: none;
+	}
 
-#mlh-trust-badge {
-	display: none;
-}
+	#mlh-trust-badge {
+		display: none;
+	}
 
-.d-icon {
-	display: none;
-}
+	.d-icon {
+		display: none;
+	}
 }
