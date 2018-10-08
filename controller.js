@@ -1,4 +1,23 @@
 current_window_width = window.innerWidth;
+/* Path prototype extension */
+if (!("path" in Event.prototype)) {
+	Object.defineProperty(Event.prototype, "path", {
+		get: function () {
+			var path = [];
+			var currentElem = this.target;
+			while (currentElem) {
+				path.push(currentElem);
+				currentElem = currentElem.parentElement;
+			}
+			if (path.indexOf(window) === -1 && path.indexOf(document) === -1)
+				path.push(document);
+			if (path.indexOf(window) === -1)
+				path.push(window);
+			return path;
+		}
+	});
+}
+
 window.onload = function () {
 	/*
 			Map
@@ -48,25 +67,6 @@ window.onload = function () {
 	});
 
 	map.addControl(new mapboxgl.NavigationControl());
-
-	/* Path prototype extension */
-	if (!("path" in Event.prototype)) {
-		Object.defineProperty(Event.prototype, "path", {
-			get: function () {
-				var path = [];
-				var currentElem = this.target;
-				while (currentElem) {
-					path.push(currentElem);
-					currentElem = currentElem.parentElement;
-				}
-				if (path.indexOf(window) === -1 && path.indexOf(document) === -1)
-					path.push(document);
-				if (path.indexOf(window) === -1)
-					path.push(window);
-				return path;
-			}
-		});
-	}
 
 	if (window.innerWidth > 801) {
 		/* Desktop version code */
@@ -366,6 +366,8 @@ window.onload = function () {
 	}
 	else {
 		/* Mobile version code */
+		about = document.getElementsByClassName('default_window')[0];
+		about.classList.remove('default_window');
 	}
 }
 
