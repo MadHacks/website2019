@@ -1,5 +1,23 @@
 current_window_width = window.innerWidth;
 
+/* Path prototype extension */
+if (!("path" in Event.prototype))
+Object.defineProperty(Event.prototype, "path", {
+  get: function() {
+    var path = [];
+    var currentElem = this.target;
+    while (currentElem) {
+      path.push(currentElem);
+      currentElem = currentElem.parentElement;
+    }
+    if (path.indexOf(window) === -1 && path.indexOf(document) === -1)
+      path.push(document);
+    if (path.indexOf(window) === -1)
+      path.push(window);
+    return path;
+  }
+});
+
 if (window.innerWidth > 801) {
 	/* Desktop version code */
 	window.onload = function () {
@@ -427,20 +445,3 @@ function faqButtonClick(el) {
 	faqTarget.innerHTML = content;
 
 }
-
-if (!("path" in Event.prototype))
-Object.defineProperty(Event.prototype, "path", {
-  get: function() {
-    var path = [];
-    var currentElem = this.target;
-    while (currentElem) {
-      path.push(currentElem);
-      currentElem = currentElem.parentElement;
-    }
-    if (path.indexOf(window) === -1 && path.indexOf(document) === -1)
-      path.push(document);
-    if (path.indexOf(window) === -1)
-      path.push(window);
-    return path;
-  }
-});
