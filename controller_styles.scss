@@ -481,22 +481,45 @@ a {
 
 /* Mobile site */
 @media (max-width:801px) {
-	body {
-		
-		margin: 0;
-  padding: 0;
-  
-  /* make it look decent enough */
-  background: $theme_blue;
-  font-family: "Avenir Next", "Avenir", sans-serif;
-	}
+html {
+	overflow: scroll;
+}
+body {		
+	margin: 0;
+  	padding: 0;
+	background: $theme_blue;
+	overflow: scroll;
+	top: 0;
+	bottom: 0;
+	
+}
+
+.framed {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border-top: 2px solid $theme_red;
+	border-right:none;
+	border-left: none;
+}
+
+
+.title_bar {
+	display: none;
+}
+
+.map, .about, .faq, .schedule, .sponsors {
+	width: 100%;
+	height: auto
+}
 
 .mobile-nav {
 	width: 100%;
 	background-color: white;
 	height: 40px;
-	position: absolute;
+	position: fixed;
 	top: 0px;
+	box-shadow: 0px $chrome_shadow_distance 0px $chrome_shadow;
 	button {
 		outline: none;
 	}
@@ -511,14 +534,38 @@ a {
 	height: 100%;
 	z-index: 100;
 	position: fixed;
-	width: 40%;
+	width: 75%;
 	top: 40px;
 	background-color:$theme_red;
 	display: none;
+	overflow-y: scroll;
+    top: 40px;
+    bottom: 0;
+}
+
+.drawer-button-content {
+	padding: 10px;
+	display: flex; 
+	flex-direction: column;
+	display: none;
+	font-size: 15px;
+	background-color: #B32626;
+	margin-top: 10px;
+	div {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	a {
+		color: white;
+		margin-bottom: 10px;
+	}
 	
 }
 
 .nav-category {
+	margin-top: 20px;
+}
+.nav-category a {
 	margin: 10px;
 }
 
