@@ -7,7 +7,8 @@ Website for MadHacks 2019
 * Add prize information to the FAQ
 * Move inline styles outline
 * View->The Team window
-* Scale down desktop icons, reupload (so browser isn't downloading them at full size then rescaling client side)
+* ~~Scale down desktop icons, reupload (so browser isn't downloading them at full size then rescaling client side)~~
+* Send Edge users to mobile
 * ~~Scroll bars interfere with close button~~
 * ~~Sponsors page gets jumpy occasionally~~
 * ~~Reformat FAQ~~
