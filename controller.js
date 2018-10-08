@@ -214,7 +214,7 @@ window.onload = function () {
 				evt.currentTarget.classList.remove("focused");
 				//if apply icon open link in new window/tab
 				if (evt.currentTarget.dataset.linkedFrame === 'apply') {
-					openInNewTab('forms/application.html')
+					openInNewTab('./application')
 				} else {
 					linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
 					linked_frame.classList.add("active");
