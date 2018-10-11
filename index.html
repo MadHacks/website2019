@@ -3,14 +3,14 @@
 <head>
 	<title>MadHacks 2018</title>
 
-
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<meta property="og:title" content="MadHacks 2018" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="http://madhacks.io" />
 	<meta property="og:image" content="http://madhacks.io/img/logo.png" />
-
-	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<meta charset="UTF-8">
+	
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 	<link rel="icon" type="image/png" href="img/logo.png" />
 	<link rel="stylesheet" href="controller_styles.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW"
@@ -45,6 +45,13 @@
 
 <body>
 	<div class="spacer">&nbsp;</div>
+
+	<div class="apply-button-mobile">
+		<div>
+			<a href=".application" target="_blank">Apply Now</a>
+		</div>
+	</div>
+
 	<div class="windows">
 		<!-- About -->
 		<div class="framed about default_window" id="about">
@@ -59,17 +66,18 @@
 			</div>
 			<div style="margin: 20px">
 				<p>
-					<h4 style="font-weight: 700; margin-bottom: 5px;">Madhacks</h4> Madhacks is the University of Wisconsin's twice-annual hackathon, bringing together participants from all over the US for 24 hours of hacking.
+					<h4 style="font-weight: 700; margin-bottom: 5px;">Madhacks</h4> Madhacks is the University of Wisconsin's twice-annual hackathon, bringing together participants from
+					all over the US and Canada for 24 hours of hacking.
 				</p>
 				<p>
 					Unlike other hackathons, MadHacks is going to be putting emphasis on the wacky, the original, and the downright impossible!
 				</p>
 				<p>
-					<h4 style="font-weight: 700; margin-bottom: 5px">Logistics</h4> Madhacks 2019 will take place on November 10-11, 2018 at 1025 W Johnson St, in Madison, WI. Look forward
-					to seeing you all there!
+					<h4 style="font-weight: 700; margin-bottom: 5px">Logistics</h4> Madhacks 2018 will take place on November 10-11, 2018 in the Educational Science Building at UW-Madison
+					(Address: 1025 W Johnson St, Madison, Wisconsin) Look forward to seeing you all there!
 				</p>
 				<p>
-					Apply now by double-clicking the Apply icon, or under File > New Application.
+					Apply now by double-clicking the Apply icon on Desktop, or under File > New Hacker Application.
 				</p>
 				<p class="attribution">
 					Icon artwork by Henrik Lund Mikkelsen, cursors by IconsGhost and Round Pixel (all of the Noun Project)
@@ -93,19 +101,17 @@
 			<div style="display: flex; flex-direction: row; margin: 20px; flex: 1;">
 				<div style="display: flex; flex-direction: column; align-items: flex-start; flex: 1">
 					<div class="faq-button faqActive" onclick="faqButtonClick(this)">
-						<p>Whats a hackathon?</p>
+						<p>👀 What's a hackathon? </p>
 						<div style="display: none;" id='faqContent'>
-							<p>A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Spring
-								2018 will be a 12 hours hackathon. If this is your first time attending, check out our hackathon veteran Spencer’s
-								medium post on
+							<p>A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Fall 2018
+								will be a 24 hours hackathon. If this is your first time attending, check out our hackathon veteran Spencer’s medium
+								post on
 								<a href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" style="text-decoration: none;">How to Do Hackathons.</a>
 							</p>
 						</div>
-
-
 					</div>
 					<div class="faq-button" onclick="faqButtonClick(this)">
-						<p>Do I need a team?</p>
+						<p> 👥 Do I need a team?</p>
 						<div style="display: none;" id='faqContent'>
 							<p>We encourage students to work with a team of 2 - 4 people but you can work individually as well. If you don't have
 								a team yet, there will be a team formation after the opening ceremony. If you want to find a team before the event,
@@ -114,15 +120,17 @@
 						</div>
 					</div>
 					<div class="faq-button" onclick="faqButtonClick(this)">
-						<p>Who can participate?</p>
+						<p>🎓 Who can participate?</p>
 						<div style="display: none;" id='faqContent'>
 							<p>We welcome undergraduate and graduate students of all backgrounds. You don’t need to be a Computer Science or Engineering
-								major to attend. If you don't know how to code, we will have workshops throughout the day to teach you how!
+								major to attend. If you don't know how to code, we will have workshops that teach you how to code and mentors that
+								can help you with your project. We will also be providing travel reimbursements for students travling from other
+								schools as well!
 							</p>
 						</div>
 					</div>
 					<div class="faq-button" onclick="faqButtonClick(this)">
-						<p>What do I need to bring?</p>
+						<p>💻 What do I need to bring?</p>
 						<div style="display: none;" id='faqContent'>
 							<p>You need to bring a photo ID to check in. You should also bring a laptop, chargers, and anything else you will need
 								for a 24 hour hackathon.
@@ -130,14 +138,54 @@
 						</div>
 					</div>
 					<div class="faq-button" onclick="faqButtonClick(this)">
-						<p>Attendance Cost</p>
+						<p>🤑 How much does it cost?</p>
 						<div style="display: none;" id='faqContent'>
 							<p>Admission to MadHacks is completely free. We will also be providing breakfast, lunch and dinner! There will also be
 								workshops and activities throughout the event.
 							</p>
 						</div>
 					</div>
+
 					<div class="faq-button" onclick="faqButtonClick(this)">
+						<p>🚘 Will there be travel reimbursement?</p>
+						<div style="display: none;" id='faqContent'>
+							<p>
+								Yes! We will assess all applications and provide travel reimbursements on a case-by-case basis. If we receive a large amount
+								of applications from your school and your school is within 5-8 hour bus ride, we may be able to send a bus.
+							</p>
+
+						</div>
+					</div>
+					<div class="faq-button" onclick="faqButtonClick(this)">
+						<p>🧀 Is there a theme for the hackathon?</p>
+						<div style="display: none;" id='faqContent'>
+							<p>
+								We will not have a specific theme this year’s hackathon but we do have different tracks that you can choose to do. Currently,
+								we have healthcare, blockchain and AI tracks. We will be posting more information about different track as we get
+								closer to the event!
+							</p>
+						</div>
+					</div>
+					<div class="faq-button" onclick="faqButtonClick(this)">
+						<p>🏅 Will there be any prizes?</p>
+						<div style="display: none;" id='faqContent'>
+							<p>
+								Yes! We will be posting details about different prizes as we get closer to the event. Stay tuned!
+							</p>
+						</div>
+					</div>
+					<div class="faq-button" onclick="faqButtonClick(this)">
+						<p>❓ Still have questions?</p>
+						<div style="display: none;" id='faqContent'>
+							<p>
+								Feel free to contact us using
+								<a href="https://madhacks-2018.typeform.com/to/NI8CP7">this form</a> or email us at
+								<a href="mailto:team@madhacks.io">team@madhacks.io</a>.
+							</p>
+						</div>
+					</div>
+					<!--
+                    <div class="faq-button" onclick="faqButtonClick(this)">
 						<p>What else do I need to know?</p>
 						<div style="display: none;" id='faqContent'>
 							<p>Please review the
@@ -147,44 +195,18 @@
 							</p>
 						</div>
 					</div>
-					<div class="faq-button" onclick="faqButtonClick(this)">
-						<p>Where and When?</p>
-						<div style="display: none;" id='faqContent'>
-							<p>
-								Saturday, November 10th in the Educational Sciences building on the UW-Madison campus.
-							</p>
-							<p>
-								<a href="https://goo.gl/maps/MFGt2tMaTKE2" target="_blank">1025 W Johnson St Madison, WI 53706</a>
-							</p>
-						</div>
-					</div>
-					<div class="faq-button" onclick="faqButtonClick(this)">
-						<p>Will there be any prizes?</p>
-						<div style="display: none;" id='faqContent'>
-							<p>
-								Yes! Check back soon for details.
-							</p>
-						</div>
-					</div>
-					<div class="faq-button" onclick="faqButtonClick(this)">
-						<p>Still have questions?</p>
-						<div style="display: none;" id='faqContent'>
-							<p>
-								Feel free to
-								<a href="https://madhacks-2018.typeform.com/to/NI8CP7">contact us</a>.
-							</p>
-						</div>
-					</div>
+-->
 				</div>
 				<div style="display: flex; flex: 1; background-color: #efefef; ">
 					<div id='faqTarget'>
-						<p>A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Spring 2018
-							will be a 12 hours hackathon. If this is your first time attending, check out our hackathon veteran Spencer’s medium
+						<p>A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Fall 2018
+							will be a 24 hours hackathon. If this is your first time attending, check out our hackathon veteran Spencer’s medium
 							post on
 							<a href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" style="text-decoration: none;">How to Do Hackathons.</a>
 						</p>
 					</div>
 				</div>
+
 			</div>
 		</div>
 
@@ -292,7 +314,7 @@
 			</div>
 		</div>
 
-				<!-- Sponsors -->
+		<!-- Sponsors -->
 		<div class="framed sponsors-mobile" id="sponsors">
 			<div class="title_bar">
 				Sponsors
@@ -306,14 +328,6 @@
 
 			<!-- content -->
 			<div class="frame_contents">
-				<div style="align-content: center; margin-left: 15px; flex: 1; position: fixed;">
-					<div class="sponsor-button active-button" id="sponsor-btn" onclick="showSponsors()">
-						<p class="sponsor-button-text">Sponsors</p>
-					</div>
-					<div class="sponsor-button" id="partner-btn" onclick="showPartners()">
-						<p class="sponsor-button-text">Partners</p>
-					</div>
-				</div>
 				<!-- Partners -->
 				<div style=" display: none; flex: 1; margin-left: 100px;" id="partnerList">
 					<div style="justify-content: center; display: flex; margin: 50px; ">
@@ -330,57 +344,59 @@
 				</div>
 
 				<!-- Sponsors -->
-				<div style="display: block; flex: 1; margin-left: 100px;" id="sponsorList">
-					<div style="flex-direction: row; display: flex; justify-content: center">
-						<div class="sponsor-item">
-							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/jane_street_large.png" />
-						</div>
+				<div style="display: block; flex: 1; align-content: center" id="sponsorList">
+					<div class="sponsor-item">
+						<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/jane_street_large.png" />
 					</div>
-					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
-						<div class="sponsor-item">
-							<img style="height: 65;" src="./img/partner_sponsor_logos/sponsors/bloomberg_medium.png" />
-						</div>
-						<div class="sponsor-item">
-							<img style="height: 95;" src="./img/partner_sponsor_logos/sponsors/Capital_One_medium.png" />
-						</div>
+					<div class="sponsor-item">
+						<img style="height: 65;" src="./img/partner_sponsor_logos/sponsors/bloomberg_medium.png" />
 					</div>
-					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
-						<div class="sponsor-item">
-							<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Epic_medium.png" />
-						</div>
-						<div class="sponsor-item">
-							<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Singlewire_medium.jpg" />
-						</div>
+					<div class="sponsor-item">
+						<img style="height: 95;" src="./img/partner_sponsor_logos/sponsors/Capital_One_medium.png" />
 					</div>
-					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
-						<div class="sponsor-item">
-							<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/5NINES-small.png" />
-						</div>
-						<div class="sponsor-item">
-							<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/balsamiq_small.png" />
-						</div>
-						<div class="sponsor-item">
-							<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/Domino_small.png" />
-						</div>
+					<div class="sponsor-item">
+						<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Epic_medium.png" />
 					</div>
-					<div style="flex-direction: row; display: flex; justify-content: center; align-items: center">
-						<div class="sponsor-item">
-							<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/kiio_small.png" />
-						</div>
-						<div class="sponsor-item">
-							<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/perblue_small.png" />
-						</div>
-						<div class="sponsor-item">
-							<img style="height: 60;" src="./img/partner_sponsor_logos/sponsors/warf_small.png" />
-						</div>
+					<div class="sponsor-item">
+						<img style="height: 90;" src="./img/partner_sponsor_logos/sponsors/Singlewire_medium.jpg" />
 					</div>
-					<div style="flex-direction: row; display: flex; justify-content: center; margin-top: 50px">
-						<div class="sponsor-item">
-							<p>Interested in sponsoring?
-								<a href="mailto:sponsorship@madhacks.io">Contact Us</a>
-							</p>
-						</div>
+					<div class="sponsor-item">
+						<img style="height: 120;" src="./img/partner_sponsor_logos/sponsors/5NINES-small.png" />
 					</div>
+					<div class="sponsor-item">
+						<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/balsamiq_small.png" />
+					</div>
+					<div class="sponsor-item">
+						<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/Domino_small.png" />
+					</div>
+					<div class="sponsor-item">
+						<img style="height: 50;" src="./img/partner_sponsor_logos/sponsors/kiio_small.png" />
+					</div>
+					<div class="sponsor-item">
+						<img style="height: 70;" src="./img/partner_sponsor_logos/sponsors/perblue_small.png" />
+					</div>
+					<div class="sponsor-item">
+						<img style="height: 60;" src="./img/partner_sponsor_logos/sponsors/warf_small.png" />
+					</div>
+					<div class="sponsor-item">
+						<p>Interested in sponsoring?
+							<a href="mailto:sponsorship@madhacks.io">Contact Us</a>
+						</p>
+					</div>
+
+					<div class="mobile-header">
+						<h4>Partners</h4>
+					</div>
+
+					<div class="sponsor-item">
+						<img style="height: 100;" src="./img/partner_sponsor_logos/partners/wolfram.png" />
+					</div>
+					<div class="sponsor-item">
+						<p>Interested in partnering?
+							<a href="mailto:team@madhacks.io">Contact Us</a>.
+						</p>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -393,12 +409,12 @@
 					<i class="fas fa-times"></i>
 				</div>
 			</div>
-			<div class="mobile-header"> 
-					<h4>Schedule</h4>
-				</div>
+			<div class="mobile-header">
+				<h4>Schedule</h4>
+			</div>
 			<div class="framed_contents">
 				<div id="schedule-container">
-					<div id="schedule-saturday" >
+					<div id="schedule-saturday">
 						<h2>Saturday</h2>
 						<h4>November 10th</h4>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
@@ -406,7 +422,7 @@
 							<p>Registration Opens</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
-							<p>9-10 am</p>
+							<p>9 am</p>
 							<p>Breakfast</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
@@ -414,11 +430,11 @@
 							<p>Registration Closes</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
-							<p>10-11 am</p>
+							<p>10 am</p>
 							<p>Madhacks Career Fair</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
-							<p>11-12 pm</p>
+							<p>11 am</p>
 							<p>Opening Ceremony</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
@@ -426,11 +442,11 @@
 							<p>Hacking Begins!</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
-							<p>1-2:30 pm</p>
+							<p>1 pm</p>
 							<p>Lunch</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
-							<p>6-7:30 pm</p>
+							<p>6 pm</p>
 							<p>Dinner</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
@@ -446,7 +462,7 @@
 							<p>Midnight Snack</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
-							<p>7-9 am</p>
+							<p>7 am</p>
 							<p>Breakfast</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
@@ -454,7 +470,7 @@
 							<p>Hacking Ends</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
-							<p>12-1:30 pm</p>
+							<p>12 pm</p>
 							<p>Lunch</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
@@ -462,7 +478,7 @@
 							<p>Judging Begins</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: space-between;">
-							<p>2-3 pm</p>
+							<p>2 pm</p>
 							<p>Project Demos</p>
 						</div>
 						<div style="flex-direction: row; display: flex; justify-content: flex-end;">
@@ -493,10 +509,10 @@
 			<div class="dropdown">
 				<button class="dropbtn" onclick="ddownFunction('fileDropdown', event)">File</button>
 				<div class="dropdown-content" id="fileDropdown">
-					<a href="forms/application.html" target="_blank">New Application...</a>
-					<a href="forms/mentors.html" target="_blank">New Mentor Application...</a>
-					<a href="forms/talks.html" target="_blank">New Speaker Application...</a>
-					<a href="forms/volunteers.html" target="_blank" id="last">New Sponsor Application...</a>
+					<a href="./application" target="_blank">New Hacker Application...</a>
+					<a href="./mentors" target="_blank">New Mentor Application...</a>
+					<a href="./talks" target="_blank">New Speaker Application...</a>
+					<a href="./volunteers" target="_blank" id="last">New Volunteer Application...</a>
 				</div>
 			</div>
 			<!--
@@ -516,7 +532,7 @@
 					<a href="https://2016.madhacks.io" target="_blank" id="last">Madhacks 2016</a>
 				</div>
 			</div>
-			<a href="https://madhacks-2018.typeform.com/to/NI8CP7" target="_blank">Contact</a>
+			<a href="./contact" target="_blank">Contact</a>
 			<div id="time"></div>
 			<div class="navbar_icons">
 				<i class="fab fa-bluetooth"></i>
@@ -606,16 +622,16 @@
 				<a href="#">Applications</a>
 				<div id='drawer-applications-content' class='drawer-button-content'>
 					<div>
-						<a href="forms/application.html" target="_blank">New Application...</a>
+						<a href="./application" target="_blank">New Hacker Application...</a>
 					</div>
 					<div>
-						<a href="forms/mentors.html" target="_blank">New Mentor Application...</a>
+						<a href="./mentors" target="_blank">New Mentor Application...</a>
 					</div>
 					<div>
-						<a href="forms/talks.html" target="_blank">New Speaker Application...</a>
+						<a href="./talks" target="_blank">New Speaker Application...</a>
 					</div>
 					<div>
-						<a href="forms/volunteers.html" target="_blank" id="last">New Sponsor Application...</a>
+						<a href="./volunteers" target="_blank" id="last">New Volunteer Application...</a>
 					</div>
 
 				</div>

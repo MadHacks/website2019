@@ -214,7 +214,7 @@ window.onload = function () {
 				evt.currentTarget.classList.remove("focused");
 				//if apply icon open link in new window/tab
 				if (evt.currentTarget.dataset.linkedFrame === 'apply') {
-					openInNewTab('forms/application.html')
+					openInNewTab('./application')
 				} else {
 					linked_frame = document.getElementsByClassName(evt.currentTarget.dataset.linkedFrame)[0];
 					linked_frame.classList.add("active");
@@ -291,33 +291,11 @@ window.onload = function () {
 			}
 
 			dicons = document.getElementsByClassName("d-icon");
-			for (var i = 0; i < ddowns.length; i++) {
-				d = ddowns[i]
+			for (var i = 0; i < dicons.length; i++) {
+				d = dicons[i]
 				d.classList.remove("focused");
 			}
 		})
-
-		/*
-			FAQ
-		*/
-		var acc = document.getElementsByClassName("accordion");
-		var i;
-
-		for (i = 0; i < acc.length; i++) {
-			acc[i].addEventListener("click", function () {
-				/* Toggle between adding and removing the "active" class,
-				to highlight the button that controls the panel */
-				this.classList.toggle("activate");
-
-				/* Toggle between hiding and showing the active panel */
-				var panel = this.nextElementSibling;
-				if (panel.style.display === "block") {
-					panel.style.display = "none";
-				} else {
-					panel.style.display = "block";
-				}
-			});
-		}
 	}
 	else {
 		/* Mobile version code */
