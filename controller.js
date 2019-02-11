@@ -22,8 +22,7 @@ window.onload = function () {
 	/*
 			Map
 		*/
-	mapboxgl.accessToken = "pk.eyJ1IjoiY29ubm9yc3RhbXBlciIsImEiOiJjamFpeDM1bXMyMXdrMnFsZTh0dmJmanVxIn0.v2IUgOKPxfRDTlAhaswe0w";
-
+    mapboxgl.accessToken = config.API_Key;
 	/* Map: This represents the map on the page. */
 	var map = new mapboxgl.Map({
 		container: "map",
