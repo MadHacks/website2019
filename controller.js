@@ -18,11 +18,13 @@ if (!("path" in Event.prototype)) {
 	});
 }
 
+var api = config.API_Key;
+
 window.onload = function () {
 	/*
 			Map
 		*/
-    mapboxgl.accessToken = config.API_Key;
+    mapboxgl.accessToken = API;
 	/* Map: This represents the map on the page. */
 	var map = new mapboxgl.Map({
 		container: "map",
