@@ -24,7 +24,7 @@ window.onload = function () {
 	/*
 			Map
 		*/
-    mapboxgl.accessToken = API;
+    mapboxgl.accessToken = api;
 	/* Map: This represents the map on the page. */
 	var map = new mapboxgl.Map({
 		container: "map",
