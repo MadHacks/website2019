@@ -14,7 +14,8 @@ const useStyles = makeStyles({
     color: '#FFFFFF',
     borderColor: '#FFFFFF',
     padding: '8px 24px',
-    fontSize: '1.5rem'
+    fontSize: '1.5rem',
+    marginTop: '10px',
   }
 });
 

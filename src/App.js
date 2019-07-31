@@ -3,6 +3,7 @@ import './App.css';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import 'typeface-roboto-condensed';
+import Container from '@material-ui/core/Container';
 
 import Header from './components/Header';
 
@@ -15,9 +16,11 @@ const theme = createMuiTheme({
 function App() {
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
-        <Header />
-      </ThemeProvider>
+      <Container>
+        <ThemeProvider theme={theme}>
+          <Header />
+        </ThemeProvider>
+      </Container>
     </div>
   );
 }
