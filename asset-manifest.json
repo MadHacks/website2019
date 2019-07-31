@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.18e317bf.chunk.css",
-    "main.js": "/static/js/main.f0c3cb01.chunk.js",
-    "main.js.map": "/static/js/main.f0c3cb01.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.c5541365.js",
-    "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
-    "static/css/2.d9029df8.chunk.css": "/static/css/2.d9029df8.chunk.css",
-    "static/js/2.db8afa21.chunk.js": "/static/js/2.db8afa21.chunk.js",
-    "static/js/2.db8afa21.chunk.js.map": "/static/js/2.db8afa21.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ae080d0ffce8b162dc5204b78c169a1a.js": "/precache-manifest.ae080d0ffce8b162dc5204b78c169a1a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.d9029df8.chunk.css.map": "/static/css/2.d9029df8.chunk.css.map",
-    "static/css/main.18e317bf.chunk.css.map": "/static/css/main.18e317bf.chunk.css.map",
-    "static/media/index.css": "/static/media/roboto-condensed-latin-700italic.a8c91eca.woff",
-    "static/media/logo.png": "/static/media/logo.b5a67670.png"
+    "main.css": "/website2019/static/css/main.0b87b4c5.chunk.css",
+    "main.js": "/website2019/static/js/main.5b91ccd6.chunk.js",
+    "main.js.map": "/website2019/static/js/main.5b91ccd6.chunk.js.map",
+    "runtime~main.js": "/website2019/static/js/runtime~main.f3ab2044.js",
+    "runtime~main.js.map": "/website2019/static/js/runtime~main.f3ab2044.js.map",
+    "static/css/2.09f0fb21.chunk.css": "/website2019/static/css/2.09f0fb21.chunk.css",
+    "static/js/2.db8afa21.chunk.js": "/website2019/static/js/2.db8afa21.chunk.js",
+    "static/js/2.db8afa21.chunk.js.map": "/website2019/static/js/2.db8afa21.chunk.js.map",
+    "index.html": "/website2019/index.html",
+    "precache-manifest.ef6aa177f7e9e5b5363d2a8358ffc155.js": "/website2019/precache-manifest.ef6aa177f7e9e5b5363d2a8358ffc155.js",
+    "service-worker.js": "/website2019/service-worker.js",
+    "static/css/2.09f0fb21.chunk.css.map": "/website2019/static/css/2.09f0fb21.chunk.css.map",
+    "static/css/main.0b87b4c5.chunk.css.map": "/website2019/static/css/main.0b87b4c5.chunk.css.map",
+    "static/media/index.css": "/website2019/static/media/roboto-condensed-latin-700italic.a8c91eca.woff",
+    "static/media/logo.png": "/website2019/static/media/logo.b5a67670.png"
   }
 }
