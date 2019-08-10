@@ -4,8 +4,22 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
+  logo: {
+    height: '40vmin',
+    pointEvents: 'none',
+  },
+  header: {
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '20pt',
+    color: 'white'
+  },
   carbon: {
     color: '#4DBF00',
     lineHeight:'0.2'
@@ -21,11 +35,11 @@ const useStyles = makeStyles({
 
 export default function Header() {
   const classes = useStyles();
-  const typeformLink = "https://madhacks-2018.typeform.com/to/sSeSiB";
+  const typeformLink = "https://madhacks-2019.typeform.com/to/sSeSiB";
 
   return (
-    <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <Grid item xs={12} className={classes.header}>
+        <img src={logo} className={classes.logo} alt="logo" />
         <Typography variant="h1" component="h2" gutterBottom>
             <b>MadHacks</b>
         </Typography>
@@ -41,6 +55,6 @@ export default function Header() {
         <Button variant="outlined" href={typeformLink} className={classes.applyButton}>
             Apply
         </Button>
-    </header>
+    </Grid>
   );
 }
