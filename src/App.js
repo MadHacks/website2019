@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import 'typeface-roboto-condensed';
-import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 
 import Header from './components/Header';
+import About from './components/About';
+import Sponsors from './components/Sponsors';
 
 const theme = createMuiTheme({
   typography: {
@@ -15,13 +16,19 @@ const theme = createMuiTheme({
 
 function App() {
   return (
-    <div className="App">
-      <Container>
-        <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <Grid container spacing={0}>
+        <Grid container item xs={12} spacing={0}>
           <Header />
-        </ThemeProvider>
-      </Container>
-    </div>
+        </Grid>
+        <Grid container item xs={12} spacing={0}>
+          <About />
+        </Grid>
+        <Grid container item xs={12} spacing={0}>
+          <Sponsors />
+        </Grid>
+      </Grid>
+    </ThemeProvider>
   );
 }
 
