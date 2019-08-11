@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/website2019/static/css/main.281659f2.chunk.css",
-    "main.js": "/website2019/static/js/main.5b91ccd6.chunk.js",
-    "main.js.map": "/website2019/static/js/main.5b91ccd6.chunk.js.map",
+    "main.css": "/website2019/static/css/main.71362e87.chunk.css",
+    "main.js": "/website2019/static/js/main.466c462c.chunk.js",
+    "main.js.map": "/website2019/static/js/main.466c462c.chunk.js.map",
     "runtime~main.js": "/website2019/static/js/runtime~main.f3ab2044.js",
     "runtime~main.js.map": "/website2019/static/js/runtime~main.f3ab2044.js.map",
     "static/css/2.09f0fb21.chunk.css": "/website2019/static/css/2.09f0fb21.chunk.css",
-    "static/js/2.db8afa21.chunk.js": "/website2019/static/js/2.db8afa21.chunk.js",
-    "static/js/2.db8afa21.chunk.js.map": "/website2019/static/js/2.db8afa21.chunk.js.map",
+    "static/js/2.2b7a6fe0.chunk.js": "/website2019/static/js/2.2b7a6fe0.chunk.js",
+    "static/js/2.2b7a6fe0.chunk.js.map": "/website2019/static/js/2.2b7a6fe0.chunk.js.map",
     "index.html": "/website2019/index.html",
-    "precache-manifest.3b0d8519eabc6d335d16dc82bedb9939.js": "/website2019/precache-manifest.3b0d8519eabc6d335d16dc82bedb9939.js",
+    "precache-manifest.3ab4884171df738cd50da122c1c35d9b.js": "/website2019/precache-manifest.3ab4884171df738cd50da122c1c35d9b.js",
     "service-worker.js": "/website2019/service-worker.js",
     "static/css/2.09f0fb21.chunk.css.map": "/website2019/static/css/2.09f0fb21.chunk.css.map",
-    "static/css/main.281659f2.chunk.css.map": "/website2019/static/css/main.281659f2.chunk.css.map",
+    "static/css/main.71362e87.chunk.css.map": "/website2019/static/css/main.71362e87.chunk.css.map",
+    "static/media/aldo_leopold.jpg": "/website2019/static/media/aldo_leopold.4f8b2c47.jpg",
     "static/media/index.css": "/website2019/static/media/roboto-condensed-latin-700italic.a8c91eca.woff",
+    "static/media/gaylord_nelson.jpg": "/website2019/static/media/gaylord_nelson.9bf73ae7.jpg",
     "static/media/logo.png": "/website2019/static/media/logo.b5a67670.png"
   }
 }

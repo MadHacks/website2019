@@ -1,31 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "75fb21ded1c125b6507eeed1e14cc847",
+    "revision": "9e7ce4809cbd215f8eab591162c4539d",
     "url": "/website2019/index.html"
   },
   {
-    "revision": "98d3468a4cc1aef6013f",
+    "revision": "b86e3f28b7f3d9ab83ff",
     "url": "/website2019/static/css/2.09f0fb21.chunk.css"
   },
   {
-    "revision": "c853398b8b860b7faa25",
-    "url": "/website2019/static/css/main.281659f2.chunk.css"
+    "revision": "f814700a5ae76d1fd10e",
+    "url": "/website2019/static/css/main.71362e87.chunk.css"
   },
   {
-    "revision": "98d3468a4cc1aef6013f",
-    "url": "/website2019/static/js/2.db8afa21.chunk.js"
+    "revision": "b86e3f28b7f3d9ab83ff",
+    "url": "/website2019/static/js/2.2b7a6fe0.chunk.js"
   },
   {
-    "revision": "c853398b8b860b7faa25",
-    "url": "/website2019/static/js/main.5b91ccd6.chunk.js"
+    "revision": "f814700a5ae76d1fd10e",
+    "url": "/website2019/static/js/main.466c462c.chunk.js"
   },
   {
     "revision": "30796fc6d163f2121371",
     "url": "/website2019/static/js/runtime~main.f3ab2044.js"
   },
   {
+    "revision": "4f8b2c4757f3a31d238337d5b0b8d0a2",
+    "url": "/website2019/static/media/aldo_leopold.4f8b2c47.jpg"
+  },
+  {
     "revision": "1fba13f8bbe4bb619557c61c7d7aa368",
     "url": "/website2019/static/media/carbon-background.1fba13f8.png"
+  },
+  {
+    "revision": "9bf73ae792479ed2ad05f4975222a405",
+    "url": "/website2019/static/media/gaylord_nelson.9bf73ae7.jpg"
   },
   {
     "revision": "b5a676702756f4709d6be0f519c12a3f",
