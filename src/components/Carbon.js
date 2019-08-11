@@ -4,15 +4,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import { getThemeProps } from '@material-ui/styles';
 
 const useStyles = makeStyles({
     header: {
         paddingTop: '100px',
-        color: 'rgb(244,154,2)',
-        textAlign: 'center',
+        paddingLeft: 50,
+        color: '#4DBF00',
+        textAlign: 'left',
+        
     },
     paper: {
-        maxWidth: 800,
         padding: '50px',
         marginBottom: '100px',
         textAlign: 'center',
@@ -22,42 +24,31 @@ const useStyles = makeStyles({
     }
 });
 
-export default function Sponsors() {
+export default function Carbon(props) {
   const classes = useStyles();
 
   return (
     <React.Fragment>
         <Grid item xs={12}>
             <Typography variant="h1" component="h2" gutterBottom className={classes.header}>
-                Our sponsors
+                <b>Carbon?</b>
             </Typography>
         </Grid>
         <Paper className={classes.paper} >
             <Grid item xs={12}>
                 <Typography variant="h5" gutterBottom>
-                    Sponsors to be announced soon!
-                    Interested in sponsoring? Contact us at <a href="mailto:=sponsorship@madhacks.io">sponsorship@madhacks.io</a> 
+                Sustainability is among the most pertinent challenges facing society today. Sustainable development describes a path to sustainability through economic development without depletion of natural resources.  
+                <br/><br/>
+                At MadHacks Carbon, we challenge students to bring ingenuity and creativity to generate novel solutions on local and global sustainability: 
+                <br/><br/>
+                - What creative solutions can we contribute for energy use and waste?
+                <br/>
+                - What other areas of society can we make more sustainable?
+                <br/>
+                - What role can technology play in the solutions?
                 </Typography>
             </Grid>
         </Paper>
     </React.Fragment>
   );
-}
-
-
-function LargeSponsor(props) {
-    const classes = useStyles();
-    return (
-        <Grid item xs={12}>
-            <img src={props.children.imgSrc} className={classes} alt="logo" />
-        </Grid>
-    )
-}
-
-function MediumSponsor(props) {
-
-}
-
-function smallSponsor(props) {
-    
 }

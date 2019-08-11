@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Header from './components/Header';
 import About from './components/About';
+import Carbon from './components/Carbon';
 import Sponsors from './components/Sponsors';
 import QuoteLeft from './components/QuoteLeft';
 import QuoteRight from './components/QuoteRight';
@@ -30,6 +31,9 @@ function App() {
           <About />
         </Grid>
         <Grid container item xs={12} spacing={0}>
+          <Carbon />
+        </Grid>>
+        <Grid container item xs={12} spacing={0}>
           <QuoteLeft
             avatar={aldo}
             author={
@@ -50,7 +54,6 @@ function App() {
         <Grid container item xs={12} spacing={0}>
           <Sponsors />
         </Grid>
-        
       </Grid>
     </ThemeProvider>
   );
