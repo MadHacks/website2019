@@ -7,7 +7,6 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
     header: {
-        paddingTop: '100px',
         color: 'rgb(244,154,2)',
         textAlign: 'center',
     },

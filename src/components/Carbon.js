@@ -9,9 +9,9 @@ import { getThemeProps } from '@material-ui/styles';
 const useStyles = makeStyles({
     header: {
         paddingTop: '100px',
-        paddingLeft: 50,
+        paddingRight: 50,
         color: '#4DBF00',
-        textAlign: 'left',
+        textAlign: 'right',
         
     },
     paper: {

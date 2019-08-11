@@ -9,6 +9,7 @@ import About from './components/About';
 import Carbon from './components/Carbon';
 import Sponsors from './components/Sponsors';
 import QuoteLeft from './components/QuoteLeft';
+import FAQ from './components/FAQ';
 import QuoteRight from './components/QuoteRight';
 
 import aldo from './img/aldo_leopold.jpg';
@@ -44,6 +45,9 @@ function App() {
             }
             msg='“We abuse land because we regard it as a commodity belonging to us. When we see land as a community to which we belong, we may begin to use it with love and respect.”'/>
         </Grid>
+        <Grid container item xs={12} spacing={0}>
+          <FAQ />
+        </Grid> 
         <Grid container item xs={12} spacing={0}>
           <QuoteRight
             avatar={gaylord}
