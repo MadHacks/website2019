@@ -4,6 +4,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import 'typeface-roboto-condensed';
 import Grid from '@material-ui/core/Grid';
 
+import MLHBanner from './components/MLHBanner';
 import Header from './components/Header';
 import About from './components/About';
 import Carbon from './components/Carbon';
@@ -24,6 +25,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <MLHBanner />
       <Grid container spacing={0}>
         <Grid container item xs={12} spacing={0}>
           <Header />

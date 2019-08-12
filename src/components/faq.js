@@ -17,10 +17,10 @@ const useStyles = makeStyles({
         textAlign: 'center',
     },
     question: {
-        fontSize: 40,
+        fontSize: 30,
     },
     answer: {
-        fontSize: 25,
+        fontSize: 20,
     },
     paper: {
         maxWidth: 800,
