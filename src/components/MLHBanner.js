@@ -9,21 +9,23 @@ const useStyles = makeStyles({
         boxShadow: 'none',
     },
     banner: {
-        width: 200,
-        height: 200,
+        width: 100,
         marginLeft: 'auto',
         marginRight: 50,
     }
 });
 
 const bannerSrc = 'https://s3.amazonaws.com/logged-assets/trust-badge/2020/mlh-trust-badge-2020-white.svg'
+const mlhSite = 'https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=white'
 
 export default function MLHBanner(props) {
   const classes = useStyles();
 
   return (
     <AppBar position='absolute' className={classes.bannerBar}>
-        <img src={bannerSrc} className={classes.banner} />
+        <a href={mlhSite} target="_blank" className={classes.banner}>
+            <img src={bannerSrc} />
+        </a>
     </AppBar>
   );
 }
