@@ -1,7 +1,7 @@
 {
   "name": "website2019",
   "version": "1.0.0",
-  "homepage": "https://madhacks.github.io/website2019",
+  "homepage": "https://www.madhacks.io",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.3.0",
