@@ -23,8 +23,8 @@ export default function MLHBanner(props) {
 
   return (
     <AppBar position='absolute' className={classes.bannerBar}>
-        <a href={mlhSite} target="_blank" className={classes.banner}>
-            <img src={bannerSrc} />
+        <a href={mlhSite} target='_blank' rel='noopener noreferrer' className={classes.banner}>
+            <img src={bannerSrc} alt='MLH Banner' />
         </a>
     </AppBar>
   );

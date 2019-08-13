@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import { getThemeProps } from '@material-ui/styles';
 
 const useStyles = makeStyles({
     header: {

@@ -42,21 +42,3 @@ export default function Sponsors() {
     </React.Fragment>
   );
 }
-
-
-function LargeSponsor(props) {
-    const classes = useStyles();
-    return (
-        <Grid item xs={12}>
-            <img src={props.children.imgSrc} className={classes} alt="logo" />
-        </Grid>
-    )
-}
-
-function MediumSponsor(props) {
-
-}
-
-function smallSponsor(props) {
-    
-}
