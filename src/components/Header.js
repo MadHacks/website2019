@@ -39,22 +39,22 @@ export default function Header() {
 
   return (
     <Grid item xs={12} className={classes.header}>
-        <img src={logo} className={classes.logo} alt="logo" />
-        <Typography variant="h1" component="h2" gutterBottom>
-            <b>MadHacks</b>
-        </Typography>
-        <Typography variant="h1" component="h2" gutterBottom className={classes.carbon}>
-            <b>Carbon</b>
-        </Typography>
-        <Typography variant="h5" gutterBottom>
-            University of Wisconsin–Madison
-        </Typography>
-        <Typography variant="h5" gutterBottom>
-            October 19-20, 2019
-        </Typography>
-        <Button variant="outlined" href={typeformLink} className={classes.applyButton}>
-            Apply
-        </Button>
+      <img src={logo} className={classes.logo} alt="logo" />
+      <Typography variant="h1" component="h2" gutterBottom>
+          <b>MadHacks</b>
+      </Typography>
+      <Typography variant="h1" component="h2" gutterBottom className={classes.carbon}>
+          <b>Carbon</b>
+      </Typography>
+      <Typography variant="h5" gutterBottom>
+          University of Wisconsin–Madison
+      </Typography>
+      <Typography variant="h5" gutterBottom>
+          October 19-20, 2019
+      </Typography>
+      <Button variant="outlined" href={typeformLink} className={classes.applyButton}>
+          Apply
+      </Button>
     </Grid>
   );
 }
