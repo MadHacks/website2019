@@ -5,8 +5,6 @@ import 'typeface-roboto-condensed';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
-import CarbonCard from './CarbonCard';
-
 const useStyles = makeStyles({
     header: {
         paddingTop: 50,
@@ -40,21 +38,9 @@ export default function Carbon(props) {
         <Paper className={classes.paper} >
             <Grid item xs={12}>
                 <Typography variant="h5" gutterBottom>
-                    Sustainability is among the most pertinent challenges facing society today. Sustainable development describes a path to sustainability through economic development without depletion of natural resources.  
-                    <br/><br/>
-                    At MadHacks Carbon, we challenge students to bring ingenuity and creativity to generate novel solutions on local and global sustainability: 
+                    MadHacks Carbon encourages competitors to bring their creativity and ingenuity to engineer solutions for sustainable living. Whether it's carbon emission, waste management, power efficiency, environmental agriculture, or any other concern, bring your ideas here. The collaborative spirit of our event will inspire teamwork and real implementation of your exciting ideas. Will you join us to contribute to a greener future?
+                    
                 </Typography>
-            </Grid>
-            <Grid container>
-                <Grid item xs={4}>
-                    <CarbonCard msg={"Create solutions for sustainable energy use and prevention and minimization of waste"} />
-                </Grid>
-                <Grid item xs={4}>
-                    <CarbonCard msg={"Identify and remediate areas of society lacking sustainability"} />
-                </Grid>
-                <Grid item xs={4}>
-                    <CarbonCard msg={"Interface with technology for sustainable solutions"} />
-                </Grid>
             </Grid>
         </Paper>
     </React.Fragment>
