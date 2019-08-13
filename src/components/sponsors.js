@@ -35,7 +35,7 @@ export default function Sponsors() {
             <Grid item xs={12}>
                 <Typography variant="h5" gutterBottom>
                     Sponsors to be announced soon!
-                    Interested in sponsoring? Contact us at <a href="mailto:=sponsorship@madhacks.io">sponsorship@madhacks.io</a> 
+                    Interested in sponsoring? Contact us at <a style={{color: 'rgb(244,154,2)'}} href="mailto:=sponsorship@madhacks.io">sponsorship@madhacks.io</a> 
                 </Typography>
             </Grid>
         </Paper>
