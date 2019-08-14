@@ -3,7 +3,6 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import 'typeface-roboto-condensed';
 import Grid from '@material-ui/core/Grid';
-import Zoom from '@material-ui/core/Zoom';
 
 import MLHBanner from './components/MLHBanner';
 import Header from './components/Header';
@@ -13,6 +12,7 @@ import Sponsors from './components/Sponsors';
 import QuoteLeft from './components/QuoteLeft';
 import FAQ from './components/FAQ';
 import QuoteRight from './components/QuoteRight';
+import Footer from './components/Footer';
 
 import aldo from './img/aldo_leopold.jpg';
 import gaylord from './img/gaylord_nelson.jpg';
@@ -29,7 +29,7 @@ function App() {
       <MLHBanner />
       <Grid container spacing={0}>
         <Grid container item xs={12} spacing={0}>
-          <Zoom in='true'><Header /></Zoom>
+          <Header />
         </Grid>
         <Grid container item xs={12} spacing={0}>
           <About />
@@ -60,6 +60,9 @@ function App() {
         </Grid>
         <Grid container item xs={12} spacing={0}>
           <Sponsors />
+        </Grid>
+        <Grid container item xs={12} spacing={0}>
+          <Footer />
         </Grid>
       </Grid>
     </ThemeProvider>
