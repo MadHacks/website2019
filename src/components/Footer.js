@@ -30,7 +30,9 @@ export default function Footer(props) {
         <Paper className={classes.paper}>
             <Grid container>
                 <Grid item xs={4}>
-                    Questions? Email us at <a style={{color: 'rgb(244,154,2)'}} href="team@madhacks.io">team@madhacks.io</a>
+                    <Typography gutterBottom>
+                        Questions? Email us at <a style={{color: 'rgb(244,154,2)'}} href="team@madhacks.io">team@madhacks.io</a>
+                    </Typography>
                 </Grid>
                 <Grid item xs={4}>
                     <Typography gutterBottom>
