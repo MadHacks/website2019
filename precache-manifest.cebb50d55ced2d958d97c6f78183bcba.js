@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8a5ada0f3a60737526e6942ed75a2da9",
+    "revision": "88a8e3d67f4596ce4f1bba757168141a",
     "url": "/index.html"
   },
   {
-    "revision": "4ff4fa1e75d6ab7567a8",
+    "revision": "d560cdfb73099bedda4e",
     "url": "/static/css/2.d9029df8.chunk.css"
   },
   {
-    "revision": "ea13499c9d04d56554cf",
+    "revision": "dd0dcf28613d8a93ded3",
     "url": "/static/css/main.e6ea2239.chunk.css"
   },
   {
-    "revision": "4ff4fa1e75d6ab7567a8",
-    "url": "/static/js/2.d0d5c0a1.chunk.js"
+    "revision": "d560cdfb73099bedda4e",
+    "url": "/static/js/2.33debf1d.chunk.js"
   },
   {
-    "revision": "ea13499c9d04d56554cf",
-    "url": "/static/js/main.0deef6ca.chunk.js"
+    "revision": "dd0dcf28613d8a93ded3",
+    "url": "/static/js/main.757bd88a.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -28,8 +28,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/aldo_leopold.4f8b2c47.jpg"
   },
   {
+    "revision": "9b1a507358ab94269e32339570511af4",
+    "url": "/static/media/american_family.9b1a5073.png"
+  },
+  {
     "revision": "1fba13f8bbe4bb619557c61c7d7aa368",
     "url": "/static/media/carbon-background.1fba13f8.png"
+  },
+  {
+    "revision": "c4203c56201a4ee0e12f762d2caf1b83",
+    "url": "/static/media/facebook.c4203c56.png"
   },
   {
     "revision": "9bf73ae792479ed2ad05f4975222a405",
@@ -38,6 +46,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b5a676702756f4709d6be0f519c12a3f",
     "url": "/static/media/logo.b5a67670.png"
+  },
+  {
+    "revision": "bd5f88b15182ebc524c8e212c3c6c1ab",
+    "url": "/static/media/mongodb.bd5f88b1.png"
+  },
+  {
+    "revision": "e816e9265facacf53a2b922fd9860f98",
+    "url": "/static/media/perblue.e816e926.png"
+  },
+  {
+    "revision": "4df073c5b1de771be31dab00daed2f03",
+    "url": "/static/media/polco.4df073c5.png"
   },
   {
     "revision": "4f5f5c645bf1a0cd30d0927f363da4a8",
