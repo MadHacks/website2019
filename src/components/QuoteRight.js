@@ -4,18 +4,18 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Avatar from '@material-ui/core/Avatar';
 
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
     },
     avatar: {
+        width: '100%',
+        height: '100%',
+        maxWidth: '300px',
+        maxHeight: '300px',
+        borderRadius: '300px',
         margin: 'auto',
-        width: 300,
-        height: 300,
-        display: 'block',
-        marginLeft: 50
     },
     paper: {
         maxWidth: '50%',
@@ -38,8 +38,8 @@ export default function QuoteRight(props) {
   return (
     <div className={classes.root}>
         <Paper className={classes.paper} >
-            <Grid container justify="center" alignItems="center">
-                <Grid item xs>
+            <Grid container justify="center" alignItems="center" spacing={3}>
+                <Grid item xs={12} md={6}>
                     <Typography variant="h5" gutterBottom>
                         <em>{props.msg}</em>
                     </Typography>
@@ -50,8 +50,8 @@ export default function QuoteRight(props) {
                         {props.title}
                     </Typography>
                 </Grid>
-                <Grid item xs>
-                    <Avatar src={props.avatar} className={classes.avatar} />
+                <Grid item xs={12} md={6}>
+                    <img src={props.avatar} className={classes.avatar} alt={props.alt}/>
                 </Grid>
             </Grid>
         </Paper>

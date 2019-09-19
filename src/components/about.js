@@ -11,6 +11,8 @@ const useStyles = makeStyles({
         paddingLeft: 50,
         color: 'rgb(244,154,2)',
         textAlign: 'left',
+        fontSize: '4rem',
+        lineHeight: 1
     },
     paper: {
         maxWidth: 800,
@@ -29,7 +31,7 @@ export default function About(props) {
   return (
     <React.Fragment>
         <Grid item xs={12}>
-            <Typography variant="h1" component="h2" gutterBottom className={classes.header}>
+            <Typography gutterBottom className={classes.header}>
                 Wisconsin's Premier Hackathon
             </Typography>
         </Grid>

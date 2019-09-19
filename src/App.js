@@ -10,7 +10,7 @@ import MLHBanner from './components/MLHBanner';
 import Header from './components/Header';
 import About from './components/About';
 import Carbon from './components/Carbon';
-import Sponsors from './components/Sponsors';
+//import Sponsors from './components/Sponsors';
 import QuoteLeft from './components/QuoteLeft';
 import FAQ from './components/FAQ';
 import QuoteRight from './components/QuoteRight';
@@ -48,6 +48,7 @@ function App() {
         <Grid container item xs={12} spacing={0}>
           <QuoteLeft
             avatar={aldo}
+            alt="Profile of Aldo Leopold"
             author={
               <span>Aldo Leopold, <em>A Sand County Almanac</em></span>
             }
@@ -62,13 +63,12 @@ function App() {
         <Grid container item xs={12} spacing={0}>
           <QuoteRight
             avatar={gaylord}
+            alt="Profile of Gaylord Nelson"
             author="Gaylord Nelson"
             title="Former Wisconsin Senator & Founder of Earth Day"
             msg="“The ultimate test of man's conscience may be his willingness to sacrifice something today for future generations whose words of thanks will not be heard.”" />
         </Grid>
-        <Grid container item xs={12} spacing={0}>
-          <Sponsors />
-        </Grid>
+
         <Footer />
       </Container>
     </ThemeProvider>
