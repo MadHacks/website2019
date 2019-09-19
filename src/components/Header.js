@@ -7,9 +7,12 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
+  root: {
+    flexGrow: 1,
+  },
   logo: {
     height: '40vmin',
-    pointEvents: 'none',
+    textAlign: 'center'
   },
   header: {
     minHeight: '100vh',
@@ -17,12 +20,13 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: '20pt',
     color: 'white'
   },
   carbon: {
     color: '#4DBF00',
-    lineHeight:'0.2'
+    fontSize:'5rem',
+    textAlign: 'center',
+    lineHeight: 1,
   },
   applyButton: {
     color: '#FFFFFF',
@@ -38,23 +42,37 @@ export default function Header() {
   const typeformLink = "https://madhacks-2019.typeform.com/to/sSeSiB";
 
   return (
-    <Grid item xs={12} className={classes.header}>
-      <img src={logo} className={classes.logo} alt="logo" />
-      <Typography variant="h1" component="h2" gutterBottom>
-          <b>MadHacks</b>
-      </Typography>
-      <Typography variant="h1" component="h2" gutterBottom className={classes.carbon}>
-          <b>Carbon</b>
-      </Typography>
-      <Typography variant="h5" gutterBottom>
-          University of Wisconsin–Madison
-      </Typography>
-      <Typography variant="h5" gutterBottom>
-          October 19-20, 2019
-      </Typography>
-      <Button variant="outlined" href={typeformLink} className={classes.applyButton}>
-          Apply
-      </Button>
-    </Grid>
+    <div className={classes.root}>
+      <Grid container>
+        <Grid item xs={12}>
+          <img src={logo} className={classes.logo} alt="logo" />
+        </Grid>
+        <Grid item xs={12}>
+        <Typography style={{fontSize:'5rem', textAlign:'center', color:'white', lineHeight: 1}}>
+            <b>MadHacks</b>
+        </Typography>
+        </Grid>
+        <Grid item xs={12}>
+        <Typography className={classes.carbon}>
+            <b>Carbon</b>
+        </Typography>
+        </Grid>
+        <Grid item xs={12}>
+        <Typography >
+            University of Wisconsin–Madison
+        </Typography>
+        </Grid>
+        <Grid item xs={12}>
+        <Typography>
+            October 19-20, 2019
+        </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <Button variant="outlined" href={typeformLink} className={classes.applyButton}>
+              Apply
+          </Button>
+        </Grid>
+      </Grid>
+    </div>
   );
 }

@@ -47,7 +47,7 @@ export default function Sponsors() {
 
   return (
     <div className={classes.root}>
-        <Grid container ontainer>
+        <Grid container>
             <Grid item xs={12}>
                 <Typography variant="h1" component="h2" gutterBottom className={classes.header}>
                     Our sponsors
