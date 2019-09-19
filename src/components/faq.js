@@ -54,7 +54,7 @@ export default function FAQ(props) {
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <Typography className={classes.answer}>
-                        A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Fall 2018 will be a 24 hours hackathon. If this is your first time attending, check out our hackathon veteran Spencer’s medium post on <a style={{color:'rgb(244,154,2)'}} href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" target="_blank" rel="noopener noreferrer">How to Do Hackathons</a>.
+                        A hackathon is an event where students gather together to work on a software or hardware project. MadHacks Carbon will be a 24 hour hackathon. If this is your first time attending, check out a Medium post on <a style={{color:'rgb(244,154,2)'}} href="https://medium.com/@spencerfricke/how-to-do-hackathons-4a96207d5d3d" target="_blank" rel="noopener noreferrer">How to Do Hackathons</a> by our hackathon veteran, Spencer.
                     </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
@@ -119,7 +119,7 @@ export default function FAQ(props) {
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <Typography className={classes.answer}>
-                        Yes! We will assess all applications and provide travel reimbursements on a case-by-case basis. If we receive a large amount of applications from your school and your school is within 5-8 hour bus ride, we may be able to send a bus.
+                        Yes! We will provide reimbursement for gas, bus, and plane tickets. We anticipate being able to provide travel reimbursements for students traveling from outside the Madison area. We are working out more logistic details but are currently able to reimburse up to $50 with proof of purchase. Please bring your receipt to the event in order to qualify for reimbursements.
                     </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
