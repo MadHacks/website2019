@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import AppBar from '@material-ui/core/AppBar';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles({
     bannerBar: {
@@ -9,7 +10,9 @@ const useStyles = makeStyles({
         boxShadow: 'none',
     },
     banner: {
-        width: 100,
+        minWidth: 65,
+        width: '15%',
+        maxWidth: 100,
         marginLeft: 'auto',
         marginRight: 50,
     }
@@ -22,10 +25,12 @@ export default function MLHBanner(props) {
   const classes = useStyles();
 
   return (
-    <AppBar position='absolute' className={classes.bannerBar}>
-        <a href={mlhSite} target='_blank' rel='noopener noreferrer' className={classes.banner}>
-            <img src={bannerSrc} alt='MLH Banner' />
-        </a>
-    </AppBar>
+    <Box width={'2vw'}>
+        <AppBar position='absolute' className={classes.bannerBar}>
+            <a href={mlhSite} target='_blank' rel='noopener noreferrer' className={classes.banner}>
+                <img src={bannerSrc} alt='MLH Banner' />
+            </a>
+        </AppBar>
+    </Box>
   );
 }

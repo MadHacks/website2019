@@ -9,31 +9,47 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles({
   root: {
     flexGrow: 1,
+    marginTop: '11vh',
+    marginBottom: 50
+  },
+  logoCont: {
+    textAlign: 'center',
   },
   logo: {
     height: '40vmin',
-    textAlign: 'center'
   },
   header: {
-    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     color: 'white'
   },
-  carbon: {
-    color: '#4DBF00',
-    fontSize:'5rem',
+  fatRoboto: {
+    fontSize:'5em',
     textAlign: 'center',
     lineHeight: 1,
+  },
+  thinRoboto: {
+    fontSize: '1.5em',
+    textAlign: 'center',
+    color: '#FFFFFF',
+  },
+  carbon: {
+    color: '#4DBF00',
+  },
+  madhacks: {
+    color: '#FFFFFF',
   },
   applyButton: {
     color: '#FFFFFF',
     borderColor: '#FFFFFF',
     padding: '8px 24px',
     fontSize: '1.5rem',
-    marginTop: '10px',
+    margin: '10px',
+  },
+  buttonCont: {
+    'textAlign': 'center',
   }
 });
 
@@ -45,32 +61,36 @@ export default function Header() {
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12}>
-          <img src={logo} className={classes.logo} alt="logo" />
+          <div className={classes.logoCont}>
+            <img src={logo} className={classes.logo} alt="logo" />
+          </div>
         </Grid>
         <Grid item xs={12}>
-        <Typography style={{fontSize:'5rem', textAlign:'center', color:'white', lineHeight: 1}}>
-            <b>MadHacks</b>
-        </Typography>
+          <Typography className={`${classes.fatRoboto} ${classes.madhacks}`}>
+              <b>MadHacks</b>
+          </Typography>
         </Grid>
         <Grid item xs={12}>
-        <Typography className={classes.carbon}>
-            <b>Carbon</b>
-        </Typography>
+          <Typography className={`${classes.fatRoboto} ${classes.carbon}`}>
+              <b>Carbon</b>
+          </Typography>
         </Grid>
         <Grid item xs={12}>
-        <Typography >
-            University of Wisconsin–Madison
-        </Typography>
+          <Typography className={classes.thinRoboto}>
+              University of Wisconsin–Madison
+          </Typography>
         </Grid>
         <Grid item xs={12}>
-        <Typography>
-            October 19-20, 2019
-        </Typography>
+          <Typography className={classes.thinRoboto}>
+              October 19-20, 2019
+          </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Button variant="outlined" href={typeformLink} className={classes.applyButton}>
-              Apply
-          </Button>
+          <div className={classes.buttonCont}>
+            <Button variant="outlined" href={typeformLink} className={classes.applyButton}>
+               Apply
+            </Button>
+          </div>
         </Grid>
       </Grid>
     </div>
