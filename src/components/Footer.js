@@ -10,6 +10,7 @@ import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
+        marginTop: '50px',
     },
     paper: {
         padding: '40px',

@@ -12,7 +12,10 @@ import facebook from '../img/sponsors/facebook.png';
 
 const useStyles = makeStyles({
     root: {
-        flexGrow: 1
+        flexGrow: 1,
+        maxWidth: '70%',
+        minWidth: '370px',
+        margin: 'auto',
     },
     header: {
         color: 'rgb(244,154,2)',
@@ -68,17 +71,17 @@ export default function Sponsors() {
                     Our sponsors
                 </Typography>
             </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} lg={6}>
                     <div className={classes.sponsorCont}>
                         <img src={amFam} className={classes.bigLogo} alt="Big American Family Insurance logo"/>
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} lg={6}>
                     <div className={classes.sponsorCont}>
                         <img src={polco} className={classes.bigLogo} alt="Big Polco logo"/>
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={12}>
+                <Grid item xs={12}>
                     <div className={classes.sponsorCont}>
                         <img src={mongoDB} className={classes.mediumLogo} alt="Medium Mongo DB Logo"/>
                     </div>
