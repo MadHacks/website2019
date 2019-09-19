@@ -8,9 +8,9 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles({
     header: {
         paddingTop: '100px',
-        paddingLeft: 50,
+        paddingRight: 300,
         color: 'rgb(244,154,2)',
-        textAlign: 'left',
+        textAlign: 'center',
         fontSize: '4rem',
         lineHeight: 1
     },

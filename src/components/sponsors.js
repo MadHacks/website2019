@@ -3,7 +3,6 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import Grid from '@material-ui/core/Grid';
-import Avatar from '@material-ui/core/Avatar';
 
 import amFam from '../img/sponsors/american_family.png';
 import polco from '../img/sponsors/polco.png';
@@ -21,24 +20,40 @@ const useStyles = makeStyles({
     },
     bigLogo: {
         backgroundColor: 'rgb(248,248,248, 0.9)',
-        marginBottom: '50px',
         margin: 'auto',
-        width: 450,
-        height: 450,
+        maxWidth: '350px',
+        maxHeight: '350px',
+        minWidth: '250px',
+        minHeight: '250px',
+        borderRadius: '250px',
+        width: '40vw',
+        height: '40vw',
     },
     mediumLogo: {
         backgroundColor: 'rgb(248,248,248, 0.9)',
-        marginBottom: '50px',
         margin: 'auto',
-        width: 300,
-        height: 300,
+        maxWidth: '200px',
+        maxHeight: '200px',
+        minWidth: '150px',
+        minHeight: '150px',
+        borderRadius: '150px',
+        width: '20vw',
+        height: '20vw',
     },
     smallLogo: {
         backgroundColor: 'rgb(248,248,248, 0.9)',
-        marginBottom: '50px',
         margin: 'auto',
-        width: 150,
-        height: 150,
+        maxWidth: '100px',
+        maxHeight: '100px',
+        minWidth: '80px',
+        minHeight: '80px',
+        borderRadius: '80px',
+        width: '10vw',
+        height: '10vw',
+    },
+    sponsorCont: {
+        textAlign: 'center',
+        margin: '20px'
     }
 });
 
@@ -54,19 +69,29 @@ export default function Sponsors() {
                 </Typography>
             </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Avatar src={amFam} className={classes.bigLogo}/>
+                    <div className={classes.sponsorCont}>
+                        <img src={amFam} className={classes.bigLogo} alt="Big American Family Insurance logo"/>
+                    </div>
                 </Grid>
                 <Grid item xs={12} sm={6}>
-                    <Avatar src={polco} className={classes.bigLogo}/>
+                    <div className={classes.sponsorCont}>
+                        <img src={polco} className={classes.bigLogo} alt="Big Polco logo"/>
+                    </div>
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Avatar src={perBlue} className={classes.smallLogo}/>
+                <Grid item xs={12} sm={12}>
+                    <div className={classes.sponsorCont}>
+                        <img src={mongoDB} className={classes.mediumLogo} alt="Medium Mongo DB Logo"/>
+                    </div>
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Avatar src={mongoDB} className={classes.mediumLogo}/>
+                <Grid item xs={12} sm={6}>
+                    <div className={classes.sponsorCont}>
+                        <img src={perBlue} className={classes.smallLogo} alt="Small PerBlue Logo"/>
+                    </div>
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                    <Avatar src={facebook} className={classes.smallLogo}/>
+                <Grid item xs={12} sm={6}>
+                    <div className={classes.sponsorCont}>
+                        <img src={facebook} className={classes.smallLogo} alt="Small Facebook logo"/>
+                    </div>
                 </Grid>
         </Grid>
     </div>
