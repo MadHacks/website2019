@@ -7,24 +7,24 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
     root: {
-        flexGrow: 1
+        flexGrow: 1,
+        paddingRight: '25px'
     },
     header: {
-        paddingTop: 50,
-        paddingRight: 50,
+        paddingTop: '50px',
         color: '#4DBF00',
         textAlign: 'right',
-        
     },
     paper: {
-        maxWidth: 800,
-        padding: '50px',
+        width: '70%',
+        minWidth: '177px',
+        maxWidth: '800px',
+        padding: '40px',
         marginBottom: '100px',
         textAlign: 'center',
         backgroundColor: 'rgb(0,36,61, 0.75)',
         color: '#FFFFFF',
         marginLeft: 'auto',
-        marginRight: 50
     }
 });
 

@@ -28,7 +28,6 @@ const useStyles = makeStyles({
     },
     questionPanel: {
         maxWidth: 800,
-        textAlign: 'center',
         backgroundColor: 'rgb(0,36,61, 0.75)',
         color: '#FFFFFF',
     }

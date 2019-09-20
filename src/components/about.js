@@ -15,8 +15,8 @@ const useStyles = makeStyles({
         lineHeight: 1
     },
     paper: {
-        maxWidth: 800,
-        padding: '50px',
+        maxWidth: '60%',
+        padding: '40px',
         marginBottom: '100px',
         textAlign: 'center',
         backgroundColor: 'rgb(0,36,61, 0.75)',
