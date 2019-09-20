@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import AppBar from '@material-ui/core/AppBar';
-import Slide from '@material-ui/core/Slide';
+import Fade from '@material-ui/core/Fade';
 
 const useStyles = makeStyles({
     bannerBar: {
@@ -10,7 +10,7 @@ const useStyles = makeStyles({
         boxShadow: 'none',
     },
     banner: {
-        minWidth: 65,
+        minWidth: 55,
         width: '15%',
         maxWidth: 100,
         marginLeft: 'auto',
@@ -25,12 +25,12 @@ export default function MLHBanner(props) {
   const classes = useStyles();
 
   return (
-      <Slide in={true} timeout={1500} direction='left'>
+      <Fade in={true} timeout={2500} direction='right'>
         <AppBar position='absolute' className={classes.bannerBar}>
             <a href={mlhSite} target='_blank' rel='noopener noreferrer' className={classes.banner}>
                 <img src={bannerSrc} alt='MLH Banner' />
             </a>
         </AppBar>
-    </Slide>
+    </Fade>
   );
 }
