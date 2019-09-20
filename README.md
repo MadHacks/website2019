@@ -1,66 +1,68 @@
-# website2019
-Website for MadHacks 2019
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## TODO
+## Available Scripts
 
-### General Fixes
-* Add prize information to the FAQ
-* Move inline styles outline
-* View->The Team window (hidden for now)
-* ~~Scale down desktop icons, reupload (so browser isn't downloading them at full size then rescaling client side)~~
-* Send Edge users to mobile
-* ~~Scroll bars interfere with close button~~
-* ~~Sponsors page gets jumpy occasionally~~
-* ~~Reformat FAQ~~
-* ~~Fix title bar on Apply window~~
-* ~~Favicon doesn't work on some browsers~~ (Still weird on Brave, fix this when we check browser compatibility)
-* ~~Add title bar icons to far right: bluetooth, volume, wifi, battery, flux~~
-* ~~Fix sponsor formatting~~
-* ~~About -- have about open to the bottom right~~
-* ~~Sponsor window left pane toggles, should do something clever-er~~
-* ~~Fix about page bug where dragging before doing anything else keeps it stuck to the bottom~~
-* ~~Fun cursors~~
+In the project directory, you can run:
 
-### Mobile
-* ~~Everything~~
+### `npm start`
 
-### Window manager framework
-* ~~Fix bug where you can move windows off the screen (Moss)~~
-* ~~Add desktop icons behaviour (Moss)~~
-* ~~Add title bar (Stamper)~~
-* ~~Fix currently-dragging window z-index issue (Moss)~~
-* ~~Fix weird bug where window title gets dragged off screen, but everything else stays put (Moss)~~
-* ~~Decide whether we want the weird floating title bug, or the ability to drag over the nav bar?~~ (the former, a fix would be nice though)
-* ~~Assign starting positions and active/hidden status to each window~~
-* ~~"About" is acting weird -- why? (Moss)~~
-* ~~Clicking close button doesn't always work -- why? (Moss)~~
-* ~~Allow for windows to edge off screen to allow for smaller screen sizes~~
-* ~~Force window back to original position when icon is re-double clicked~~
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### Content
-* ~~Add rest of the windows, barebones content (Stamper)~~
-* ~~change history links when past websites are hosted, otherwise remove them~~
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-### style
-* ~~Theme the css according to the style guide (Stamper)~~
-* ~~Find body font (Stamper)~~
-* ~~Find appropriate desktop icons (Stamper)~~
-* ~~Padding on frames, esp. Map (Stamper)~~
-* ~~Maps -- remove text (Stamper)~~
-* ~~Maps -- update marker (Stamper)~~
+### `npm test`
 
-## Using SASS
-Installation:
-```
-npm install -g sass
-```
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Usage:
-```
-sass style.scss style.css
-```
+### `npm run build`
 
-Watch directory for updates (and autocompile):
-```
-sass --watch style.scss:style.css
-```
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
