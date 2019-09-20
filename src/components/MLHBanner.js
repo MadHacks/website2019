@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core/Box';
+import Slide from '@material-ui/core/Slide';
 
 const useStyles = makeStyles({
     bannerBar: {
@@ -25,12 +25,12 @@ export default function MLHBanner(props) {
   const classes = useStyles();
 
   return (
-    <Box width={'2vw'}>
+      <Slide in={true} timeout={1500} direction='left'>
         <AppBar position='absolute' className={classes.bannerBar}>
             <a href={mlhSite} target='_blank' rel='noopener noreferrer' className={classes.banner}>
                 <img src={bannerSrc} alt='MLH Banner' />
             </a>
         </AppBar>
-    </Box>
+    </Slide>
   );
 }
