@@ -20,13 +20,6 @@ const useStyles = makeStyles({
   logo: {
     height: '40vmin',
   },
-  header: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'white'
-  },
   fatRoboto: {
     fontSize:'5em',
     textAlign: 'center',
@@ -61,42 +54,60 @@ export default function Header() {
   return (
     <div className={classes.root}>
       <Fade in={true} timeout={2500}>
-      <Grid container>
-        <Grid item xs={12}>
-          <div className={classes.logoCont}>
-            <img src={logo} className={classes.logo} alt="logo" />
-          </div>
+        <Grid container>
+          <Grid item xs={12}>
+            <div className={classes.logoCont}>
+              <img src={logo} className={classes.logo} alt="logo" />
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography className={`${classes.fatRoboto} ${classes.madhacks}`}>
+                <b>MadHacks</b>
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography className={`${classes.fatRoboto} ${classes.carbon}`}>
+                <b>Carbon</b>
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography className={classes.thinRoboto}>
+                University of Wisconsin–Madison
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography className={classes.thinRoboto}>
+                October 19-20, 2019
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <div className={classes.buttonCont}>
+            <Link to='/apply' style={{ textDecoration: 'none' }}>
+              <Button variant="outlined" className={classes.applyButton}>
+                Apply
+              </Button>
+              </Link>
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <div className={classes.buttonCont}>
+            <Link to='/mentor' style={{ textDecoration: 'none' }}>
+              <Button variant="outlined" className={classes.applyButton}>
+                Mentor
+              </Button>
+              </Link>
+            </div>
+          </Grid>
+          <Grid item xs={12}>
+            <div className={classes.buttonCont}>
+            <Link to='/volunteer' style={{ textDecoration: 'none' }}>
+              <Button variant="outlined" className={classes.applyButton}>
+                Volunteer
+              </Button>
+              </Link>
+            </div>
+          </Grid>
         </Grid>
-        <Grid item xs={12}>
-          <Typography className={`${classes.fatRoboto} ${classes.madhacks}`}>
-              <b>MadHacks</b>
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography className={`${classes.fatRoboto} ${classes.carbon}`}>
-              <b>Carbon</b>
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography className={classes.thinRoboto}>
-              University of Wisconsin–Madison
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <Typography className={classes.thinRoboto}>
-              October 19-20, 2019
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <div className={classes.buttonCont}>
-          <Link to='/apply' style={{ textDecoration: 'none' }}>
-            <Button variant="outlined" className={classes.applyButton}>
-               Apply
-            </Button>
-            </Link>
-          </div>
-        </Grid>
-      </Grid>
       </Fade>
     </div>
   );

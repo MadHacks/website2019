@@ -14,18 +14,18 @@ const useStyles = makeStyles({
     }
   });
   
-function Apply() {
+function Typeform(props) {
     const classes = useStyles();
 
     return (
         <div className={classes.root}>
             <iframe
                 id="typeform-full"
-                title="MadHacks 2019 Carbon Main Application"
+                title={props.title}
                 width="100%"
                 height="100%"
                 frameBorder="0"
-                src="https://madhacks-2019.typeform.com/to/sSeSiB"
+                src={props.typeformLink}
                 className={classes.typeformFrame}
             >
             </iframe>
@@ -34,4 +34,4 @@ function Apply() {
     )
 }
 
-export default Apply
+export default Typeform
