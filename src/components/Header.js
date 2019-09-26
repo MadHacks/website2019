@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'typeface-roboto-condensed';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import Fade from '@material-ui/core/Fade';
 
 const useStyles = makeStyles({
   root: {
@@ -59,6 +60,7 @@ export default function Header() {
 
   return (
     <div className={classes.root}>
+      <Fade in={true} timeout={2500}>
       <Grid container>
         <Grid item xs={12}>
           <div className={classes.logoCont}>
@@ -93,6 +95,7 @@ export default function Header() {
           </div>
         </Grid>
       </Grid>
+      </Fade>
     </div>
   );
 }
