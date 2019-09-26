@@ -8,6 +8,7 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
+        marginBottom: 200,
     },
     avatar: {
         width: '100%',
@@ -20,7 +21,6 @@ const useStyles = makeStyles({
     paper: {
         maxWidth: '50%',
         padding: 40,
-        marginBottom: 100,
         marginRight: 50,
         marginLeft: 'auto',
         textAlign: 'center',

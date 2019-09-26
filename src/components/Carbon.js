@@ -8,7 +8,8 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
-        paddingRight: '25px'
+        paddingRight: '25px',
+        marginBottom: '200px',
     },
     header: {
         paddingTop: '50px',
@@ -20,7 +21,6 @@ const useStyles = makeStyles({
         minWidth: '177px',
         maxWidth: '800px',
         padding: '40px',
-        marginBottom: '100px',
         textAlign: 'center',
         backgroundColor: 'rgb(0,36,61, 0.75)',
         color: '#FFFFFF',

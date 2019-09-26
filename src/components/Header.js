@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   root: {
     flexGrow: 1,
     marginTop: '11vh',
-    marginBottom: 50
+    marginBottom: 100,
   },
   logoCont: {
     textAlign: 'center',
