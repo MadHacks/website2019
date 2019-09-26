@@ -42,8 +42,6 @@ function App() {
 
         <About />
 
-        <Carbon />
-        
         <QuoteLeft
           avatar={aldo}
           alt="Profile of Aldo Leopold"
@@ -55,6 +53,8 @@ function App() {
           }
           msg='“We abuse land because we regard it as a commodity belonging to us. When we see land as a community to which we belong, we may begin to use it with love and respect.”'/>
 
+        <Carbon />
+
         <FAQ />
 
         <Schedule />
@@ -64,7 +64,7 @@ function App() {
           alt="Profile of Gaylord Nelson"
           author="Gaylord Nelson"
           title="Former Wisconsin Senator & Founder of Earth Day"
-          msg="“The ultimate test of man's conscience may be his willingness to sacrifice something today for future generations whose words of thanks will not be heard.”" />
+          msg="“The wealth of the nation is its air, water, soil, forests, minerals, rivers, lakes, oceans, scenic beauty, wildlife habitats and biodiversity... that's all there is. That's the whole economy. That's where all the economic activity and jobs come from. These biological systems are the sustaining wealth of the world.”" />
 
         <Sponsors />
         <Footer />

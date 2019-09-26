@@ -6,6 +6,10 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
+    root: {
+        flexGrow: 1,
+        marginBottom: '200px'
+    },
     header: {
         paddingTop: '100px',
         paddingRight: 300,
@@ -17,7 +21,6 @@ const useStyles = makeStyles({
     paper: {
         maxWidth: '60%',
         padding: '40px',
-        marginBottom: '100px',
         textAlign: 'center',
         backgroundColor: 'rgb(0,36,61, 0.75)',
         color: '#FFFFFF',
@@ -29,7 +32,7 @@ export default function About(props) {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
+    <div className={classes.root}>
         <Grid item xs={12}>
             <Typography gutterBottom className={classes.header}>
                 Wisconsin's Premier Hackathon
@@ -45,6 +48,6 @@ export default function About(props) {
                 </Typography>
             </Grid>
         </Paper>
-    </React.Fragment>
+    </div>
   );
 }
