@@ -9,6 +9,7 @@ import polco from '../img/sponsors/polco.png';
 import mongoDB from '../img/sponsors/mongodb.png';
 import perBlue from '../img/sponsors/perblue.png';
 import facebook from '../img/sponsors/facebook.png';
+import fiveNines from '../img/sponsors/5nines.png';
 
 const useStyles = makeStyles({
     root: {
@@ -46,8 +47,8 @@ const useStyles = makeStyles({
     smallLogo: {
         backgroundColor: 'rgb(248,248,248, 0.9)',
         margin: 'auto',
-        maxWidth: '100px',
-        maxHeight: '100px',
+        maxWidth: '105px',
+        maxHeight: '105px',
         minWidth: '80px',
         minHeight: '80px',
         borderRadius: '80px',
@@ -73,27 +74,44 @@ export default function Sponsors() {
             </Grid>
                 <Grid item xs={12} lg={6}>
                     <div className={classes.sponsorCont}>
-                        <img src={amFam} className={classes.bigLogo} alt="Big American Family Insurance logo"/>
+                        <a href="https://www.amfam.com/" target="_blank" rel="noopener noreferrer" >
+                            <img src={amFam} className={classes.bigLogo} alt="Big American Family Insurance logo"/>
+                        </a>
                     </div>
                 </Grid>
                 <Grid item xs={12} lg={6}>
                     <div className={classes.sponsorCont}>
-                        <img src={polco} className={classes.bigLogo} alt="Big Polco logo"/>
+                        <a href="https://info.polco.us/" target="_blank" rel="noopener noreferrer" > 
+                            <img src={polco} className={classes.bigLogo} alt="Big Polco logo"/>
+                        </a>
                     </div>
                 </Grid>
                 <Grid item xs={12}>
                     <div className={classes.sponsorCont}>
-                        <img src={mongoDB} className={classes.mediumLogo} alt="Medium Mongo DB Logo"/>
+                        <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer" >
+                            <img src={mongoDB} className={classes.mediumLogo} alt="Medium Mongo DB Logo"/>
+                        </a>
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={4}>
                     <div className={classes.sponsorCont}>
-                        <img src={perBlue} className={classes.smallLogo} alt="Small PerBlue Logo"/>
+                        <a href="http://www.perblue.com/" target="_blank" rel="noopener noreferrer" >
+                            <img src={perBlue} className={classes.smallLogo} alt="Small PerBlue Logo"/>
+                        </a>
                     </div>
                 </Grid>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={4}>
                     <div className={classes.sponsorCont}>
-                        <img src={facebook} className={classes.smallLogo} alt="Small Facebook logo"/>
+                        <a href="https://5nines.com/" target="_blank" rel="noopener noreferrer" >
+                                <img src={fiveNines} className={classes.smallLogo} alt="Small 5NINES Logo"/>
+                        </a>
+                    </div>
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <div className={classes.sponsorCont}>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" >
+                            <img src={facebook} className={classes.smallLogo} alt="Small Facebook logo"/>
+                        </a>
                     </div>
                 </Grid>
         </Grid>
