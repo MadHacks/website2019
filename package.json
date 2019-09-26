@@ -1,6 +1,6 @@
 {
   "name": "website2019",
-  "version": "1.1",
+  "version": "1.2",
   "homepage": "https://www.madhacks.io",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.1.0",
     "react-scripts": "3.0.1",
     "react-swipeable-views": "^0.13.3",
     "typeface-roboto": "^0.0.75",

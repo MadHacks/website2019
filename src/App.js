@@ -1,75 +1,31 @@
 import React from 'react';
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles';
-import Container from '@material-ui/core/Container';
-import { makeStyles } from '@material-ui/core/styles';
-
-import MLHBanner from './components/MLHBanner';
-import Header from './components/Header';
-import About from './components/About';
-import Carbon from './components/Carbon';
-import Sponsors from './components/Sponsors';
-import Schedule from './components/Schedule';
-import QuoteLeft from './components/QuoteLeft';
-import FAQ from './components/FAQ';
-import QuoteRight from './components/QuoteRight';
-import Footer from './components/Footer';
-
-import aldo from './img/aldo_leopold.jpg';
-import gaylord from './img/gaylord_nelson.jpg';
-
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: '"Roboto Condensed"'
-  }
-});
-
-const useStyles = makeStyles({
-  root: {
-    padding: '0',
-  },
-});
+import { Route, Switch } from 'react-router-dom';
+import Home from './components/Home';
+import Typeform from './components/Typeform';
 
 function App() {
-  const classes = useStyles();
-
   return (
-    <ThemeProvider theme={theme}>
-      <Container maxWidth='xl' className={classes.root}>
-        <MLHBanner />
-
-        <Header />
-
-        <About />
-
-        <QuoteLeft
-          avatar={aldo}
-          alt="Profile of Aldo Leopold"
-          author={
-            <span>Aldo Leopold, <em>A Sand County Almanac</em></span>
-          }
-          title={
-            <p>Conservationist & Professor Emeritus University of Wisconsin</p>
-          }
-          msg='“We abuse land because we regard it as a commodity belonging to us. When we see land as a community to which we belong, we may begin to use it with love and respect.”'/>
-
-        <Carbon />
-
-        <FAQ />
-
-        <Schedule />
-
-        <QuoteRight
-          avatar={gaylord}
-          alt="Profile of Gaylord Nelson"
-          author="Gaylord Nelson"
-          title="Former Wisconsin Senator & Founder of Earth Day"
-          msg="“The wealth of the nation is its air, water, soil, forests, minerals, rivers, lakes, oceans, scenic beauty, wildlife habitats and biodiversity... that's all there is. That's the whole economy. That's where all the economic activity and jobs come from. These biological systems are the sustaining wealth of the world.”" />
-
-        <Sponsors />
-        <Footer />
-      </Container>
-    </ThemeProvider>
+    <Switch>
+      <Route path="/apply" component={() => 
+        <Typeform
+          title="MadHacks 2019 Carbon Main Application"
+          typeformLink="https://madhacks-2019.typeform.com/to/sSeSiB" 
+          />}
+        />
+      <Route path="/mentor" component={() => 
+        <Typeform
+          title="Mentorship Carbon Form 2019 Fall"
+          typeformLink="https://madhacks-2019.typeform.com/to/I48ILs" 
+          />}
+        />
+      <Route path="/volunteer" component={() => 
+        <Typeform
+          title="Volunteer Fall 2019 MadHacks Carbon"
+          typeformLink="https://madhacks-2019.typeform.com/to/VNfV0v" 
+          />}
+        />
+      <Route component={Home} />
+    </Switch>
   );
 }
 
