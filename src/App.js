@@ -9,6 +9,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Carbon from './components/Carbon';
 import Sponsors from './components/Sponsors';
+import Schedule from './components/Schedule';
 import QuoteLeft from './components/QuoteLeft';
 import FAQ from './components/FAQ';
 import QuoteRight from './components/QuoteRight';
@@ -55,6 +56,8 @@ function App() {
           msg='“We abuse land because we regard it as a commodity belonging to us. When we see land as a community to which we belong, we may begin to use it with love and respect.”'/>
 
         <FAQ />
+
+        <Schedule />
 
         <QuoteRight
           avatar={gaylord}
