@@ -6,6 +6,7 @@ import 'typeface-roboto-condensed';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Fade from '@material-ui/core/Fade';
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
   root: {
@@ -56,7 +57,6 @@ const useStyles = makeStyles({
 
 export default function Header() {
   const classes = useStyles();
-  const typeformLink = "https://madhacks-2019.typeform.com/to/sSeSiB";
 
   return (
     <div className={classes.root}>
@@ -89,9 +89,11 @@ export default function Header() {
         </Grid>
         <Grid item xs={12}>
           <div className={classes.buttonCont}>
-            <Button variant="outlined" href={typeformLink} className={classes.applyButton}>
+          <Link to='/apply' style={{ textDecoration: 'none' }}>
+            <Button variant="outlined" className={classes.applyButton}>
                Apply
             </Button>
+            </Link>
           </div>
         </Grid>
       </Grid>
