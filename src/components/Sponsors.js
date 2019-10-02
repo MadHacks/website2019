@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import amFam from '../img/sponsors/american_family.png';
 import polco from '../img/sponsors/polco.png';
 import mongoDB from '../img/sponsors/mongodb.png';
+import capOne from '../img/sponsors/capital_one.png';
 import perBlue from '../img/sponsors/perblue.png';
 import facebook from '../img/sponsors/facebook.png';
 import fiveNines from '../img/sponsors/5nines.png';
@@ -86,10 +87,17 @@ export default function Sponsors() {
                         </a>
                     </div>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={6}>
                     <div className={classes.sponsorCont}>
                         <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer" >
                             <img src={mongoDB} className={classes.mediumLogo} alt="Medium Mongo DB Logo"/>
+                        </a>
+                    </div>
+                </Grid>
+                <Grid item xs={6}>
+                    <div className={classes.sponsorCont}>
+                        <a href="https://www.capitalone.com/" target="_blank" rel="noopener noreferrer" >
+                            <img src={capOne} className={classes.mediumLogo} alt="Medium Capital One Logo"/>
                         </a>
                     </div>
                 </Grid>
