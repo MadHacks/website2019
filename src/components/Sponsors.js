@@ -11,6 +11,8 @@ import capOne from '../img/sponsors/capital_one.png';
 import perBlue from '../img/sponsors/perblue.png';
 import facebook from '../img/sponsors/facebook.png';
 import fiveNines from '../img/sponsors/5nines.png';
+import propeller from '../img/sponsors/propeller.png';
+import aramco from '../img/sponsors/aramco.png';
 
 const useStyles = makeStyles({
     root: {
@@ -22,6 +24,17 @@ const useStyles = makeStyles({
     header: {
         color: 'rgb(244,154,2)',
         textAlign: 'center',
+    },
+    hugeLogo: {
+        backgroundColor: 'rgb(248,248,248, 0.9)',
+        margin: 'auto',
+        maxWidth: '500px',
+        maxHeight: '500px',
+        minWidth: '325px',
+        minHeight: '325px',
+        borderRadius: '325px',
+        width: '40vw',
+        height: '40vw',
     },
     bigLogo: {
         backgroundColor: 'rgb(248,248,248, 0.9)',
@@ -73,6 +86,13 @@ export default function Sponsors() {
                     Our sponsors
                 </Typography>
             </Grid>
+                <Grid item xs={12}>
+                    <div className={classes.sponsorCont}>
+                        <a href="https://www.saudiaramco.com/en/creating-value/sustainable-business-operations/environmental-performance" target="_blank" rel="noopener noreferrer" >
+                            <img src={aramco} className={classes.hugeLogo} alt="Huge Aramco logo"/>
+                        </a>
+                    </div>
+                </Grid>
                 <Grid item xs={12} lg={6}>
                     <div className={classes.sponsorCont}>
                         <a href="https://www.amfam.com/" target="_blank" rel="noopener noreferrer" >
@@ -87,14 +107,21 @@ export default function Sponsors() {
                         </a>
                     </div>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} >
+                    <div className={classes.sponsorCont}>
+                        <a href="https://www.propellerhealth.com/" target="_blank" rel="noopener noreferrer" > 
+                            <img src={propeller} className={classes.bigLogo} alt="Big Propeller logo"/>
+                        </a>
+                    </div>
+                </Grid>
+                <Grid item xs={12} sm={6}>
                     <div className={classes.sponsorCont}>
                         <a href="https://www.mongodb.com/" target="_blank" rel="noopener noreferrer" >
                             <img src={mongoDB} className={classes.mediumLogo} alt="Medium Mongo DB Logo"/>
                         </a>
                     </div>
                 </Grid>
-                <Grid item xs={6}>
+                <Grid item xs={12} sm={6}>
                     <div className={classes.sponsorCont}>
                         <a href="https://www.capitalone.com/" target="_blank" rel="noopener noreferrer" >
                             <img src={capOne} className={classes.mediumLogo} alt="Medium Capital One Logo"/>
