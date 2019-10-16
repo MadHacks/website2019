@@ -20,19 +20,20 @@ function createData(time, event) {
 }
 
 const oct19 = [
-  createData('11:00AM', 'Opening Ceremony: Welcome!'),
+  createData('9AM', 'Check in'),
+  createData('11AM', 'Opening Ceremony: Welcome!'),
   createData('11:15AM', 'Team Finding and Brainstorm'),
-  createData('12:00PM', 'Hacking begins!'),
-  createData('1:00PM', 'Lunch'),
-  createData('2:00PM - 6:00PM', 'Tech Talks and Sponsor Tables'),
-  createData('7:00PM', 'Dinner'),
+  createData('12PM', 'Hacking begins!'),
+  createData('1PM', 'Lunch'),
+  createData('2PM - 6PM', 'Tech Talks and Sponsor Tables'),
+  createData('7PM', 'Dinner'),
 ];
 
 const oct20 = [
-  createData('1:00AM', 'Midnight Snacks'),
-  createData('9:00AM', 'Breakfast'),
-  createData('12:00PM', 'Hacking ends & Judging'),
-  createData('1:00PM', 'Closing Ceremony'),
+  createData('1AM', 'Midnight Snack'),
+  createData('9AM', 'Breakfast'),
+  createData('12PM', 'Hacking ends & Judging'),
+  createData('1PM', 'Closing Ceremony'),
 ]
 
 const useStyles = makeStyles(theme => ({
